@@ -1,1 +1,7 @@
-This repo is a starter Quarto website template. Some exmaple files are provided. Website example pages provide guidance on various elements and were you locate additional resources. 
+# Project
+
+Data visualization: Association of Tennis Professionals (ATP) 
+
+## Description
+
+This project is for data communication using tennis data for the ATP maintained at https://github.com/JeffSackmann/tennis_atp. Data range from 1968 to 2024.

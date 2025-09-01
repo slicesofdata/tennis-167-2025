@@ -1,10 +1,10 @@
 ################################################################################
 # Script Name: clean_mpg_data.R
-# Author: slicesofdata
-# GitHub: slicesofdata
+# Author: Carly
+# GitHub: carlybaretz
 # Date Created:
 #
-# Purpose: This script will read raw data and process/clean it and write 
+# Purpose: This script will read raw data and process/clean it and write
 # out the cleaned data.
 #
 ################################################################################
@@ -21,7 +21,7 @@ library(dplyr)
 
 ################################################################################
 # read the raw data
-mpg <- readRDS(object = <-- path to and name of file --> )
+mpg <- readRDS("data/raw/mpg.Rds")
 
 
 ################################################################################
@@ -33,8 +33,10 @@ cleaned_mpg <-
 ################################################################################
 # save the cleaned data file
 cleaned_mpg |>
-  saveRDS( <-- save the file as cleaned_mpg.Rds --> )
+  saveRDS ("data/processed/cleaned_mpg.Rds")
 
+source("src/data/clean_mpg_data.R", echo = TRUE)
+file.exists("data/processed/cleaned_mpg.Rds")
 
 ################################################################################
 # End of script
