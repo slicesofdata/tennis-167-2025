@@ -1,13 +1,11 @@
 ################################################################################
-# Script Name: plot_cty_hwy_mpg_point.R
-# Author: slicesofdata
-# GitHub: slicesofdata
-# Date Created: 9/11/25
+# Script Name: Starter Script File Example for HW01
+# Author: Joey
+# GitHub: jwilson26-stack
+# Date Created: 9/12/25
 #
-# Purpose: This script will: 
-# - read the cleaned data, 
-# - plot highway by city mpg,
-# - save the plot as png
+# Purpose: This script is for homework 01, to understand the basics behind how to work together
+# on rStudio and github
 #
 ################################################################################
 
@@ -19,42 +17,20 @@
 
 ################################################################################
 # Load necessary libraries/source any function directories
-library(ggplot2)
+# Example:
+#R.utils::sourceDirectory(here::here("src", "functions"))
+source(here::here("src", "functions", "load-libraries.R"))
 
-# source a plot saving function script for file uniformity 
-# source a plot theme
+################################################################################
+# ...
 
 
 ################################################################################
-# read the cleaned data cleaned_mpg.Rds in data/processed 
-cleaned_mpg <- readRDS("data/processed/cleaned_mpg.Rds")
+# ...
 
 
 ################################################################################
-# plot the cleaned data
-cty_hwy_point_plot <-
-  cleaned_mpg |>
-  ggplot(mapping = aes(x = cty, y = hwy)) +
-  geom_point()
-cty_hwy_point_plot
-
-################################################################################
-# save the plot as cty_hwy_mpg_point.png to figs/
-ggsave(filename = "figs/cty_hwy_mpg_point.png", 
-       plot = cty_hwy_point_plot,
-       units = "in",
-       #width = , 
-       #height = , 
-       dpi = "retina",
-       create.dir = TRUE)
-
-here::here()
-fs::file_exists(here::here("src", "figs", "plot_cty_hwy_mpg_point.R"))
+# ...
 
 ################################################################################
 # End of script
-
-
-
-
-
