@@ -1,0 +1,49 @@
+---
+title: "Doubles Data"
+author: "Ivey Gehring"
+date: "2025-09-20"
+output: html_document
+---
+
+```{r}
+library(here)
+library(tidyverse)
+library(dplyr)
+library(lubridate)
+```
+These are the libraries that we needed
+```{r}
+files <- list.files(
+  path = here("data", "raw"),
+  pattern = "^atp_matches_doubles_[0-9]{4}.csv$",
+  full.names = TRUE
+)
+```
+Just used a here and pattern function to pull the desired files
+```{r}
+files
+```
+This is me appending the files to make sure that I pulled all of the desired files
+```{r}
+all_matches_doubles <- files %>%
+  map_dfr(read_csv)
+```
+Here I joined them all
+```{r}
+all_matches_doubles
+```
+Appended here
+```{r}
+all_matches_doubles_parsed <- all_matches_doubles %>%
+  mutate(tourney_date = ymd(tourney_date),
+         tourney_date = format(tourney_date, "%m/%d/%Y"))
+```
+Parsed the dates
+```{r}
+all_matches_doubles_parsed
+```
+Appended
+
+```{r save-clean-data, echo=FALSE}
+saveRDS(all_matches_doubles_parsed, file = here::here("data", "cleaned_doubles_data.Rds"))
+```
