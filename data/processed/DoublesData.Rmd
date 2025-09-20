@@ -45,5 +45,5 @@ all_matches_doubles_parsed
 Appended
 
 ```{r save-clean-data, echo=FALSE}
-saveRDS(all_matches_doubles_parsed, file = here::here("data", "cleaned_doubles_data.Rds"))
+saveRDS(all_matches_doubles_parsed, file = here::here("data", "cleaned_doubles_data.Rds")) 
 ```
