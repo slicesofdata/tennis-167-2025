@@ -16,7 +16,12 @@ execute:
   freeze: auto
 ---
 
-
+```{r}
+library(here)
+library(dplyr)
+library(ggplot2)
+library(fs)
+```
 
 ```{r}
 # do not display the code block on your website. 
@@ -24,11 +29,12 @@ execute:
 
 # read and clean the data
 #source( <-- data cleaning path and file name -->)
+source(here::here("data", "processed", "cleaned_mpg.Rds"))
 
 # read cleaned and plot data
+source(here::here("src", "figs", "plot_cty_hwy_mpg_point.png"))
 #source( <-- data plotting file name -->)
 ```
-
 
 # Overview (Level #1)
 
@@ -36,6 +42,11 @@ Text here ...
 
 
 ## Sub-Section (Level #2)
+
+```{r}
+stopifnot(fs::file_exists(here::here("src", "figs", "plot_cty_hwy_mpg_point.png")))
+knitr::include_graphics(here::here("figs", "plot_cty_hwy_mpg_point.png"))
+```
 
 ### Our Plot! (Level #3)
 
