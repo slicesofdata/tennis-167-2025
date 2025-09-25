@@ -44,4 +44,4 @@ all_quals
 saveRDS(all_quals, file = here::here("data", "processed", "JoinedQualChall.rds"))
 
 ################################################################################
-# End of script
+# End of script.
