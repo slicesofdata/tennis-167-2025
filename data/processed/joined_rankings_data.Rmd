@@ -54,7 +54,7 @@ player_rankings
 
 
 ```{r save-clean-date, echo=FALSE}
-saveRDS(player_rankings, file = here::here("data", "processed", "cleaned_rankings_data.rds"))
+saveRDS(player_rankings, file = here::here("data", "processed", "joined_rankings_data.Rds"))
 
 ```
 donezo
