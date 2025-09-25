@@ -1,0 +1,60 @@
+---
+title: "Rankings"
+date: "2025-09-20"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+``` {r setup, include=FALSE}
+library(here)
+library(tidyverse)
+#functions library
+```
+
+```{r}
+files <- list.files(
+  path = here("data", "raw"),
+  pattern = "^atp_rankings_(90s|00s|10s|20s|70s|80s|current)\\.csv$",
+  full.names = TRUE
+)
+#pulling rankings files
+```
+
+```{r}
+files
+#test to see if previous code worked
+```
+
+```{r}
+all_rankings <- files %>%
+  map_dfr(read_csv)
+all_rankings
+#pulling all of the files into one ranking
+```
+
+
+```{r}
+players <- read.csv("atp_players.csv")
+players
+```
+
+
+
+
+```{r}
+player_rankings <- players %>%
+  full_join(all_rankings, by = c("player_id" = "player"))
+```
+
+```{r}
+player_rankings
+```
+
+
+```{r save-clean-date, echo=FALSE}
+saveRDS(player_rankings, file = here::here("data", "processed", "cleaned_rankings_data.rds"))
+
+```
+donezo
