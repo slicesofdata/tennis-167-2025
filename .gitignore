@@ -145,3 +145,10 @@ Thumbs.db
 *.so
 
 ##############################################################################
+src/data/joined_futures.R
+src/data/using_starter_script_file.R
+src/figs/examplehw3.png
+src/figs/starter_script_file.R
+src/functions/save_plot_png.R
+
+
