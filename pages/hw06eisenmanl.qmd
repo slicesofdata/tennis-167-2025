@@ -1,0 +1,120 @@
+Homework #6: Lindsay Eisenman
+
+<br>
+
+Limitations associated with the below visualization: <br>
+  - Only includes data from the years 2022-2025 and top 10 rankings <br>
+  - Infrequent changes in the data result in flat sections in the graph <br>
+  - Difficult to draw meaningful conclusions about performance from rankings <br>
+  
+<br>
+
+Here is the code created to clean the Alcaraz and Sinner data:
+
+cleaneddata_alcaraz <- cleaned_rankings_data %>% <br>
+  mutate(dob = as.Date(as.character(dob), format = "%Y%m%d")) %>% <br>
+  mutate(ranking_date = as.Date(as.character(ranking_date), format = "%Y%m%d")) %>% <br>
+  mutate(height = as.numeric(height)) %>% <br>
+  filter(name_last == "Alcaraz") %>% <br>
+  filter(name_first == "Carlos") %>% <br>
+  mutate(age = as.numeric((ranking_date - dob) / 365.25)) <br>
+cleaneddata_alcaraz <br>
+
+cleaneddata_sinner <- cleaned_rankings_data %>% <br>
+  mutate(dob = as.Date(as.character(dob), format = "%Y%m%d")) %>% <br>
+  mutate(ranking_date = as.Date(as.character(ranking_date), format = "%Y%m%d")) %>% <br>
+  mutate(height = as.numeric(height)) %>% <br>
+  filter(name_last == "Sinner") %>% <br>
+  filter(name_first == "Jannik") %>% <br>
+  mutate(age = as.numeric((ranking_date - dob) / 365.25)) <br>
+cleaneddata_sinner <br>
+
+<br>
+
+Here is the code to create the visualization using the aboved cleaned data:
+
+new2_ranking_timeline <-<br>
+  ggplot(mapping = aes(x = ranking_date, y = rank)) + <br>
+  geom_line(data = cleaneddata_sinner, aes(color = "Sinner")) + <br>
+  geom_line(data = cleaneddata_alcaraz, aes(color = "Alcaraz")) + <br>
+  labs(x = "Date", y = "Ranking (1 = Highest)", color = "Player", <br>
+  title = "ATP Singles Ranking: Alcaraz vs Sinner  (2022-2025)") + <br>
+  scale_color_manual(values = c("Sinner" = "navy", <br>
+                                "Alcaraz" = "orange")) + <br>
+  scale_x_date(limits = as.Date(c("2022-01-01", Sys.Date()))) + <br>
+  scale_y_reverse(limits = c(10,1), <br>
+                  breaks = 10:1, <br>
+                  labels = scales::number_format(accuracy = 1)) + <br>
+  annotate("point", x = as.Date("2024-01-28"), y = 4, size = 1) + <br>
+  annotate("text", x = as.Date("2024-01-28"), y = 4.25, <br>
+           label = "Australian Open", <br>
+           size = 3) + #this adds a point and text to show the sinner's AO win <br>
+  annotate("point", x = as.Date("2024-09-6"), y = 1, size = 1) + <br>
+  annotate("text", x = as.Date("2024-09-6"), y = 1.25,<br>
+           label = "US Open", <br>
+           size = 3) + <br>
+  annotate("point", x = as.Date("2022-09-11"), y = 1, size = 1) + <br>
+  annotate("text", x = as.Date("2022-09-11"), y = 1.25, <br>
+           label = "US Open", <br>
+           size = 3) + <br>
+  annotate("point", x = as.Date("2023-09-16"), y = 2, size = 1) + <br>
+  annotate("text", x = as.Date("2023-09-16"), y = 2.25, <br>
+           label = "Wimbledon", <br>
+           size = 3) + <br>
+  annotate("point", x = as.Date("2024-06-09"), y = 2, size = 1) + <br>
+  annotate("text", x = as.Date("2024-06-09"), y = 2.25, <br>
+           label = "French Open", <br>
+           size = 3) + <br>
+  annotate("point", x = as.Date("2024-07-14"), y = 3, size = 1) + <br>
+  annotate("text", x = as.Date("2024-07-14"), y = 3.25, <br>
+           label = "Wimbledon", <br>
+           size = 3) + <br>
+  theme_classic() <br>
+new2_ranking_timeline <br>
+
+<br>
+
+
+```{r}
+#| echo: false
+#| fig.cap: "Plot 1"
+#| fig.align: "center" 
+#| out.width: "800px"
+
+knitr::include_graphics(here::here("src", "figs", "hw06_plot1.png"))
+```
+
+<br>
+
+I used geom_line for this visualization because this is time-series data and I wanted to visualize the trendline and compare the rankings between both players.
+
+<br>
+
+Instead of geom_line, I could have also used geom_smooth what provides the following: <br>
+<br>
+  Advantages: <br>
+    - Automatically fits and displays a trend line that reveal patterns in the data <br>
+    - Reduces noise by summarizing trends instead of showing every fluctuation <br>
+    - Good for data sets covering a large time frame <br>
+  Disadvantages: <br>
+    - Geom_smooth can oversimplify the data and obscure actual data variability <br>
+    - Results depend on the chosen smoothing method, which can mislead interpretation <br>
+
+<br>
+
+Decorative elements of this visualization: <br>
+  - Added bullet points on the trend lines to indicate grand slam wins by each player <br>
+      - Since there were only 6 bullet points total, the graph did not become overcrowded <br>
+      - However, if there were more grand slam wins, the graph would not be readable <br>
+  - Another decorative element I could add would be a color gradient for the player's age <br>
+
+<br>
+
+This visualization relates to Wilke's "The principle of proportional ink" which emphasizes that the amount of "ink" should be related to the values the data represents. In this case, the lines are thin and trace the ranking movement per player, which is a good use of ink. However, the bullet points labeling each grand slam both players have won is a possible violation of this principle. Any more additional bullet points may lead to an overcrowded graph. 
+  
+
+
+
+
+
+
