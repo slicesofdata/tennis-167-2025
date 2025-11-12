@@ -5,6 +5,38 @@ library(tidyverse)
 library(ggplot2)
 library(scales)
 
+save_plot_png <- function(
+    plot,
+    file_name, 
+    figs_dir,
+    units = "px",
+    width = 1600,
+    height = 1100,
+    dpi = 300) {
+  
+  file_path <- here::here(figs_dir, file_name)
+  
+  ggsave(
+    filename = file_path,
+    plot = plot,
+    device = "png",
+    units = units,
+    width = width,
+    height = height,
+    dpi = dpi
+  )
+}
+
+
+player_colors <- c(
+  "Federer" = "#006400",   # Green
+  "Nadal" = "#D32F2F",     # Red
+  "Djokovic" = "#1976D2",  # Blue
+  "Alcaraz" = "#FF8C00",   # Orange
+  "Sinner" = "#9C27B0"     # Pink
+)
+
+
 #######################################################################################################################
 
 cleaned_rankings_data <- readRDS(file = here::here("data","processed","cleaned_rankings_data.rds")) 
@@ -12,39 +44,6 @@ head(cleaned_rankings_data)
 
 atp_singles_data <- readRDS(file = here::here("data","processed","atp_singles.Rds")) 
 head(atp_singles_data)
-
-#######################################################################################################################
-
-cleaneddata_federer <- cleaned_rankings_data %>%
-  mutate(dob = as.Date(as.character(dob), format = "%Y%m%d")) %>%
-  mutate(ranking_date = as.Date(as.character(ranking_date), format = "%Y%m%d")) %>%
-  mutate(height = as.numeric(height)) %>%
-  filter(name_last == "Federer") %>%
-  filter(name_first == "Roger")
-cleaneddata_federer
-
-#this graph shows federer's overall ranking timeline from the start to end of his career
-federer_ranking_timeline1 <- cleaneddata_federer %>%
-  ggplot(mapping = aes(x = ranking_date, y = rank)) +
-  geom_line() +
-  labs(x = "Date", y = "Ranking") +
-  scale_x_date(limits = as.Date(c("1998-01-01", "2022-12-31"))) +
-  theme_classic()
-federer_ranking_timeline1
-
-
-#here is federer's ranking timeline during the first year that he won a major (wimbledon 2003)
-federer_ranking_timeline2 <- cleaneddata_federer %>%
-  ggplot(mapping = aes(x = ranking_date, y = rank)) +
-  geom_line() +
-  labs(x = "Date", y = "Ranking") +
-  scale_x_date(limits = as.Date(c("2003-01-01", "2003-12-31"))) +
-  scale_y_continuous(limits = c(0,10), 
-                     breaks = 0:10,
-                     labels = scales::number_format(accuracy = 1)) +
-  theme_classic()
-federer_ranking_timeline2
-
 
 #######################################################################################################################
 
@@ -57,6 +56,37 @@ filtered_atp_singles <- atp_singles_data %>%
   select(tourney_name, tourney_date, winner_name, winner_rank)
 filtered_atp_singles
 
+#######################################################################################################################
+
+cleaneddata_federer <- cleaned_rankings_data %>%
+  mutate(dob = as.Date(as.character(dob), format = "%Y%m%d")) %>%
+  mutate(ranking_date = as.Date(as.character(ranking_date), format = "%Y%m%d")) %>%
+  mutate(height = as.numeric(height)) %>%
+  filter(name_last == "Federer") %>%
+  filter(name_first == "Roger")
+cleaneddata_federer
+
+#######################################################################################################################
+
+cleaneddata_nadal <- cleaned_rankings_data %>%
+  mutate(dob = as.Date(as.character(dob), format = "%Y%m%d")) %>%
+  mutate(ranking_date = as.Date(as.character(ranking_date), format = "%Y%m%d")) %>%
+  mutate(height = as.numeric(height)) %>%
+  filter(name_last == "Nadal") %>%
+  filter(name_first == "Rafael")
+cleaneddata_nadal
+
+#######################################################################################################################
+
+cleaneddata_djokovic <- cleaned_rankings_data %>%
+  mutate(dob = as.Date(as.character(dob), format = "%Y%m%d")) %>%
+  mutate(ranking_date = as.Date(as.character(ranking_date), format = "%Y%m%d")) %>%
+  mutate(height = as.numeric(height)) %>%
+  filter(name_last == "Djokovic") %>%
+  filter(name_first == "Novak")
+cleaneddata_djokovic
+
+#######################################################################################################################
 
 #shows the big three ranking during this specific time frame represented by different colors
 big3_ranking_timeline <- 
@@ -93,40 +123,6 @@ save_plot_png(plot = big3_ranking_timeline, file_name = "big3_ranking_timeline.p
 
 #######################################################################################################################
 
-cleaneddata_nadal <- cleaned_rankings_data %>%
-  mutate(dob = as.Date(as.character(dob), format = "%Y%m%d")) %>%
-  mutate(ranking_date = as.Date(as.character(ranking_date), format = "%Y%m%d")) %>%
-  mutate(height = as.numeric(height)) %>%
-  filter(name_last == "Nadal") %>%
-  filter(name_first == "Rafael")
-cleaneddata_nadal
-
-nadal_ranking_timeline <- cleaneddata_nadal %>%
-  ggplot(mapping = aes(x = ranking_date, y = rank)) +
-  geom_line() +
-  labs(x = "Date", y = "Ranking") +
-  theme_minimal()
-nadal_ranking_timeline
-
-#######################################################################################################################
-
-cleaneddata_djokovic <- cleaned_rankings_data %>%
-  mutate(dob = as.Date(as.character(dob), format = "%Y%m%d")) %>%
-  mutate(ranking_date = as.Date(as.character(ranking_date), format = "%Y%m%d")) %>%
-  mutate(height = as.numeric(height)) %>%
-  filter(name_last == "Djokovic") %>%
-  filter(name_first == "Novak")
-cleaneddata_djokovic
-
-djokovic_ranking_timeline <- cleaneddata_djokovic %>%
-  ggplot(mapping = aes(x = ranking_date, y = rank)) +
-  geom_line() +
-  labs(x = "Date", y = "Ranking") +
-  theme_minimal()
-djokovic_ranking_timeline
-
-#######################################################################################################################
-
 cleaneddata_sinner <- cleaned_rankings_data %>%
   mutate(dob = as.Date(as.character(dob), format = "%Y%m%d")) %>%
   mutate(ranking_date = as.Date(as.character(ranking_date), format = "%Y%m%d")) %>%
@@ -135,13 +131,6 @@ cleaneddata_sinner <- cleaned_rankings_data %>%
   filter(name_first == "Jannik") %>%
   mutate(age = as.numeric((ranking_date - dob) / 365.25))
 cleaneddata_sinner
-
-sinner_ranking_timeline <- cleaneddata_sinner %>%
-  ggplot(mapping = aes(x = ranking_date, y = rank)) +
-  geom_line() +
-  labs(x = "Date", y = "Ranking") +
-  theme_minimal()
-sinner_ranking_timeline
 
 #######################################################################################################################
 
@@ -153,14 +142,6 @@ cleaneddata_alcaraz <- cleaned_rankings_data %>%
   filter(name_first == "Carlos") %>%
   mutate(age = as.numeric((ranking_date - dob) / 365.25))
 cleaneddata_alcaraz
-
-alcaraz_ranking_timeline <- cleaneddata_alcaraz %>%
-  ggplot(mapping = aes(x = ranking_date, y = rank)) +
-  geom_line() +
-  labs(x = "Date", y = "Ranking") +
-  theme_minimal()
-alcaraz_ranking_timeline
-
 
 #######################################################################################################################
 
@@ -306,14 +287,6 @@ weeks_rank1_graph_1 <- weeks_at_rank_1 %>%
   theme(legend.position = "none")
 weeks_rank1_graph_1
 
-
-player_colors <- c(
-  "Federer" = "#006400",   # Green
-  "Nadal" = "#D32F2F",     # Red
-  "Djokovic" = "#1976D2",  # Blue
-  "Alcaraz" = "#FF8C00",   # Orange
-  "Sinner" = "#9C27B0"     # Pink
-)
 
 
 #graph with percentage of weeks at #1
