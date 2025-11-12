@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>. – Website Title</title>
+<title>ATP Singles Ranking – Website Title</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -35,10 +35,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-4db7c7701a6062a1e0d63aaf3d3efda3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -89,8 +89,8 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
-<span class="menu-text">Index Page Text</span></a>
+    <a class="nav-link" href="../pages/Tennis_homepage.html"> 
+<span class="menu-text">Tennis Homepage</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../pages/my_first_page.html"> 
@@ -112,6 +112,10 @@ ul.task-list li input[type="checkbox"] {
         <li>
     <a class="dropdown-item" href="../pages/team_test_page.html">
  <span class="dropdown-text">Exercise Test Page</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../pages/ranking_page.html">
+ <span class="dropdown-text">Ranking Page</span></a>
   </li>  
     </ul>
   </li>
@@ -149,7 +153,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">.</h1>
+<h1 class="title">ATP Singles Ranking</h1>
 </div>
 
 
@@ -166,10 +170,27 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<!--
-Although the code will run, this page will not appear as a page your website 
-because its not references in the _quarto.yml 
--->
+<p><br></p>
+<p>The ATP singles ranking is a point-based system that ranks men’s professional tennis players based on their performance in official singles tournaments over the preceding 52 weeks. A player’s best 19 tournament results determines their ranking, with points awarded based on the level of the tournament (e.g., Grand Slam, ATP Masters 1000, ATP 500, ATP 250, etc.) and how far a player advances. Points from tournaments are dropped after 52 weeks and replaced with current performances, meaning rankings can change weekly. Rankings are important for tournament eligibility and their seeding within the draw. The player with the highest number of points at the end of the year is crowned the year-end No.&nbsp;1 player.</p>
+<p><br></p>
+<p>The “Big 3”—Novak Djokovic, Rafael Nadal, and Roger Federer—have been dominating the ATP Tour for the past two decades, a testament to their consistent presence at the top of the singles rankings.</p>
+<p><br></p>
+<p>The visualization below illustrates the career trajectory for these players’ singles rankings, with circles denoting their Grand Slam victories at each point in time. Federer dominated the early years, particularly from 2005-2010, as shown by a cluster of green circles coinciding with his peak ranking. On the other hand, Nadal’s Grand Slam wins appear to be more evenly distributed across his career, without any distinct ‘domination’ period. Djokovic, meanwhile, seems to find his prime later than both Federer and Nadal, reflecting his later rise to the top and younger age compared to the other two.</p>
+<p><br></p>
+<p>#| echo: false #| fig.cap: ” ” #| fig.align: “center” #| out.width: “800px”</p>
+<p>knitr::include_graphics(here::here(“figs”, “big3_ranking_timeline.png”))</p>
+<p>The “New 2”—Carlos Alcaraz and Jannik Sinner—have risen to the top of the game in the last few years, bringing new faces to the men’s tennis landscape. Both have established themselves as standouts of the younger generation, challenging the dominance of older players.</p>
+<p><br></p>
+<p>The visualization below shows the ATP singles ranking trajectory for Carlos Alcaraz and Jannik Sinner, with circles representing their Grand Slam wins. Alcaraz emerged as a frontrunner, rising to the top of the game slightly before Sinner, accumulating a few more Grand Slam titles during this time period. However, Sinner has recently surged ahead in the rankings, signaling the beginning of a fierce rivalry for the world No.&nbsp;1 spot between these two rising stars.</p>
+<p><br></p>
+<p>#| echo: false #| fig.cap: ” ” #| fig.align: “center” #| out.width: “800px”</p>
+<p>knitr::include_graphics(here::here(“figs”, “new2_ranking_timeline1.png”))</p>
+<p>Beyond visualizing the movement of these five players’ singles rankings over time, we can also examine the percentage of weeks each player has spent at the No.&nbsp;1 spot throughout their career. The bar chart below highlights this data, showcasing how Djokovic has spent approximately 37.1% of his career as the world No.&nbsp;1. This is evidence of his sustained dominance at the top of the game and consistency year after year, as rankings are a great data-driven measure of performance based on a player’s results against a variety of different opponents.</p>
+<p><br></p>
+<p>It is also interesting to note how Djokovic, Federer, and Nadal make up around 80% of the total weeks spent at No.&nbsp;1 in their careers. This remarkable statistic not only underscores their individual dominance, but their role in defining modern men’s tennis.</p>
+<p><br></p>
+<p>#| echo: false #| fig.cap: ” ” #| fig.align: “center” #| out.width: “800px”</p>
+<p>knitr::include_graphics(here::here(“figs”, “number1_percentage.png”))</p>
 
 
 
@@ -256,8 +277,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -368,7 +387,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {

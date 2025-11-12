@@ -1,17 +1,17 @@
 [
   {
-    "objectID": "pages/my_fourth_page.html",
-    "href": "pages/my_fourth_page.html",
-    "title": "Page example",
+    "objectID": "tennis_homepage.html",
+    "href": "tennis_homepage.html",
+    "title": "tennis_homepage",
     "section": "",
-    "text": "# do not display the code on your website\n\n# read and clean the data\n#source( &lt;-- data cleaning path and file name --&gt;)\n\n# read cleaned and plot data\n#source( &lt;-- data plotting file name --&gt;)"
+    "text": "Since 1963, tennis has given us legends, rivalries, and unforgettable matches. This site brings those stories to life through data—visualized in ways that highlight patterns, rivalries, and the evolution of the sport.\nAt the center of modern tennis history stand Roger Federer, Rafael Nadal, and Novak Djokovic—the Big Three. Their rivalry has defined an era, producing countless classics and pushing each player to new heights. Together, they’ve amassed dozens of Grand Slam titles, spent record-breaking weeks at World No. 1, and redefined what dominance looks like in tennis.\nAlongside them, a new generation has begun to take the stage. Carlos Alcaraz and Jannik Sinner are not just rising stars—they’re the future of the sport. With data-driven insights, we’ll explore how their early careers compare to the Big Three, and what their budding rivalry might mean for tennis in the years ahead.\nOur data stretches back over six decades and includes every player since 1963—their names, heights, countries of origin, and more. By combining rich historical records with modern performance metrics, this project offers both context and clarity to tennis’s biggest debates."
   },
   {
-    "objectID": "pages/my_fourth_page.html#sub-section-level-2",
-    "href": "pages/my_fourth_page.html#sub-section-level-2",
-    "title": "Page example",
-    "section": "Sub-Section (Level #2)",
-    "text": "Sub-Section (Level #2)\n\nOur Plot! (Level #3)\nThe plot may feel stretched. If this is the case, you will want to determine good plot-saving settings for a website.\nFor example, controlling the plot saving parameter argument of ggplot::sggsave() using units = \"px\" (pixels) and specifying the width (in pixels) and height (in pixels) may be a good approach. You can determine what pixel dimensions would be good for a webpage by doing and Internet search.\nExample:\n\nwidth    = 1600\nheight   = 1100\nunits    = \"px\"\ndpi      = 200 # or \"retina\"\n\n\n\n\nPlot with width configurations\n\n\n\nOur Plot with width configurations"
+    "objectID": "pages/ranking_page.html",
+    "href": "pages/ranking_page.html",
+    "title": "ATP Singles Ranking",
+    "section": "",
+    "text": "The ATP singles ranking is a point-based system that ranks men’s professional tennis players based on their performance in official singles tournaments over the preceding 52 weeks. A player’s best 19 tournament results determines their ranking, with points awarded based on the level of the tournament (e.g., Grand Slam, ATP Masters 1000, ATP 500, ATP 250, etc.) and how far a player advances. Points from tournaments are dropped after 52 weeks and replaced with current performances, meaning rankings can change weekly. Rankings are important for tournament eligibility and their seeding within the draw. The player with the highest number of points at the end of the year is crowned the year-end No. 1 player.\n\nThe “Big 3”—Novak Djokovic, Rafael Nadal, and Roger Federer—have been dominating the ATP Tour for the past two decades, a testament to their consistent presence at the top of the singles rankings.\n\nThe visualization below illustrates the career trajectory for these players’ singles rankings, with circles denoting their Grand Slam victories at each point in time. Federer dominated the early years, particularly from 2005-2010, as shown by a cluster of green circles coinciding with his peak ranking. On the other hand, Nadal’s Grand Slam wins appear to be more evenly distributed across his career, without any distinct ‘domination’ period. Djokovic, meanwhile, seems to find his prime later than both Federer and Nadal, reflecting his later rise to the top and younger age compared to the other two.\n\n#| echo: false #| fig.cap: ” ” #| fig.align: “center” #| out.width: “800px”\nknitr::include_graphics(here::here(“figs”, “big3_ranking_timeline.png”))\nThe “New 2”—Carlos Alcaraz and Jannik Sinner—have risen to the top of the game in the last few years, bringing new faces to the men’s tennis landscape. Both have established themselves as standouts of the younger generation, challenging the dominance of older players.\n\nThe visualization below shows the ATP singles ranking trajectory for Carlos Alcaraz and Jannik Sinner, with circles representing their Grand Slam wins. Alcaraz emerged as a frontrunner, rising to the top of the game slightly before Sinner, accumulating a few more Grand Slam titles during this time period. However, Sinner has recently surged ahead in the rankings, signaling the beginning of a fierce rivalry for the world No. 1 spot between these two rising stars.\n\n#| echo: false #| fig.cap: ” ” #| fig.align: “center” #| out.width: “800px”\nknitr::include_graphics(here::here(“figs”, “new2_ranking_timeline1.png”))\nBeyond visualizing the movement of these five players’ singles rankings over time, we can also examine the percentage of weeks each player has spent at the No. 1 spot throughout their career. The bar chart below highlights this data, showcasing how Djokovic has spent approximately 37.1% of his career as the world No. 1. This is evidence of his sustained dominance at the top of the game and consistency year after year, as rankings are a great data-driven measure of performance based on a player’s results against a variety of different opponents.\n\nIt is also interesting to note how Djokovic, Federer, and Nadal make up around 80% of the total weeks spent at No. 1 in their careers. This remarkable statistic not only underscores their individual dominance, but their role in defining modern men’s tennis.\n\n#| echo: false #| fig.cap: ” ” #| fig.align: “center” #| out.width: “800px”\nknitr::include_graphics(here::here(“figs”, “number1_percentage.png”))"
   },
   {
     "objectID": "pages/my_second_page.html",
@@ -68,6 +68,34 @@
     "title": "Key Directories",
     "section": "Blog Directory",
     "text": "Blog Directory\nThe blog directory contains files related to our project blog:\nblog/\n  _metadata.yml\n  index.qmd\n  posts/"
+  },
+  {
+    "objectID": "pages/my_first_page.html",
+    "href": "pages/my_first_page.html",
+    "title": "Page example",
+    "section": "",
+    "text": "Quarto files are structured similar to R Markdown files. You can bold and italicize text, create hyperlinks, and also bullet items among other things. There is a lot you can do with Quarto for building, website.\n\nFormatting\nUse headers\nWrite formatted content\nDisplaying plots and images\nLink to other websites\nLink to other pages on this site"
+  },
+  {
+    "objectID": "pages/my_first_page.html#header-level-2-tips-for-linkingdisplaying-figures-and-images.",
+    "href": "pages/my_first_page.html#header-level-2-tips-for-linkingdisplaying-figures-and-images.",
+    "title": "Page example",
+    "section": "Header Level 2: Tips for linking/displaying figures and images.",
+    "text": "Header Level 2: Tips for linking/displaying figures and images.\n\nHeader Level 3: Linking to a Plot/Fig\n\nWrite you code to create your plot and save it. Save this script in src/figs. The source code does not need to be on the website.\nEnsure that your plot is saved to figs/ by referencing the path with {here}.\nAt the top of the .qmd file for your page, add a code block that source()s the script that will generate the plot you wish displayed on that page.\n\nFor example:\nsource(here::here(\"figs\", \"point_mpg_by_wt.R\"))`\nMake sure to edit the code block so that the code runs only (no output).\nNOTE: Code blocks that appear in .qmd files will call .R files only. Do NOT embed code blocks in your .qmd file(s) that will process data or create plots directly. Reserve .qmd files for website text, sourcing script files, and calling .png plot files. Developers and engineers compartmentalize project elements and do not combine all content into a single files. Doing so creates many problems not limited to code breaking and code-repair problems, Git merge problems, etc. You will follow a similar practice of breaking the project into pieces, save those files, and push them to the remote repository weekly for your team members.\nThis code-source()ing step also ensures that plot(s) are (re)created when Quarto rendering the website build files. You certainly want this feature so that new website elements and files are built during the rendering process. A full website re-build, however, is unnecessary when no element of the website changes other than the images and figures embedded within it. As a result, re-builds are not always necessary and will increase update time."
+  },
+  {
+    "objectID": "pages/my_first_page.html#header-level-2-optional-circumventing-a-full-website-build",
+    "href": "pages/my_first_page.html#header-level-2-optional-circumventing-a-full-website-build",
+    "title": "Page example",
+    "section": "Header Level 2: (Optional) Circumventing a Full Website Build",
+    "text": "Header Level 2: (Optional) Circumventing a Full Website Build\nSometimes the main structure of your website is untouched but you have new data and you need to run a rebuild of your plots. Although re-rendering is not problematic, it might just take longer than you desire. If you don’t need to render the website and just want to build files, the following is a solution, though requires some extra work.\nTo avoid a full site rebuild (re-render) when you simply want to create and git push new plots:\n\nAdd your source()ing code to a separate file, for example, call_scripts/call_plot_scripts.qmd.\nAdd a code block to source individual .R files or all .R files in a directory.\n\nExample:\n#| include: false\n\n# source a script file that this page depends on\nsource(here::here(\"figs\", \"point_mpg_by_wt.R\"))\n\nThis .qmd file will render and create the .png files you need in your specified directory but the page will not be linked on your website. Technically, it will be visible at https://the_url/call_scripts/call_plot_scripts.html but this will be difficult to find. You can always remove the file or directory after rendering the website if you want to remove it completely.\n\n\nLink the plot .png file in your .qmd file.\n\nOnce you know the name and location of the file, you can reference it like this, where the .png file is being pulled from figs/:\n\n\n\na plot description\n\n\n\nLinking to Image Example\nSimilarly, save your image in a folder like images/, and use this format to show it:\n\n\n\nshort description if necessary"
+  },
+  {
+    "objectID": "pages/my_first_page.html#hyperlinks-to-internal-website-pages",
+    "href": "pages/my_first_page.html#hyperlinks-to-internal-website-pages",
+    "title": "Page example",
+    "section": "Hyperlinks to internal website pages",
+    "text": "Hyperlinks to internal website pages\n\nExternal Websites\nRefer to an outside url:\nText to display\n\n\nInternal website Pages\nRefer to the rendered HTML files:\n\nVisit the Home Page\nRead the About Page\nGot to another page\n\n\nTip: LInk to .html files and not the .qmd file."
   },
   {
     "objectID": "index.html",
@@ -133,32 +161,32 @@
     "text": "My post text goes here …"
   },
   {
-    "objectID": "pages/my_first_page.html",
-    "href": "pages/my_first_page.html",
+    "objectID": "pages/Tennis_homepage.html",
+    "href": "pages/Tennis_homepage.html",
+    "title": "Team Tennis Homepage",
+    "section": "",
+    "text": "Since 1963, tennis has given us legends, rivalries, and unforgettable matches. This site brings those stories to life through data—visualized in ways that highlight patterns, rivalries, and the evolution of the sport.\nAt the center of modern tennis history stand Roger Federer, Rafael Nadal, and Novak Djokovic—the Big Three. Their rivalry has defined an era, producing countless classics and pushing each player to new heights. Together, they’ve amassed dozens of Grand Slam titles, spent record-breaking weeks at World No. 1, and redefined what dominance looks like in tennis.\nAlongside them, a new generation has begun to take the stage. Carlos Alcaraz and Jannik Sinner are not just rising stars—they’re the future of the sport. With data-driven insights, we’ll explore how their early careers compare to the Big Three, and what their budding rivalry might mean for tennis in the years ahead.\nOur data stretches back over six decades and includes every player since 1963—their names, heights, countries of origin, and more. By combining rich historical records with modern performance metrics, this project offers both context and clarity to tennis’s biggest debates."
+  },
+  {
+    "objectID": "pages/Tennis_homepage.html#get-to-know-the-players",
+    "href": "pages/Tennis_homepage.html#get-to-know-the-players",
+    "title": "Team Tennis Homepage",
+    "section": "Get to know the players:",
+    "text": "Get to know the players:"
+  },
+  {
+    "objectID": "pages/my_fourth_page.html",
+    "href": "pages/my_fourth_page.html",
     "title": "Page example",
     "section": "",
-    "text": "Quarto files are structured similar to R Markdown files. You can bold and italicize text, create hyperlinks, and also bullet items among other things. There is a lot you can do with Quarto for building, website.\n\nFormatting\nUse headers\nWrite formatted content\nDisplaying plots and images\nLink to other websites\nLink to other pages on this site"
+    "text": "# do not display the code on your website\n\n# read and clean the data\n#source( &lt;-- data cleaning path and file name --&gt;)\n\n# read cleaned and plot data\n#source( &lt;-- data plotting file name --&gt;)"
   },
   {
-    "objectID": "pages/my_first_page.html#header-level-2-tips-for-linkingdisplaying-figures-and-images.",
-    "href": "pages/my_first_page.html#header-level-2-tips-for-linkingdisplaying-figures-and-images.",
+    "objectID": "pages/my_fourth_page.html#sub-section-level-2",
+    "href": "pages/my_fourth_page.html#sub-section-level-2",
     "title": "Page example",
-    "section": "Header Level 2: Tips for linking/displaying figures and images.",
-    "text": "Header Level 2: Tips for linking/displaying figures and images.\n\nHeader Level 3: Linking to a Plot/Fig\n\nWrite you code to create your plot and save it. Save this script in src/figs. The source code does not need to be on the website.\nEnsure that your plot is saved to figs/ by referencing the path with {here}.\nAt the top of the .qmd file for your page, add a code block that source()s the script that will generate the plot you wish displayed on that page.\n\nFor example:\nsource(here::here(\"figs\", \"point_mpg_by_wt.R\"))`\nMake sure to edit the code block so that the code runs only (no output).\nNOTE: Code blocks that appear in .qmd files will call .R files only. Do NOT embed code blocks in your .qmd file(s) that will process data or create plots directly. Reserve .qmd files for website text, sourcing script files, and calling .png plot files. Developers and engineers compartmentalize project elements and do not combine all content into a single files. Doing so creates many problems not limited to code breaking and code-repair problems, Git merge problems, etc. You will follow a similar practice of breaking the project into pieces, save those files, and push them to the remote repository weekly for your team members.\nThis code-source()ing step also ensures that plot(s) are (re)created when Quarto rendering the website build files. You certainly want this feature so that new website elements and files are built during the rendering process. A full website re-build, however, is unnecessary when no element of the website changes other than the images and figures embedded within it. As a result, re-builds are not always necessary and will increase update time."
-  },
-  {
-    "objectID": "pages/my_first_page.html#header-level-2-optional-circumventing-a-full-website-build",
-    "href": "pages/my_first_page.html#header-level-2-optional-circumventing-a-full-website-build",
-    "title": "Page example",
-    "section": "Header Level 2: (Optional) Circumventing a Full Website Build",
-    "text": "Header Level 2: (Optional) Circumventing a Full Website Build\nSometimes the main structure of your website is untouched but you have new data and you need to run a rebuild of your plots. Although re-rendering is not problematic, it might just take longer than you desire. If you don’t need to render the website and just want to build files, the following is a solution, though requires some extra work.\nTo avoid a full site rebuild (re-render) when you simply want to create and git push new plots:\n\nAdd your source()ing code to a separate file, for example, call_scripts/call_plot_scripts.qmd.\nAdd a code block to source individual .R files or all .R files in a directory.\n\nExample:\n#| include: false\n\n# source a script file that this page depends on\nsource(here::here(\"figs\", \"point_mpg_by_wt.R\"))\n\nThis .qmd file will render and create the .png files you need in your specified directory but the page will not be linked on your website. Technically, it will be visible at https://the_url/call_scripts/call_plot_scripts.html but this will be difficult to find. You can always remove the file or directory after rendering the website if you want to remove it completely.\n\n\nLink the plot .png file in your .qmd file.\n\nOnce you know the name and location of the file, you can reference it like this, where the .png file is being pulled from figs/:\n\n\n\na plot description\n\n\n\nLinking to Image Example\nSimilarly, save your image in a folder like images/, and use this format to show it:\n\n\n\nshort description if necessary"
-  },
-  {
-    "objectID": "pages/my_first_page.html#hyperlinks-to-internal-website-pages",
-    "href": "pages/my_first_page.html#hyperlinks-to-internal-website-pages",
-    "title": "Page example",
-    "section": "Hyperlinks to internal website pages",
-    "text": "Hyperlinks to internal website pages\n\nExternal Websites\nRefer to an outside url:\nText to display\n\n\nInternal website Pages\nRefer to the rendered HTML files:\n\nVisit the Home Page\nRead the About Page\nGot to another page\n\n\nTip: LInk to .html files and not the .qmd file."
+    "section": "Sub-Section (Level #2)",
+    "text": "Sub-Section (Level #2)\n\nOur Plot! (Level #3)\nThe plot may feel stretched. If this is the case, you will want to determine good plot-saving settings for a website.\nFor example, controlling the plot saving parameter argument of ggplot::sggsave() using units = \"px\" (pixels) and specifying the width (in pixels) and height (in pixels) may be a good approach. You can determine what pixel dimensions would be good for a webpage by doing and Internet search.\nExample:\n\nwidth    = 1600\nheight   = 1100\nunits    = \"px\"\ndpi      = 200 # or \"retina\"\n\n\n\n\nPlot with width configurations\n\n\n\nOur Plot with width configurations"
   },
   {
     "objectID": "pages/my_third_page.html",
