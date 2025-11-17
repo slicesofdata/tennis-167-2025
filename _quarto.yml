@@ -1,6 +1,6 @@
 project:
   type: website
-  output-dir: docs      # use docs/ for githubpages, other cases use _site/
+  output-dir: docs
   render:
 #    - "*.{qmd,R,py}"
     - "*.qmd"           # render all *.qmd files
@@ -19,8 +19,13 @@ project:
   #  - figs/    # ensures that the .R files in figs/ are rendered in a website build
 
   # settings for previewing the website
+
+    - "index.qmd"
+    - "about.qmd"
+    - "pages/*.qmd" # render all *.qmd files in pages/
+    
   preview:
-    port: 167
+    port: 1111
     browser: true
     navigate: true
 
@@ -53,12 +58,12 @@ website:
 
   # add webpage description
   description: ""
-
+  title: "Tennis"
   navbar:
-    left:
-      # the index file
-      - text: "Index Page Text" # use empty string to be blank
-        href: index.qmd
+    left: # the right side of nav bar
+      - href: index.qmd
+        text: Home
+      - about.qmd
 
       # adding another page
       - text: "First Page Text"
@@ -114,4 +119,27 @@ format:
 
 # set quarto optional editor preference: source or visual
 #editor: source
+
+      - text: "*The Big 3*"  
+        menu:
+        - text: "ATP Singles Ranking"
+          href: pages/page1.qmd
+        - text: "**Major vs Non-major Wins**"
+          href: pages/page2.qmd
+        - text: "**Limitations of Visualization**"
+          href: pages/hw06eisenmanl.qmd
+        - text: "**More Visualizations**"
+          href: pages/hw05eisenmanl_final.qmd
+          
+    right:  # the right side of nav bar
+      - href: index.qmd
+        text: Home
+      - about.qmd
+
+format:
+  html:
+    theme: 
+      light: [cosmo, styles/example-light.scss] # location of light theme
+      dark: [cosmo, styles/example-dark.scss]   # location of dark theme
+    toc: true # if you want a table of contents
 
