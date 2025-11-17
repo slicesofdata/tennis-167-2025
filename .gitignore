@@ -52,7 +52,7 @@ _ignore_this_dir/*
 #src/*
 
 # but keep the directory itself with an empty .gitkeep or .gitignore
-#!api/.gitkeep 
+#!api/.gitkeep
 !data/.gitkeep
 !figs/.gitkeep
 !src/.gitkeep
@@ -61,7 +61,7 @@ _ignore_this_dir/*
 
 ## image/pdf files ##
 #*.pdf
-#*.png 
+#*.png
 *.tiff
 #*.jpg
 #*.jpeg
@@ -145,6 +145,7 @@ Thumbs.db
 *.so
 
 ##############################################################################
+<<<<<<< HEAD
 src/data/joined_futures.R
 src/data/using_starter_script_file.R
 src/figs/examplehw3.png
@@ -180,4 +181,8 @@ src/functions/save_plot_png.R
 
 >>>>>>> 50cdd87 (Add .gitignore to ignore src files)
 
+
+=======
+
+**/*.quarto_ipynb
 

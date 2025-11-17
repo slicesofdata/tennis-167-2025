@@ -1,0 +1,99 @@
+/*-- scss:defaults --*/
+
+// Base document colors
+
+$background-color: #FDFBF7;
+
+// body
+$body-bg: #FDFBF7;	  //The page background color.
+$body-color: #000000; //The page text color.
+
+// links
+// hyperlinks
+$navlink-color: #FDFBF7; 
+$link-color: #fc346f;	   //The link color
+
+// navigation bar
+$navbar-bg: #405057; 	//The background color of the navbar. Defaults to the theme’s $primary color.
+$navbar-fg: #41d7a7;	//The color of foreground elements (text and navigation) on the navbar. If not specified, a contrasting color is automatically computed.
+$navbar-hl: #fc346f;	//The highlight color for links in the navbar. If not specified, the $link-color is used or a contrasting color is automatically computed.
+
+// sidebar bar
+$sidebar-bg: #FDFBF7; //The background color for a sidebar. Defaults to $light except when a navbar is present or when the style is floating. In that case it defaults to the $body-bg color.
+$sidebar-fg: #41d7a7;	//The color of foreground elements (text and navigation) on the sidebar. If not specified, a contrasting color is automatically computed.
+$sidebar-hl: #fc346f;	//The highlight color for links in the sidebar. If not specified, the $link-color is used.
+
+// footer
+$footer-bg: #FDFBF7; 	//The background color for the footer. Defaults to the $body-bg color.
+$footer-fg: #41d7a7;	//The color of foreground elements (text and navigation) on the footer. If not specified, a contrasting color is automatically computed.
+
+body {
+  background-color: $body-bg; 
+  color: $body-color;  
+  font-family: Arial, sans-serif; 
+  line-height: 1.6; 
+  margin: 0;         
+  padding: 0;       
+}
+
+.navbar {
+  //background-color: darken($body-bg, 10%) !important;
+  a.nav-link {
+    color: $navlink-color !important;
+    &:hover {
+      color: $navbar-hl !important;
+    }
+  }
+}
+
+.dropdown-menu {
+  background-color: $body-bg !important; // dropdown background
+  border: none !important;              // remove white borders
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important; // darker shadow
+}
+
+.dropdown-item {
+  color: $body-color  !important; 
+  &:hover {
+    background-color: $body-bg !important; 
+    color: $navbar-hl !important; // on hover
+  }
+}
+
+.navbar a {
+  color: $navbar-fg; 
+  text-decoration: none; 
+  padding: 5px 10px; 
+}
+
+
+
+footer {
+  background-color: $body-bg; 
+  color: #FDFBF7; 
+  padding: 10px 20px; 
+  text-align: center; 
+  position: fixed; 
+  width: 100%; 
+  bottom: 0; 
+  border-top: 2px solid #000000; 
+}
+
+pre {
+  background-color: $body-bg; 
+  border-color: #000000; 
+  border-width: 1px; 
+  border-style: solid; 
+  padding: 10px; 
+  overflow-x: auto; 
+}
+
+//remove underlines from all links site-wide (not just navbar/dropdowns), add
+a {
+  text-decoration: none !important;
+  &:hover {
+    text-decoration: none !important;
+  }
+}
+
+
