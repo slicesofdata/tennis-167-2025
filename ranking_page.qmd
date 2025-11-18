@@ -25,12 +25,14 @@ cleaned_rankings_data <- readRDS(file = here::here("data", "processed", "cleaned
 atp_singles_data <- readRDS(file = here::here("data", "processed", "atp_singles.Rds"))
 ```
 
+
 ```{r}
 #| message: false
 #| warning: false
 #| include: false
 source(here::here("ranking_timeline.R"))
 ```
+
 
 ```{r}
 #| echo: false
@@ -41,13 +43,16 @@ source(here::here("ranking_timeline.R"))
 knitr::include_graphics(here::here("figs", "big3_ranking_timeline.png"))
 ```
 
+
 The "New 2"—Carlos Alcaraz and Jannik Sinner—have risen to the top of the game in the last few years, bringing new faces to the men's tennis landscape. Both have established themselves as standouts of the younger generation, challenging the dominance of older players.
+
 
 <br>
 
 The visualization below shows the ATP singles ranking trajectory for Carlos Alcaraz and Jannik Sinner, with circles representing their Grand Slam wins. Alcaraz emerged as a frontrunner, rising to the top of the game slightly before Sinner, accumulating a few more Grand Slam titles during this time period. However, Sinner has recently surged ahead in the rankings, signaling the beginning of a fierce rivalry for the world No. 1 spot between these two rising stars.
 
 <br>
+
 
 ```{r}
 #| echo: false
@@ -64,6 +69,7 @@ Beyond visualizing the movement of these five players' singles rankings over tim
 
 It is also interesting to note how Djokovic, Federer, and Nadal make up around 80% of the total weeks spent at No. 1 in their careers. This remarkable statistic not only underscores their individual dominance, but their role in defining modern men's tennis.
 
+
 <br>
 
 ```{r}
@@ -74,3 +80,4 @@ It is also interesting to note how Djokovic, Federer, and Nadal make up around 8
 
 knitr::include_graphics(here::here("figs", "number1_percentage.png"))
 ```
+

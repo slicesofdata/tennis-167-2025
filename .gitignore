@@ -146,6 +146,7 @@ Thumbs.db
 
 ##############################################################################
 <<<<<<< HEAD
+<<<<<<< HEAD
 src/data/joined_futures.R
 src/data/using_starter_script_file.R
 src/figs/examplehw3.png
@@ -182,3 +183,7 @@ src/functions/save_plot_png.
 
 **/*.quarto_ipynb
 
+=======
+
+**/*.quarto_ipynb
+>>>>>>> 9a01d62743ea877b881452ee4133aefb8fc22401

@@ -2,14 +2,14 @@ project:
   type: website
   output-dir: docs
   render:
-#    - "*.{qmd,R,py}"
+    # - "*.{qmd,R,py}"
     - "*.qmd"           # render all *.qmd files
     - "!site/this_dir/" # don't render a directory
 
     #- "!call_scripts/" # don't render a directory
   #pre-render: Rscript prerender.R #load_libraries.R
   # after rendering completes, script that removes .R files from the docs/ folder.
-  post-render: Rscript cleanup/clean_docs_dir.R
+  # post-render: Rscript cleanup/clean_docs_dir.R
 
   #resources:
   #  - "webr-serviceworker.js"
@@ -20,10 +20,6 @@ project:
 
   # settings for previewing the website
 
-    - "index.qmd"
-    - "about.qmd"
-    - "pages/*.qmd" # render all *.qmd files in pages/
-    
   preview:
     port: 1111
     browser: true
@@ -57,12 +53,13 @@ website:
 
 
   # add webpage description
-  description: ""
-  title: "Tennis"
+  description: "Blah Blah Blah"
+  
   navbar:
-    left: # the right side of nav bar
+    left: 
+      # the right side of nav bar
       - href: index.qmd
-        text: Home
+        text: "Home"
       - about.qmd
 
       # adding another page
@@ -110,36 +107,4 @@ format:
     include-in-header: "fonts/fontawesome.html"
     #mainfont: arial #Nunito
     #fontsize: 1.1rem # 1.2rem
-
-
-# for branding
-#brand:
- # light: brand/light.yml
- # dark: brand/dark.yml
-
-# set quarto optional editor preference: source or visual
-#editor: source
-
-      - text: "*The Big 3*"  
-        menu:
-        - text: "ATP Singles Ranking"
-          href: pages/page1.qmd
-        - text: "**Major vs Non-major Wins**"
-          href: pages/page2.qmd
-        - text: "**Limitations of Visualization**"
-          href: pages/hw06eisenmanl.qmd
-        - text: "**More Visualizations**"
-          href: pages/hw05eisenmanl_final.qmd
-          
-    right:  # the right side of nav bar
-      - href: index.qmd
-        text: Home
-      - about.qmd
-
-format:
-  html:
-    theme: 
-      light: [cosmo, styles/example-light.scss] # location of light theme
-      dark: [cosmo, styles/example-dark.scss]   # location of dark theme
-    toc: true # if you want a table of contents
 
