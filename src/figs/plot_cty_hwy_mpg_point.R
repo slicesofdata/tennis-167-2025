@@ -1,7 +1,7 @@
 ################################################################################
 # Script Name: plot_cty_hwy_mpg_point.R
-# Author: slicesofdata
-# GitHub: slicesofdata
+# Author: Lindsay
+# GitHub: lindsayeisenman
 # Date Created: 9/11/25
 #
 # Purpose: This script will: 
@@ -20,6 +20,7 @@
 ################################################################################
 # Load necessary libraries/source any function directories
 library(ggplot2)
+library(quarto)
 
 # source a plot saving function script for file uniformity 
 # source a plot theme

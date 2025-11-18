@@ -1,7 +1,7 @@
 ################################################################################
-# Script Name:
-# Author:
-# GitHub:
+# Script Name: 
+# Author: Lindsay Eisenman
+# GitHub: lindsayeisenman
 # Date Created:
 #
 # Purpose: This script ...

@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>. – Website Title</title>
+<title>Team Tennis Homepage – Website Title</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -35,10 +35,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-4db7c7701a6062a1e0d63aaf3d3efda3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -89,8 +89,8 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
-<span class="menu-text">Index Page Text</span></a>
+    <a class="nav-link active" href="../pages/Tennis_homepage.html" aria-current="page"> 
+<span class="menu-text">Tennis Homepage</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../pages/my_first_page.html"> 
@@ -112,6 +112,10 @@ ul.task-list li input[type="checkbox"] {
         <li>
     <a class="dropdown-item" href="../pages/team_test_page.html">
  <span class="dropdown-text">Exercise Test Page</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../pages/ranking_page.html">
+ <span class="dropdown-text">Ranking Page</span></a>
   </li>  
     </ul>
   </li>
@@ -141,15 +145,21 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#get-to-know-the-players" id="toc-get-to-know-the-players" class="nav-link active" data-scroll-target="#get-to-know-the-players">Get to know the players:</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">.</h1>
+<h1 class="title">Team Tennis Homepage</h1>
 </div>
 
 
@@ -166,12 +176,15 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<!--
-Although the code will run, this page will not appear as a page your website 
-because its not references in the _quarto.yml 
--->
+<p>Since 1963, tennis has given us legends, rivalries, and unforgettable matches. This site brings those stories to life through data—visualized in ways that highlight patterns, rivalries, and the evolution of the sport.</p>
+<p>At the center of modern tennis history stand Roger Federer, Rafael Nadal, and Novak Djokovic—the Big Three. Their rivalry has defined an era, producing countless classics and pushing each player to new heights. Together, they’ve amassed dozens of Grand Slam titles, spent record-breaking weeks at World No.&nbsp;1, and redefined what dominance looks like in tennis.</p>
+<p>Alongside them, a new generation has begun to take the stage. Carlos Alcaraz and Jannik Sinner are not just rising stars—they’re the future of the sport. With data-driven insights, we’ll explore how their early careers compare to the Big Three, and what their budding rivalry might mean for tennis in the years ahead.</p>
+<p>Our data stretches back over six decades and includes every player since 1963—their names, heights, countries of origin, and more. By combining rich historical records with modern performance metrics, this project offers both context and clarity to tennis’s biggest debates.</p>
+<section id="get-to-know-the-players" class="level2">
+<h2 class="anchored" data-anchor-id="get-to-know-the-players">Get to know the players:</h2>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -256,8 +269,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -368,7 +379,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
