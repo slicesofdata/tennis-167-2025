@@ -1,17 +1,17 @@
 [
   {
-    "objectID": "pages/team_test_page.html",
-    "href": "pages/team_test_page.html",
-    "title": "Page example",
+    "objectID": "ranking_page.html",
+    "href": "ranking_page.html",
+    "title": "ATP Singles Ranking",
     "section": "",
-    "text": "# do not display the code block on your website. \n# to disable, select the 'show nothing run code' option from the gear set of options \n\n# read and clean the data\n#source( &lt;-- data cleaning path and file name --&gt;)\n\n# read cleaned and plot data\n#source( &lt;-- data plotting file name --&gt;)"
+    "text": "The ATP singles ranking is a point-based system that ranks men’s professional tennis players based on their performance in official singles tournaments over the preceding 52 weeks. A player’s best 19 tournament results determines their ranking, with points awarded based on the level of the tournament (e.g., Grand Slam, ATP Masters 1000, ATP 500, ATP 250, etc.) and how far a player advances. Points from tournaments are dropped after 52 weeks and replaced with current performances, meaning rankings can change weekly. Rankings are important for tournament eligibility and their seeding within the draw. The player with the highest number of points at the end of the year is crowned the year-end No. 1 player.\n\nThe “Big 3”—Novak Djokovic, Rafael Nadal, and Roger Federer—have been dominating the ATP Tour for the past two decades, a testament to their consistent presence at the top of the singles rankings.\n\nThe visualization below illustrates the career trajectory for these players’ singles rankings, with circles denoting their Grand Slam victories at each point in time. Federer dominated the early years, particularly from 2005-2010, as shown by a cluster of green circles coinciding with his peak ranking. On the other hand, Nadal’s Grand Slam wins appear to be more evenly distributed across his career, without any distinct ‘domination’ period. Djokovic, meanwhile, seems to find his prime later than both Federer and Nadal, reflecting his later rise to the top and younger age compared to the other two.\n\n\n\n\n\n\n\n\n\n\nThe “New 2”—Carlos Alcaraz and Jannik Sinner—have risen to the top of the game in the last few years, bringing new faces to the men’s tennis landscape. Both have established themselves as standouts of the younger generation, challenging the dominance of older players.\n\nThe visualization below shows the ATP singles ranking trajectory for Carlos Alcaraz and Jannik Sinner, with circles representing their Grand Slam wins. Alcaraz emerged as a frontrunner, rising to the top of the game slightly before Sinner, accumulating a few more Grand Slam titles during this time period. However, Sinner has recently surged ahead in the rankings, signaling the beginning of a fierce rivalry for the world No. 1 spot between these two rising stars.\n\n\n\n\n\n\n\n\n\n\nBeyond visualizing the movement of these five players’ singles rankings over time, we can also examine the percentage of weeks each player has spent at the No. 1 spot throughout their career. The bar chart below highlights this data, showcasing how Djokovic has spent approximately 37.1% of his career as the world No. 1. This is evidence of his sustained dominance at the top of the game and consistency year after year, as rankings are a great data-driven measure of performance based on a player’s results against a variety of different opponents.\n\nIt is also interesting to note how Djokovic, Federer, and Nadal make up around 80% of the total weeks spent at No. 1 in their careers. This remarkable statistic not only underscores their individual dominance, but their role in defining modern men’s tennis."
   },
   {
-    "objectID": "pages/team_test_page.html#sub-section-level-2",
-    "href": "pages/team_test_page.html#sub-section-level-2",
-    "title": "Page example",
-    "section": "Sub-Section (Level #2)",
-    "text": "Sub-Section (Level #2)\n\nOur Plot! (Level #3)\nThe plot may feel stretched. If this is the case, you will want to determine good plot-saving settings for a website.\nFor example, controlling the plot saving parameter argument of ggplot::sggsave() using units = \"px\" (pixels) and specifying the width (in pixels) and height (in pixels) may be a good approach. You can determine what pixel dimensions would be good for a webpage by doing and Internet search.\nExample:\n\nwidth    = 1600\nheight   = 1100\nunits    = \"px\"\ndpi      = 200 # or \"retina\"\n\n\n\n\n\nsome caption\n\n\n\n\nPlot with width configurations\n\n\n\na different caption\n\n\n\n\nOur Plot with width configurations and no caption"
+    "objectID": "pages/ranking_page.html",
+    "href": "pages/ranking_page.html",
+    "title": "ATP Singles Ranking",
+    "section": "",
+    "text": "The ATP singles ranking is a point-based system that ranks men’s professional tennis players based on their performance in official singles tournaments over the preceding 52 weeks. A player’s best 19 tournament results determines their ranking, with points awarded based on the level of the tournament (e.g., Grand Slam, ATP Masters 1000, ATP 500, ATP 250, etc.) and how far a player advances. Points from tournaments are dropped after 52 weeks and replaced with current performances, meaning rankings can change weekly. Rankings are important for tournament eligibility and their seeding within the draw. The player with the highest number of points at the end of the year is crowned the year-end No. 1 player.\n\nThe “Big 3”—Novak Djokovic, Rafael Nadal, and Roger Federer—have been dominating the ATP Tour for the past two decades, a testament to their consistent presence at the top of the singles rankings.\n\nThe visualization below illustrates the career trajectory for these players’ singles rankings, with circles denoting their Grand Slam victories at each point in time. Federer dominated the early years, particularly from 2005-2010, as shown by a cluster of green circles coinciding with his peak ranking. On the other hand, Nadal’s Grand Slam wins appear to be more evenly distributed across his career, without any distinct ‘domination’ period. Djokovic, meanwhile, seems to find his prime later than both Federer and Nadal, reflecting his later rise to the top and younger age compared to the other two.\n\n\n\n\n\n\n\n\n\n\nThe “New 2”—Carlos Alcaraz and Jannik Sinner—have risen to the top of the game in the last few years, bringing new faces to the men’s tennis landscape. Both have established themselves as standouts of the younger generation, challenging the dominance of older players.\n\nThe visualization below shows the ATP singles ranking trajectory for Carlos Alcaraz and Jannik Sinner, with circles representing their Grand Slam wins. Alcaraz emerged as a frontrunner, rising to the top of the game slightly before Sinner, accumulating a few more Grand Slam titles during this time period. However, Sinner has recently surged ahead in the rankings, signaling the beginning of a fierce rivalry for the world No. 1 spot between these two rising stars.\n\n\n\n\n\n\n\n\n\n\nBeyond visualizing the movement of these five players’ singles rankings over time, we can also examine the percentage of weeks each player has spent at the No. 1 spot throughout their career. The bar chart below highlights this data, showcasing how Djokovic has spent approximately 37.1% of his career as the world No. 1. This is evidence of his sustained dominance at the top of the game and consistency year after year, as rankings are a great data-driven measure of performance based on a player’s results against a variety of different opponents.\n\nIt is also interesting to note how Djokovic, Federer, and Nadal make up around 80% of the total weeks spent at No. 1 in their careers. This remarkable statistic not only underscores their individual dominance, but their role in defining modern men’s tennis."
   },
   {
     "objectID": "pages/page1.html",
@@ -58,7 +58,7 @@
   {
     "objectID": "pages/hw05eisenmanl_final.html",
     "href": "pages/hw05eisenmanl_final.html",
-    "title": "Tennis",
+    "title": "Website Title",
     "section": "",
     "text": "Homework #5: Lindsay Eisenman\n\n\n\n\n\nPlot 1\n\n\n\n\n\n\n\n\n\nPlot 2\n\n\n\n\n\n\n\n\n\nPlot 3"
   },
@@ -105,6 +105,13 @@
     "text": "ggplot2 Reference\nTips for website pages Other\nQuarto Documentation\nQuarto Websites\nTheming with a _brand.yml, example here\nMore on Brand YML\nOther Theming"
   },
   {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "My blog",
+    "section": "",
+    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nMy great title\n\n\n\ndata\n\ndogs\n\nanimals\n\n\n\n\n\n\n\n\n\nJan 1, 2025\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About Website Title",
@@ -112,9 +119,30 @@
     "text": "This site …\nSome about page tips are also available."
   },
   {
+    "objectID": "blog/posts/firstpost.html",
+    "href": "blog/posts/firstpost.html",
+    "title": "My great title",
+    "section": "",
+    "text": "My post text goes here …"
+  },
+  {
+    "objectID": "pages/Tennis_homepage.html",
+    "href": "pages/Tennis_homepage.html",
+    "title": "Team Tennis Homepage",
+    "section": "",
+    "text": "Since 1963, tennis has given us legends, rivalries, and unforgettable matches. This site brings those stories to life through data—visualized in ways that highlight patterns, rivalries, and the evolution of the sport.\nAt the center of modern tennis history stand Roger Federer, Rafael Nadal, and Novak Djokovic—the Big Three. Their rivalry has defined an era, producing countless classics and pushing each player to new heights. Together, they’ve amassed dozens of Grand Slam titles, spent record-breaking weeks at World No. 1, and redefined what dominance looks like in tennis.\nAlongside them, a new generation has begun to take the stage. Carlos Alcaraz and Jannik Sinner are not just rising stars—they’re the future of the sport. With data-driven insights, we’ll explore how their early careers compare to the Big Three, and what their budding rivalry might mean for tennis in the years ahead.\nOur data stretches back over six decades and includes every player since 1963—their names, heights, countries of origin, and more. By combining rich historical records with modern performance metrics, this project offers both context and clarity to tennis’s biggest debates."
+  },
+  {
+    "objectID": "pages/Tennis_homepage.html#get-to-know-the-players",
+    "href": "pages/Tennis_homepage.html#get-to-know-the-players",
+    "title": "Team Tennis Homepage",
+    "section": "Get to know the players:",
+    "text": "Get to know the players:"
+  },
+  {
     "objectID": "pages/hw06eisenmanl.html",
     "href": "pages/hw06eisenmanl.html",
-    "title": "Tennis",
+    "title": "Website Title",
     "section": "",
     "text": "Homework #6: Lindsay Eisenman\n\nLimitations associated with the below visualization:  - Only includes data from the years 2022-2025 and top 10 rankings  - Infrequent changes in the data result in flat sections in the graph  - Difficult to draw meaningful conclusions about performance from rankings \n\nHere is the code created to clean the Alcaraz and Sinner data:\ncleaneddata_alcaraz &lt;- cleaned_rankings_data %&gt;%  mutate(dob = as.Date(as.character(dob), format = “%Y%m%d”)) %&gt;%  mutate(ranking_date = as.Date(as.character(ranking_date), format = “%Y%m%d”)) %&gt;%  mutate(height = as.numeric(height)) %&gt;%  filter(name_last == “Alcaraz”) %&gt;%  filter(name_first == “Carlos”) %&gt;%  mutate(age = as.numeric((ranking_date - dob) / 365.25))  cleaneddata_alcaraz \ncleaneddata_sinner &lt;- cleaned_rankings_data %&gt;%  mutate(dob = as.Date(as.character(dob), format = “%Y%m%d”)) %&gt;%  mutate(ranking_date = as.Date(as.character(ranking_date), format = “%Y%m%d”)) %&gt;%  mutate(height = as.numeric(height)) %&gt;%  filter(name_last == “Sinner”) %&gt;%  filter(name_first == “Jannik”) %&gt;%  mutate(age = as.numeric((ranking_date - dob) / 365.25))  cleaneddata_sinner \n\nHere is the code to create the visualization using the aboved cleaned data:\nnew2_ranking_timeline &lt;- ggplot(mapping = aes(x = ranking_date, y = rank)) +  geom_line(data = cleaneddata_sinner, aes(color = “Sinner”)) +  geom_line(data = cleaneddata_alcaraz, aes(color = “Alcaraz”)) +  labs(x = “Date”, y = “Ranking (1 = Highest)”, color = “Player”,  title = “ATP Singles Ranking: Alcaraz vs Sinner (2022-2025)”) +  scale_color_manual(values = c(“Sinner” = “navy”,  “Alcaraz” = “orange”)) +  scale_x_date(limits = as.Date(c(“2022-01-01”, Sys.Date()))) +  scale_y_reverse(limits = c(10,1),  breaks = 10:1,  labels = scales::number_format(accuracy = 1)) +  annotate(“point”, x = as.Date(“2024-01-28”), y = 4, size = 1) +  annotate(“text”, x = as.Date(“2024-01-28”), y = 4.25,  label = “Australian Open”,  size = 3) + #this adds a point and text to show the sinner’s AO win  annotate(“point”, x = as.Date(“2024-09-6”), y = 1, size = 1) +  annotate(“text”, x = as.Date(“2024-09-6”), y = 1.25, label = “US Open”,  size = 3) +  annotate(“point”, x = as.Date(“2022-09-11”), y = 1, size = 1) +  annotate(“text”, x = as.Date(“2022-09-11”), y = 1.25,  label = “US Open”,  size = 3) +  annotate(“point”, x = as.Date(“2023-09-16”), y = 2, size = 1) +  annotate(“text”, x = as.Date(“2023-09-16”), y = 2.25,  label = “Wimbledon”,  size = 3) +  annotate(“point”, x = as.Date(“2024-06-09”), y = 2, size = 1) +  annotate(“text”, x = as.Date(“2024-06-09”), y = 2.25,  label = “French Open”,  size = 3) +  annotate(“point”, x = as.Date(“2024-07-14”), y = 3, size = 1) +  annotate(“text”, x = as.Date(“2024-07-14”), y = 3.25,  label = “Wimbledon”,  size = 3) +  theme_classic()  new2_ranking_timeline \n\n\n\n\n\n\nPlot 1\n\n\n\n\n\nI used geom_line for this visualization because this is time-series data and I wanted to visualize the trendline and compare the rankings between both players.\n\nInstead of geom_line, I could have also used geom_smooth what provides the following:   Advantages:  - Automatically fits and displays a trend line that reveal patterns in the data  - Reduces noise by summarizing trends instead of showing every fluctuation  - Good for data sets covering a large time frame  Disadvantages:  - Geom_smooth can oversimplify the data and obscure actual data variability  - Results depend on the chosen smoothing method, which can mislead interpretation \n\nDecorative elements of this visualization:  - Added bullet points on the trend lines to indicate grand slam wins by each player  - Since there were only 6 bullet points total, the graph did not become overcrowded  - However, if there were more grand slam wins, the graph would not be readable  - Another decorative element I could add would be a color gradient for the player’s age \n\nThis visualization relates to Wilke’s “The principle of proportional ink” which emphasizes that the amount of “ink” should be related to the values the data represents. In this case, the lines are thin and trace the ranking movement per player, which is a good use of ink. However, the bullet points labeling each grand slam both players have won is a possible violation of this principle. Any more additional bullet points may lead to an overcrowded graph."
   },
@@ -180,5 +208,40 @@
     "title": "Key Directories",
     "section": "Blog Directory",
     "text": "Blog Directory\nThe blog directory contains files related to our project blog:\nblog/\n  _metadata.yml\n  index.qmd\n  posts/"
+  },
+  {
+    "objectID": "pages/team_test_page.html",
+    "href": "pages/team_test_page.html",
+    "title": "Page example",
+    "section": "",
+    "text": "# do not display the code block on your website. \n# to disable, select the 'show nothing run code' option from the gear set of options \n\n# read and clean the data\n#source( &lt;-- data cleaning path and file name --&gt;)\n\n# read cleaned and plot data\n#source( &lt;-- data plotting file name --&gt;)"
+  },
+  {
+    "objectID": "pages/team_test_page.html#sub-section-level-2",
+    "href": "pages/team_test_page.html#sub-section-level-2",
+    "title": "Page example",
+    "section": "Sub-Section (Level #2)",
+    "text": "Sub-Section (Level #2)\n\nOur Plot! (Level #3)\nThe plot may feel stretched. If this is the case, you will want to determine good plot-saving settings for a website.\nFor example, controlling the plot saving parameter argument of ggplot::sggsave() using units = \"px\" (pixels) and specifying the width (in pixels) and height (in pixels) may be a good approach. You can determine what pixel dimensions would be good for a webpage by doing and Internet search.\nExample:\n\nwidth    = 1600\nheight   = 1100\nunits    = \"px\"\ndpi      = 200 # or \"retina\"\n\n\n\n\n\nsome caption\n\n\n\n\nPlot with width configurations\n\n\n\na different caption\n\n\n\n\nOur Plot with width configurations and no caption"
+  },
+  {
+    "objectID": "leisenman_hw8.html",
+    "href": "leisenman_hw8.html",
+    "title": "Lindsay Eisenman",
+    "section": "",
+    "text": "I chose to change the legends and annotations for my graph containing a trendline of the ATP singles ranking for Jannik Sinner and Carlos Alcaraz. To start, I put the legend below the graph with larger points to help the audience view it easier. For the annotations, I created a tibble with the dates and labels I wanted for each player’s grand slam win. This helped automate the labeling process, which I used geom_point and geom_text_repel for. I used the ggrepel library to ensure that the text from the label does not block any of the points."
+  },
+  {
+    "objectID": "leisenman_hw8.html#the-modified-plot",
+    "href": "leisenman_hw8.html#the-modified-plot",
+    "title": "Lindsay Eisenman",
+    "section": "",
+    "text": "I chose to change the legends and annotations for my graph containing a trendline of the ATP singles ranking for Jannik Sinner and Carlos Alcaraz. To start, I put the legend below the graph with larger points to help the audience view it easier. For the annotations, I created a tibble with the dates and labels I wanted for each player’s grand slam win. This helped automate the labeling process, which I used geom_point and geom_text_repel for. I used the ggrepel library to ensure that the text from the label does not block any of the points."
+  },
+  {
+    "objectID": "leisenman_hw8.html#code-block-for-embedding-your-png",
+    "href": "leisenman_hw8.html#code-block-for-embedding-your-png",
+    "title": "Lindsay Eisenman",
+    "section": "",
+    "text": "# plot with a caption\n\n#| fig.cap: \"Plot 1\"\n#| fig.align: \"center\" # to center plot on page if desired\n#| out.width: \"100%\"   # or some other % appropriate for you site\n\nknitr::include_graphics(here::here(\"figs\", \"new2_ranking_timeline_hw.png\"))"
   }
 ]
