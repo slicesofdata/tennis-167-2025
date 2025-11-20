@@ -25,7 +25,6 @@ cleaned_rankings_data <- readRDS(file = here::here("data", "processed", "cleaned
 atp_singles_data <- readRDS(file = here::here("data", "processed", "atp_singles.Rds"))
 ```
 
-
 ```{r}
 #| message: false
 #| warning: false
@@ -33,19 +32,16 @@ atp_singles_data <- readRDS(file = here::here("data", "processed", "atp_singles.
 source(here::here("ranking_timeline.R"))
 ```
 
-
 ```{r}
 #| echo: false
 #| fig.cap: " "
 #| fig.align: "center" 
 #| out.width: "800px"
 
-knitr::include_graphics(here::here("figs", "big3_ranking_timeline.png"))
+knitr::include_graphics(here::here("figs", "big3_ranking_timeline_final.png"))
 ```
 
-
 The "New 2"—Carlos Alcaraz and Jannik Sinner—have risen to the top of the game in the last few years, bringing new faces to the men's tennis landscape. Both have established themselves as standouts of the younger generation, challenging the dominance of older players.
-
 
 <br>
 
@@ -53,14 +49,13 @@ The visualization below shows the ATP singles ranking trajectory for Carlos Alca
 
 <br>
 
-
 ```{r}
 #| echo: false
 #| fig.cap: " "
 #| fig.align: "center" 
 #| out.width: "800px"
 
-knitr::include_graphics(here::here("figs", "new2_ranking_timeline1.png"))
+knitr::include_graphics(here::here("figs", "new2_ranking_timeline_final.png"))
 ```
 
 Beyond visualizing the movement of these five players' singles rankings over time, we can also examine the percentage of weeks each player has spent at the No. 1 spot throughout their career. The bar chart below highlights this data, showcasing how Djokovic has spent approximately 37.1% of his career as the world No. 1. This is evidence of his sustained dominance at the top of the game and consistency year after year, as rankings are a great data-driven measure of performance based on a player's results against a variety of different opponents.
@@ -68,7 +63,6 @@ Beyond visualizing the movement of these five players' singles rankings over tim
 <br>
 
 It is also interesting to note how Djokovic, Federer, and Nadal make up around 80% of the total weeks spent at No. 1 in their careers. This remarkable statistic not only underscores their individual dominance, but their role in defining modern men's tennis.
-
 
 <br>
 
@@ -80,4 +74,3 @@ It is also interesting to note how Djokovic, Federer, and Nadal make up around 8
 
 knitr::include_graphics(here::here("figs", "number1_percentage.png"))
 ```
-
