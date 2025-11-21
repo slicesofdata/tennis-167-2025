@@ -40,10 +40,7 @@ rates_all <- data_merged_ss_3 %>%
 
 rates_all
 
-# Faceted plot:
-# - one facet for Opponent: Top 100
-# - one facet for Opponent: 101+
-# - within each, bars for winner Top 100 vs 101+
+
 rank_rate_facet_plot <- rates_all %>%
   ggplot(aes(x = rank_group, y = straight_set_rate, fill = rank_group)) +
   geom_col(width = 0.6, color = "black") +
