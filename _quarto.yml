@@ -58,7 +58,7 @@ website:
 
   # add webpage description
   description: ""
-  title: "Tennis"
+  # title: ""
   navbar:
     left: # the right side of nav bar
       - href: index.qmd
