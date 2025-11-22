@@ -16,6 +16,8 @@ cleaned_doubles_data <- readRDS(file = here::here("data","processed","cleaned_do
 #| include: false
 source(here::here("doubles_titles.R"))
 source(here::here("percentage_doubles_won_vs_lost.R"))
+source(here::here("src", "figs", "doubles_over_time.R"))
+source(here::here("src", "figs", "singles_vs_doubles_number.R"))
 ```
 
 In tennis, doubles involves two teams of two players competing on one court. Unlike singles, where players compete alone, doubles requires teamwork, communication, and a slightly different set of skills. The court is wider in doubles, with both alleys in play, allowing for different angles and more space to attack and defend. Doubles players often have great volleys, quick reflexes, and a wider range of different shots in their repertoire. Being able to react quickly during fast exchanges is a big part of what makes doubles so exciting to watch. Playing doubles often enhances a player's net game in singles, which is why so many of the top singles players continue to compete in doubles tournaments. 
