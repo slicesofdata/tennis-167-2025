@@ -1,0 +1,19 @@
+---
+title: "Winning Percentages on Different Surfaces and  Website Page"
+editor: visual
+---
+
+```{r}
+#| message: false
+#| warning: false
+#| include: false
+cleaned_rankings_data <- readRDS(file = here::here("data", "processed", "cleaned_rankings_data.rds"))
+atp_singles_data <- readRDS(file = here::here("data", "processed", "atp_singles.Rds"))
+```
+
+```{r}
+#| message: false
+#| warning: false
+#| include: false
+source(here::here("majorsurface.R"))
+```
