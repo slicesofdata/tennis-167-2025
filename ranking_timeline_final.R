@@ -7,15 +7,15 @@ library(scales)
 
 save_plot_png <- function(
     plot,
-    file_name,
+    file_name, 
     figs_dir,
     units = "px",
     width = 1600,
     height = 1100,
     dpi = 300) {
-
+  
   file_path <- here::here(figs_dir, file_name)
-
+  
   ggsave(
     filename = file_path,
     plot = plot,
@@ -39,17 +39,17 @@ player_colors <- c(
 
 #######################################################################################################################
 
-cleaned_rankings_data <- readRDS(file = here::here("data","processed","cleaned_rankings_data.rds"))
+cleaned_rankings_data <- readRDS(file = here::here("data","processed","cleaned_rankings_data.rds")) 
 head(cleaned_rankings_data)
 
-atp_singles_data <- readRDS(file = here::here("data","processed","atp_singles.Rds"))
+atp_singles_data <- readRDS(file = here::here("data","processed","atp_singles.Rds")) 
 head(atp_singles_data)
 
 #######################################################################################################################
 
 filtered_atp_singles <- atp_singles_data %>%
   filter(
-    winner_name %in% c("Roger Federer", "Novak Djokovic", "Rafael Nadal")
+    winner_name %in% c("Roger Federer", "Novak Djokovic", "Rafael Nadal") 
   ) %>%
   filter (tourney_level == "G") %>%
   filter(round == "F") %>%
@@ -89,21 +89,21 @@ cleaneddata_djokovic
 #######################################################################################################################
 
 #shows the big three ranking during this specific time frame represented by different colors
-big3_ranking_timeline <-
+big3_ranking_timeline <- 
   ggplot(mapping = aes(x = ranking_date, y = rank)) +
   geom_smooth(data = cleaneddata_federer, aes(color = "Roger Federer"), se = FALSE, method = "loess", linewidth = 1) +
   geom_smooth(data = cleaneddata_nadal, aes(color = "Rafael Nadal"), se = FALSE, method = "loess", linewidth = 1) +
   geom_smooth(data = cleaneddata_djokovic, aes(color = "Novak Djokovic"), se = FALSE, method = "loess", linewidth = 1) +
-  geom_point(data = filtered_atp_singles, aes(x = tourney_date, y = winner_rank, color = winner_name),
+  geom_point(data = filtered_atp_singles, aes(x = tourney_date, y = winner_rank, color = winner_name), 
              size = 1.5, stroke = 0.4, shape = 21,
              position = position_jitter()) +
   labs(x = "Date", y = "Ranking (1 = Highest)", color = "", shape = "Grand Slam Wins",
-       title = "ATP Singles Ranking: Big 3 (2003-2025)",
+       title = "ATP Singles Ranking: Big 3",
        caption = "Grand Slam wins are marked by circles on the plot.") +
-  scale_color_manual(values = c("Roger Federer" = "#006400",
-                                "Rafael Nadal" = "#D32F2F",
+  scale_color_manual(values = c("Roger Federer" = "#006400", 
+                                "Rafael Nadal" = "#D32F2F", 
                                 "Novak Djokovic" = "#1976D2")) +
-  scale_y_reverse(limits = c(6,1),
+  scale_y_reverse(limits = c(6,1), 
                   breaks = 6:1,
                   labels = scales::number) +
   guides(color = guide_legend(override.aes = list(size = 3))) +
@@ -117,7 +117,7 @@ big3_ranking_timeline <-
 big3_ranking_timeline
 
 
-save_plot_png(plot = big3_ranking_timeline, file_name = "big3_ranking_timeline.png", figs_dir = "figs")
+save_plot_png(plot = big3_ranking_timeline, file_name = "big3_ranking_timeline_final.png", figs_dir = "figs")
 
 #maybe add a fourth line that shows the total (see domination?)
 
@@ -150,7 +150,7 @@ cleaneddata_alcaraz
 
 filtered_atp_singles_new2 <- atp_singles_data %>%
   filter(
-    winner_name %in% c("Jannik Sinner", "Carlos Alcaraz")
+    winner_name %in% c("Jannik Sinner", "Carlos Alcaraz") 
   ) %>%
   filter (tourney_level == "G") %>%
   filter(round == "F") %>%
@@ -159,18 +159,18 @@ filtered_atp_singles_new2
 
 
 #this is a graph for sinner and alcaraz singles ranking from 2022-current (top 10 only)
-new2_ranking_timeline1 <-
+new2_ranking_timeline1 <- 
   ggplot(mapping = aes(x = ranking_date, y = rank)) +
   geom_smooth(data = cleaneddata_sinner, aes(color = "Jannik Sinner"), se = FALSE, method = "loess", linewidth = 1) +
-  geom_smooth(data = cleaneddata_alcaraz, aes(color = "Carlos Alcaraz"), se = FALSE, method = "loess", linewidth = 1) +
+  geom_smooth(data = cleaneddata_alcaraz, aes(color = "Carlos Alcaraz"), se = FALSE, method = "loess", linewidth = 1) + 
   geom_point(data = filtered_atp_singles_new2, aes(x = tourney_date, y = winner_rank, color = winner_name),
              size = 2.5, alpha = 0.6) +
-  labs(x = "Date", y = "Ranking (1 = Highest)", color = " ",
-       title = "ATP Singles Ranking: Alcaraz vs Sinner (2022-2025)",
+  labs(x = "Date", y = "Ranking (1 = Highest)", color = " ", 
+       title = "ATP Singles Ranking: Alcaraz vs Sinner",
        caption = "Grand Slam wins are marked by circles on the plot.") +
-  scale_color_manual(values = c("Jannik Sinner" = "#9C27B0",
+  scale_color_manual(values = c("Jannik Sinner" = "#9C27B0", 
                                 "Carlos Alcaraz" = "#FF8C00")) +
-  scale_y_reverse(limits = c(10,1),
+  scale_y_reverse(limits = c(10,1), 
                   breaks = 10:1,
                   labels = scales::number_format(accuracy = 1)) +
   guides(color = guide_legend(override.aes = list(size = 3))) +
@@ -183,45 +183,45 @@ new2_ranking_timeline1 <-
   )
 new2_ranking_timeline1
 
-save_plot_png(plot = new2_ranking_timeline1, file_name = "new2_ranking_timeline1.png", figs_dir = "figs")
+save_plot_png(plot = new2_ranking_timeline1, file_name = "new2_ranking_timeline_final.png", figs_dir = "figs")
 
 
 ###this is the same graph as above, just using geom_line instead of geom_smooth
 
-new2_ranking_timeline <-
+new2_ranking_timeline <- 
   ggplot(mapping = aes(x = ranking_date, y = rank)) +
   geom_line(data = cleaneddata_sinner, aes(color = "Sinner")) +
   geom_line(data = cleaneddata_alcaraz, aes(color = "Alcaraz")) +
   labs(x = "Date", y = "Ranking (1 = Highest)", color = "Player", title = "ATP Singles Ranking: Alcaraz vs Sinner (2022-2025)") +
-  scale_color_manual(values = c("Sinner" = "#9C27B0",
+  scale_color_manual(values = c("Sinner" = "#9C27B0", 
                                 "Alcaraz" = "#FF8C00")) +
   scale_x_date(limits = as.Date(c("2022-01-01", Sys.Date()))) +
-  scale_y_reverse(limits = c(10,1),
+  scale_y_reverse(limits = c(10,1), 
                   breaks = 10:1,
                   labels = scales::number_format(accuracy = 1)) +
   annotate("point", x = as.Date("2024-01-28"), y = 4, size = 1) +
-  annotate("text", x = as.Date("2024-01-28"), y = 4.25,
-           label = "Australian Open",
+  annotate("text", x = as.Date("2024-01-28"), y = 4.25, 
+           label = "Australian Open", 
            size = 3) + #this adds a point and text to show the sinner's AO win
   annotate("point", x = as.Date("2024-09-6"), y = 1, size = 1) +
-  annotate("text", x = as.Date("2024-09-6"), y = 1.25,
-           label = "US Open",
+  annotate("text", x = as.Date("2024-09-6"), y = 1.25, 
+           label = "US Open", 
            size = 3) +
   annotate("point", x = as.Date("2022-09-11"), y = 1, size = 1) +
-  annotate("text", x = as.Date("2022-09-11"), y = 1.25,
-           label = "US Open",
+  annotate("text", x = as.Date("2022-09-11"), y = 1.25, 
+           label = "US Open", 
            size = 3) +
   annotate("point", x = as.Date("2023-09-16"), y = 2, size = 1) +
-  annotate("text", x = as.Date("2023-09-16"), y = 2.25,
-           label = "Wimbledon",
+  annotate("text", x = as.Date("2023-09-16"), y = 2.25, 
+           label = "Wimbledon", 
            size = 3) +
   annotate("point", x = as.Date("2024-06-09"), y = 2, size = 1) +
-  annotate("text", x = as.Date("2024-06-09"), y = 2.25,
-           label = "French Open",
+  annotate("text", x = as.Date("2024-06-09"), y = 2.25, 
+           label = "French Open", 
            size = 3) +
   annotate("point", x = as.Date("2024-07-14"), y = 3, size = 1) +
-  annotate("text", x = as.Date("2024-07-14"), y = 3.25,
-           label = "Wimbledon",
+  annotate("text", x = as.Date("2024-07-14"), y = 3.25, 
+           label = "Wimbledon", 
            size = 3) +
   theme_classic()
 new2_ranking_timeline
@@ -277,9 +277,9 @@ weeks_summary
 weeks_rank1_graph_1 <- weeks_at_rank_1 %>%
   ggplot(mapping = aes(x = name_last, y = total_weeks_at_rank_1, fill = name_last)) +
   geom_col() +
-  geom_text(aes(label = round(total_weeks_at_rank_1, 1)),
+  geom_text(aes(label = round(total_weeks_at_rank_1, 1)), 
             vjust = -0.5,   # Adjust this to move the text above the bar
-            size = 3) +
+            size = 3) +    
   labs(x = " ", y = "Weeks", title = "Total Number of Weeks Spent at #1 Ranking",
        fill = "Player") +
   scale_fill_manual(values = player_colors) +
@@ -292,13 +292,13 @@ weeks_rank1_graph_1
 #graph with percentage of weeks at #1
 weeks_rank1_graph_2 <- weeks_summary %>%
   ggplot(mapping = aes(x = name_last, y = percentage_weeks_at_rank_1, fill = name_last)) +
-  geom_col() +
+  geom_col() +  
   scale_y_continuous(labels = scales::percent_format(scale = 1),
-                     limits = c(0, 100)) +
-  geom_text(aes(label = percent(percentage_weeks_at_rank_1 / 100, accuracy = 0.1)),
+                     limits = c(0, 100)) + 
+  geom_text(aes(label = percent(percentage_weeks_at_rank_1 / 100, accuracy = 0.1)), 
             vjust = -0.5,   # Adjust this to move the text above the bar
-            size = 3) +
-  labs(x = "", y = " ", fill = "Player",
+            size = 3) +    
+  labs(x = "", y = " ", fill = "Player", 
        title = "Percentage of Weeks Spent at #1 Ranking") +
   scale_fill_manual(values = player_colors) +
   theme_minimal() +
@@ -307,4 +307,4 @@ weeks_rank1_graph_2
 
 save_plot_png(plot = weeks_rank1_graph_2, file_name = "number1_percentage.png", figs_dir = "figs")
 
-#######################################################################################################################
+

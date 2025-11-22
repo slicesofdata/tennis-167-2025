@@ -1,11 +1,10 @@
 ################################################################################
-# Script Name: clean_mpg_data.R
-# Author: Carly
-# GitHub: carlybaretz
-# Date Created:
+# Script Name: Joined Qual Chall
+# Author: Joey
+# GitHub: jwilson26-stack
+# Date Created: 9/20/25
 #
-# Purpose: This script will read raw data and process/clean it and write
-# out the cleaned data.
+# Purpose: This script is to join Qual Chall data into one table
 #
 ################################################################################
 
@@ -17,26 +16,32 @@
 
 ################################################################################
 # Load necessary libraries/source any function directories
-library(dplyr)
+# Example:
+#R.utils::sourceDirectory(here::here("src", "functions"))
+source(here::here("src", "functions", "load-libraries.R"))
+library(here)
+library(tidyverse)
+library(readr)
+library(purrr)
 
 ################################################################################
-# read the raw data
-mpg <- readRDS("data/raw/mpg.Rds")
-
-
-################################################################################
-# clean the data
-cleaned_mpg <-
-  mpg |>
-  filter(manufacturer == "audi")
+# Pull Qual Chall docs into one assigned table
+QualsFiles <- list.files(
+  path=here("data", "raw"),
+  pattern = "^atp_matches_qual_chall_\\d+\\.csv$",
+  full.names = TRUE
+)
+QualsFiles
 
 ################################################################################
-# save the cleaned data file
-cleaned_mpg |>
-  saveRDS ("data/processed/cleaned_mpg.Rds")
+# Create data table
+all_quals <- QualsFiles %>%
+  map_dfr(read_csv)
+all_quals
 
-source("src/data/clean_mpg_data.R", echo = TRUE)
-file.exists("data/processed/cleaned_mpg.Rds")
+################################################################################
+# 
+saveRDS(all_quals, file = here::here("data", "processed", "JoinedQualChall.rds"))
 
 ################################################################################
 # End of script

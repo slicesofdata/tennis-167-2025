@@ -1,6 +1,6 @@
 project:
   type: website
-  output-dir: docs
+  output-dir: docs      # use docs/ for githubpages, other cases use _site/
   render:
 #    - "*.{qmd,R,py}"
     - "*.qmd"           # render all *.qmd files
@@ -9,7 +9,7 @@ project:
     #- "!call_scripts/" # don't render a directory
   #pre-render: Rscript prerender.R #load_libraries.R
   # after rendering completes, script that removes .R files from the docs/ folder.
-  post-render: Rscript cleanup/clean_docs_dir.R
+  #post-render: Rscript cleanup/clean_docs_dir.R
 
   #resources:
   #  - "webr-serviceworker.js"
@@ -19,13 +19,8 @@ project:
   #  - figs/    # ensures that the .R files in figs/ are rendered in a website build
 
   # settings for previewing the website
-
-    - "index.qmd"
-    - "about.qmd"
-    - "pages/*.qmd" # render all *.qmd files in pages/
-    
   preview:
-    port: 1111
+    port: 167
     browser: true
     navigate: true
 
@@ -58,12 +53,12 @@ website:
 
   # add webpage description
   description: ""
-  title: "Tennis"
+
   navbar:
-    left: # the right side of nav bar
-      - href: index.qmd
-        text: Home
-      - about.qmd
+    left:
+      # the index file
+      - text: "Tennis Homepage" # use empty string to be blank
+        href: pages/Tennis_homepage.qmd
 
       # adding another page
       - text: "First Page Text"
@@ -78,6 +73,8 @@ website:
             href: pages/my_third_page.qmd
           - text: "Exercise Test Page"
             href: pages/team_test_page.qmd
+          - text: "Ranking Page"
+            href: pages/ranking_page.qmd
 
       # the about file
       - text: "About Page Text"
@@ -112,34 +109,7 @@ format:
     #fontsize: 1.1rem # 1.2rem
 
 
-# for branding
-#brand:
- # light: brand/light.yml
- # dark: brand/dark.yml
+
 
 # set quarto optional editor preference: source or visual
 #editor: source
-
-      - text: "*The Big 3*"  
-        menu:
-        - text: "ATP Singles Ranking"
-          href: pages/page1.qmd
-        - text: "**Major vs Non-major Wins**"
-          href: pages/page2.qmd
-        - text: "**Limitations of Visualization**"
-          href: pages/hw06eisenmanl.qmd
-        - text: "**More Visualizations**"
-          href: pages/hw05eisenmanl_final.qmd
-          
-    right:  # the right side of nav bar
-      - href: index.qmd
-        text: Home
-      - about.qmd
-
-format:
-  html:
-    theme: 
-      light: [cosmo, styles/example-light.scss] # location of light theme
-      dark: [cosmo, styles/example-dark.scss]   # location of dark theme
-    toc: true # if you want a table of contents
-
