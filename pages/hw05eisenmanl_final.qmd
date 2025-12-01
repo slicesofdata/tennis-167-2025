@@ -1,0 +1,41 @@
+Homework #5:
+Lindsay Eisenman
+
+
+```{r}
+#| message: false
+#| warning: false
+#| include: false
+source(here::here("hw5_plots_final.R"))
+```
+
+
+
+```{r}
+#| echo: false
+#| fig.cap: "Plot 1"
+#| fig.align: "center" 
+#| out.width: "800px"
+
+knitr::include_graphics(here::here("src", "figs", "hw5_plot1.png"))
+```
+
+```{r}
+#| echo: false
+#| fig.cap: "Plot 2"
+#| fig.align: "center" 
+#| out.width: "800px"
+
+knitr::include_graphics(here::here("src", "figs", "hw5_plot2.png"))
+```
+
+
+```{r}
+#| echo: false
+#| fig.cap: "Plot 3"
+#| fig.align: "center" 
+#| out.width: "800px"
+
+knitr::include_graphics(here::here("src", "figs", "hw5_plot3.png"))
+```
+
