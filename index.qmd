@@ -1,5 +1,5 @@
 ---
-title: "Site Name"
+title: "Team Tennis"
 page-layout: article
 format:
   html:
@@ -13,125 +13,47 @@ execute:
   freeze: auto
 ---
 
-# Welcome
+Since 1963, tennis has given us legends, rivalries, and unforgettable matches. This site brings those stories to life through data visualized in ways that highlight patterns, rivalries, and the evolution of the sport.
 
-Welcome to **Site Name**! Blah, blah...
+At the center of modern tennis history stand Roger Federer, Rafael Nadal, and Novak Djokovic—the Big Three. Their rivalry has defined an era, producing countless classics and pushing each player to new heights. Together, they’ve amassed dozens of Grand Slam titles, spent record-breaking weeks at World No. 1, and redefined what dominance looks like in tennis.
 
-## About This Site
+Alongside them, a new generation has begun to take the stage. Carlos Alcaraz and Jannik Sinner are not just rising stars, they’re the future of the sport. With data-driven insights, we’ll explore how their early careers compare to the Big Three, and what their budding rivalry might mean for tennis in the years ahead.
 
-This simple site serves as the core template for building your website and is designed to communicate elements of building your plots, pages, and content for a webpage. You will build a Quarto website for a target audience to communicate data visualized in ways to communicate patterns, trends, in data or to tell a story about data. There are more advanced styling you can modify with Quarto websites but this template is a good starting point if you are unfamiliary with Quarto.
-
---- 
-
-<!-- the 3 hyphens seen above create an optional break on the page. Dp not place where they touche other content  -->
- 
-
-## Types of your Data Visualization Website
-
-1. **Exploratory Data Stories**  
-   - *Purpose:* Allows visitors to interact with data to explore patterns and relationships.
-   - *Some Characteristic:*  
-     - Guided narrative plus visualizations  
-     - User-driven discovery (obviates raw data analysis skills)  
-   - Demonstrates that you can you can clean and wrangle raw open data, but also combine storytelling and data interpretation.
-  
-  
-2. **Analytical Decision-Support Tools**  
-   - *Purpose:* Help professionals understand data and make informed choices.
-   - *Some Characteristic:*  
-     - Multiple data metrics
-     - Provides different slices/groupings of data
-   - Demonstrates that you can clean and wrangle raw open data and can work with complex data sets that support business decisions directly.
+Our data stretches back over six decades and includes every player since 1963,their names, heights, countries of origin, and more. By combining rich historical records with modern performance metrics, this project offers both context and clarity to tennis’s biggest debates.
 
 
-3. **Public Transparency & Open Data Portals**  
-   - *Purpose:* Share government or research data in a user-friendly way for either accountability or public engagement or both.
-   - *Some Characteristics:*  
-     - Clear, accessible visuals for non-expert audiences  
-     - Open data downloads  
-     - Trend and comparison features 
-   - Demonstrates you can clean and wrangle raw open data, combine multiple data sources, and provide value to otherwise stagnant data.
 
----
 
-## Coding DOs and DON'Ts
+## Get to know the players:
 
-### Do *NOT*:
 
-- Save files in random places (see directory structure)
-- Hard-code paths (e.g., `/myusername/directory/subdirectory/file.R` or `C:/myusername/directory/subdirectory/file.R`) 
-- Import or process data without code
-- Save/export plot files without code
-- Use the R Studio Git GUI
-- Use spaces for directory names or file names
-- use UPPERCASE characters in directories and file names
+![](../images/roger.png){width="300px" style="float:left; margin-right:15px;"}
 
-### Please **DO**:
+**Roger Federer** Roger Federer is a Swiss tennis player, born in 1981 in Basel, who became one of the sport’s greatest champions with 20 Grand Slam titles,highlighted by a record 8 at Wimbledon. He held the world No. 1 ranking for 310 weeks, earned Olympic medals, and retired in 2022 after more than two decades at the top of the game.
 
-- Save files in a directory structure
-- Reference directory and file paths using the **{here}** library
-  - by importing files using code
-  - by saving/exporting files using code
-- Use Git commands in the RStudio terminal
-- Use machine-readable file paths (e.g., directory and file names)
-  - by replacing spaces with _ or - (choose one)
-  - by making all characters lowercase 
 
----
+<br clear="all">
 
-## For building your website, you will:
+![](../images/rafael.png){width="300px" style="float:left; margin-right:15px;"}
 
-- **Develop Website Content**
+**Rafael Nadal** Rafael Nadal is a Spanish tennis legend, born in 1986 in Manacor, Mallorca. He turned pro in 2001 and over his career amassed 22 Grand Slam singles titles, including a record 14 at the French Open. He has 92 ATP singles titles total, spent 209 weeks as world No. 1, and dominated especially on clay courts before retiring in 2024.
 
-  - Modify a `_quarto.yml` ([YAML](https://en.wiktionary.org/wiki/YAML)) config file for the page structure, options, and configuration
-  - Structure Quarto `.qmd` input files for the website pages (e.g., `index.qmd`, `about.qmd`, etc.)
-  - Add text content for the input file pages
-  - Render website files using *Build > Render Website* or **{quarto}** library; [See here for more details](https://quarto.org/docs/websites/)
-  - Push to GitHub and manage in [GitHub Pages](https://docs.github.com/en/pages)
+<br clear="all">
 
-- **Maintain File Organization**
+![](../images/novak.png){width="300px" style="float:left; margin-right:15px;"}
 
-  - Organize directories and files
-  - Maintain a directory structure
+**Novak Djokovic** Novak Djokovic is a Serbian tennis player, born in 1987 in Belgrade, who has won a record 24 Grand Slam titles, including 10 Australian Opens. He held the world No. 1 ranking for a record 428 weeks, and established himself as one of the most accomplished and dominant players in tennis history.
 
-- **Create Data File(s) and Scripts**
+<br clear="all">
 
-  - Save data files in appropriate directory in `data/` (e.g., `data/raw/`)
-  - Write `.R` scripts for cleaning and summarizing data using **{tidyverse}** libraries 
-  - Save data-related scripts in `src/data/` using meaningful and standardized names
-  - Save cleaned/processed data files `data/processed/`
+![](../images/carlos.png){width="300px" style="float:left; margin-right:15px;"}
 
-- **Create Plot Scripts, Functions, and Files**
+**Carlos Alcarz**  Carlos Alcaraz is a Spanish tennis player, born in 2003 in El Palmar, Murcia, who turned professional in 2018 and by age 22 has already won six Grand Slam singles titles — French Open (2024, 2025), Wimbledon (2023, 2024), and US Open (2022, 2025) — and has risen to the world No. 1 ranking (first achieved in 2022 and again in 2025). 
 
-  - *Scripts*
-  
-    - Write `.R` scripts for creating plots using **{ggplot}** 
-    - Save plot-related scripts in  `src/figs/` using meaningful and standardized names
+<br clear="all">
 
-  - *Function Script(s)*
-  
-    - Write a function to ensure uniform saving of plots using [ggplot2::ggsave()](https://ggplot2.tidyverse.org/reference/ggsave.html) and save function in `src/figs/` so that you can apply it systematically to format plot objects
-  
-  - *Plot Files*
-  
-    - Save plots/figures as **.png** files in `figs/` making sure to use unique names for each plot
-    - Link *.png* files inside webpages so they load
+![](../images/jannik.png){width="300px" style="float:left; margin-right:15px;"}
 
-  - *(Optional) Customize a Website Theme*
-  
-    - Create a `custom.scss` [Sass file](https://sass-lang.com/) to manage color schemes and save in `styles/` or create a [`_brand.yml` file](https://quarto.org/docs/authoring/brand.html) 
-    - Additional [theme tips can be found here](https://quarto.org/docs/output-formats/html-themes-more.html)
+**Jannik Sinner** Jannik Sinner is an Italian tennis player, born in 2001 in San Candido, who turned pro in 2018 and by age 24 has already won 4 Grand Slam singles titles (Australian Open 2024 & 2025, US Open 2024, Wimbledon 2025), reached world No. 1 ranking in 2024, and claimed 24 ATP Tour-level singles titles overall, marking him as one of the rising stars and most accomplished young players in men’s tennis.
 
----
-
-## Other Useful Project-Related Resources
-
-- [ggplot2 Reference](https://ggplot2.tidyverse.org/reference/)
-- [Tips for website pages](https://torquemag.io/2023/09/must-have-pages-website/) 
-Other 
-- [Quarto Documentation](https://quarto.org/docs/)
-- [Quarto Websites](https://quarto.org/docs/websites/)
-- Theming with a [_brand.yml](https://quarto.org/docs/authoring/brand.html), [example here](https://quarto.org/docs/blog/posts/2025-01-15-quarto-tip-brand-positron/)
-- [More on Brand YML](https://posit-dev.github.io/brand-yml/)
-- [Other Theming](https://quarto.org/docs/dashboards/theming.html)
-
+<br clear="all">
