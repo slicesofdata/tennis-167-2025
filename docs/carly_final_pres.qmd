@@ -1,0 +1,32 @@
+---
+title: "final pres graphs"
+editor: visual
+---
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+library(readr)
+library(here)
+
+
+atp_singles_data <- readRDS(file = here::here("data","processed","atp_singles.Rds" ))
+head(atp_singles_data)
+```
+
+- alcaraz - 2018 - 2025 
+
+
+```{r}
+here::here()
+# should now show ".../tennis_project"
+
+list.files(here::here("data", "processed"))
+# should show "atp_singles.Rds"
+
+atp_singles_data <- readRDS(here::here("data", "processed", "atp_singles.Rds"))
+head(atp_singles_data)
+
+
+
+
