@@ -81,33 +81,34 @@ matches_per_year$player_name <- factor(
 
 
 
-ggplot(matches_per_year, aes(x = age, y = matches, fill = player_name)) +
-  geom_col( ) +  
-  scale_fill_manual(values = player_colors) +
-  facet_wrap(~ player_name) + 
+numberofmatches_year <- ggplot(matches_per_year, aes(x = year, y = player_name, 
+                                                     fill = player_name, alpha = matches)) +
+  geom_tile() +
+  scale_fill_manual(values = player_colors) +  
+  scale_alpha_continuous(range = c(0.1, 1), guide = FALSE) +  
+  labs(title = "Singles Matches Played per Year (Heatmap)",
+       x = "Year",
+       y = " ",
+       caption = "Tile opacity reflects match volume: lighter tiles represent 
+  around 25 matches, mid-tones reflect roughly 50 matches,  
+  and the darkest tiles correspond to about 75 matches.") +
+  scale_y_discrete(limits = rev(levels(matches_per_year$player_name))) +  
   theme_classic() +
-  theme(legend.position = "none") +
-  labs(
-    title = "Number of Matches Played by Age per Player",
-    x = "Age",
-    y = "Number of Matches",
-    fill = "Player"
+  theme(
+    legend.title = element_blank(),
+    legend.position = "none",
+    plot.caption = element_text(
+      hjust = 0.5,      # centers the caption horizontally
+      size = 10,        # adjusts font size
+      face = "italic",  # makes caption italic
+      margin = margin(t = 10)
+    )
   )
+numberofmatches_year
 
 
-ggplot(matches_per_year, aes(x = age, y = player_name, height = matches, fill = player_name)) +
-  geom_density_ridges2(stat = "identity", scale = 1, alpha = 0.75) +
-  scale_fill_manual(values = player_colors) +
-  theme_classic() +
-  theme(legend.position = "none") +
-  labs(
-    title = "Ridge Plot: Number of Matches Played by Age per Player",
-    x = "Age",
-    y = " ",
-    fill = "Player"
-  )
 
-
+save_plot_png(plot = numberofmatches_year, file_name = "numberofmatches_year.png", figs_dir = "figs")
 
 
 
