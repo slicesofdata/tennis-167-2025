@@ -20,7 +20,7 @@ project:
 
   # settings for previewing the website
   preview:
-    port: 167
+    port: 1671
     browser: true
     navigate: true
 
