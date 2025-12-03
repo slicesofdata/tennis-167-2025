@@ -1,35 +1,38 @@
----
-title: "final pres graphs"
-editor: visual
----
 
-```{r}
+
+
 library(tidyverse)
 library(ggplot2)
 library(readr)
 library(here)
 
+save_plot_png <- function(
+    plot,
+    file_name,
+    figs_dir,
+    units = "px",
+    width = 1600,
+    height = 1100,
+    dpi = 300) {
+
+  file_path <- here::here(figs_dir, file_name)
+
+  ggsave(
+    filename = file_path,
+    plot = plot,
+    device = "png",
+    units = units,
+    width = width,
+    height = height,
+    dpi = dpi
+  )
+}
+
 
 atp_singles_data <- readRDS(file = here :: here("Desktop","dataviz","tennis-167-2025","data","processed","atp_singles.Rds" ))
 head(atp_singles_data)
-```
 
-- alcaraz - 2018 - 2025 
-- sinner 2018 - 2025 
-- nadal - 2001 - 2008 
-- federer - 1998 - 2005 
-- djovick - 2003 - 2010
 
-```{r}
-library(tidyverse)
-library(lubridate)
-library(here)
-
-# 0. Load data -------------------------------------------------------------
-
-atp_singles_data <- readRDS(
-  file = here::here("Desktop","dataviz","tennis-167-2025","data","processed","atp_singles.Rds")
-)
 
 matches <- atp_singles_data   # alias so we can call it 'matches' everywhere
 
@@ -102,40 +105,64 @@ wins_cum$winner_name <- factor(
 
 # 6. Plot cumulative wins -------------------------------------------------
 
-ggplot(wins_cum,
+cummulative_match_wins <- ggplot(wins_cum,
        aes(x = career_year,
            y = cumulative_wins,
            color = winner_name,
            group = winner_name)) +
-  geom_line(linewidth = 1.2) +
+  geom_line(linewidth = 1.2, alpha = 0.7) +
   geom_point(size = 2) +
-  scale_color_manual(values = player_colors_full, name = "Player") +
+  scale_x_continuous(breaks = seq(1, 7, by = 1)) +
+  scale_y_continuous(breaks = seq(0, max(wins_cum$cumulative_wins), by = 50)) +
+  scale_color_manual(
+    values = player_colors_full,
+    name = NULL,
+    guide = guide_legend(nrow = 2,
+                         byrow = TRUE)
+  ) +
   labs(
-    title = "Cumulative Match Wins in the First Seven Seasons",
+    title = "Early-Career Trajectories:
+    Cumulative Singles Match Wins (Years 1–7)",
     x = "Career Year (aligned by debut season)",
     y = "Cumulative Match Wins"
   ) +
-  theme_minimal(base_size = 13) +
+  theme_minimal() +
   theme(
     legend.position = "bottom",
-    plot.title = element_text(face = "bold", hjust = 0.5)
+    legend.box = "horizontal",
+    legend.box.just = "center",
+    legend.justification = "center",
+    plot.title = element_text(face = "bold", hjust = 0.5),
+    legend.text = element_text(size = 10)
   )
+cummulative_match_wins
+
+save_plot_png(plot = cummulative_match_wins, file_name = "cummulative_match_wins.png", figs_dir = "Desktop/dataviz/tennis-167-2025/figs")
+
 
 ```
 
 ```{r}
-library(ggridges)
+'''library(ggridges)
 
-ggplot(wins_age,
+ <- ggplot(wins_age,
        aes(x = winner_age, y = winner_name, fill = winner_name)) +
   geom_density_ridges(alpha = 0.8) +
   scale_fill_manual(values = player_colors_full) +
+  scale_x_continuous(
+    breaks = floor(min(wins_age$winner_age, na.rm = TRUE)):
+      ceiling(max(wins_age$winner_age, na.rm = TRUE)),
+    labels = function(x) sprintf("%d", x)  # force no decimals
+  ) +
   labs(title = "Age Density of Early-Career Match Wins",
        x = "Age",
        y = NULL) +
-  theme_minimal(base_size = 14) +
+  theme_classic() +
   theme(legend.position = "none",
         plot.title = element_text(hjust = 0.5, face="bold"))
+early_career
+'''
+
 
 ```
 
