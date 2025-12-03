@@ -56,10 +56,6 @@ website:
 
   navbar:
     left:
-
-     - text: "Index Page" # use empty string to be blank
-        href: index.qmd
-
       # the index file
       - text: "Tennis Homepage" # use empty string to be blank
         href: pages/Tennis_homepage.qmd
