@@ -38,7 +38,7 @@ source(here::here("ranking_timeline.R"))
 #| fig.align: "center" 
 #| out.width: "800px"
 
-knitr::include_graphics(here::here("figs", "big3_ranking_timeline.png"))
+knitr::include_graphics(here::here("figs", "big3_ranking_timeline_final.png"))
 ```
 
 The "New 2"—Carlos Alcaraz and Jannik Sinner—have risen to the top of the game in the last few years, bringing new faces to the men's tennis landscape. Both have established themselves as standouts of the younger generation, challenging the dominance of older players.
@@ -55,7 +55,7 @@ The visualization below shows the ATP singles ranking trajectory for Carlos Alca
 #| fig.align: "center" 
 #| out.width: "800px"
 
-knitr::include_graphics(here::here("figs", "new2_ranking_timeline1.png"))
+knitr::include_graphics(here::here("figs", "new2_ranking_timeline_final.png"))
 ```
 
 Beyond visualizing the movement of these five players' singles rankings over time, we can also examine the percentage of weeks each player has spent at the No. 1 spot throughout their career. The bar chart below highlights this data, showcasing how Djokovic has spent approximately 37.1% of his career as the world No. 1. This is evidence of his sustained dominance at the top of the game and consistency year after year, as rankings are a great data-driven measure of performance based on a player's results against a variety of different opponents.

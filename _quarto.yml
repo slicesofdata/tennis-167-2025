@@ -2,14 +2,18 @@ project:
   type: website
   output-dir: docs      # use docs/ for githubpages, other cases use _site/
   render:
-#    - "*.{qmd,R,py}"
+    # - "*.{qmd,R,py}"
     - "*.qmd"           # render all *.qmd files
     - "!site/this_dir/" # don't render a directory
 
     #- "!call_scripts/" # don't render a directory
   #pre-render: Rscript prerender.R #load_libraries.R
   # after rendering completes, script that removes .R files from the docs/ folder.
+<<<<<<< HEAD
   #post-render: Rscript cleanup/clean_docs_dir.R
+=======
+  # post-render: Rscript cleanup/clean_docs_dir.R
+>>>>>>> lindsay
 
   #resources:
   #  - "webr-serviceworker.js"
@@ -19,6 +23,10 @@ project:
   #  - figs/    # ensures that the .R files in figs/ are rendered in a website build
 
   # settings for previewing the website
+<<<<<<< HEAD
+=======
+
+>>>>>>> lindsay
   preview:
     port: 1671
     browser: true
@@ -52,6 +60,7 @@ website:
 
 
   # add webpage description
+<<<<<<< HEAD
   description: ""
 
   navbar:
@@ -63,6 +72,16 @@ website:
       # the index file
       - text: "Tennis Homepage" # use empty string to be blank
         href: pages/Tennis_homepage.qmd
+=======
+  description: "Blah Blah Blah"
+  
+  navbar:
+    left: 
+      # the right side of nav bar
+      - href: index.qmd
+        text: "Home"
+      - about.qmd
+>>>>>>> lindsay
 
       # adding another page
       - text: "First Page Text"
@@ -112,8 +131,11 @@ format:
     #mainfont: arial #Nunito
     #fontsize: 1.1rem # 1.2rem
 
+<<<<<<< HEAD
 
 
 
 # set quarto optional editor preference: source or visual
 #editor: source
+=======
+>>>>>>> lindsay

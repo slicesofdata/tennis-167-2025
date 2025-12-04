@@ -1,0 +1,29 @@
+---
+title: "Untitled"
+editor: visual
+---
+
+
+```{r}
+#| message: false
+#| warning: false
+#| include: false
+atp_singles_data <- readRDS(file = here::here("data", "processed", "atp_singles.Rds"))
+```
+
+```{r}
+#| message: false
+#| warning: false
+#| include: false
+source(here::here("age_vs_performance.R"))
+source(here::here("age_numberofmatches.R"))
+```
+
+```{r}
+#| echo: false
+#| fig.cap: " "
+#| fig.align: "center" 
+#| out.width: "800px"
+
+knitr::include_graphics(here::here("figs", "age_performance.png"))
+```

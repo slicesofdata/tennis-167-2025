@@ -109,7 +109,11 @@
     "href": "blog/index.html",
     "title": "My blog",
     "section": "",
+<<<<<<< HEAD
     "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nMy great title\n\n\n\n\n\n\ndata\n\n\ndogs\n\n\nanimals\n\n\n\n\n\n\n\n\n\nJan 1, 2025\n\n\n\n\n\n\nNo matching items"
+=======
+    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nMy great title\n\n\n\ndata\n\ndogs\n\nanimals\n\n\n\n\n\n\n\n\n\nJan 1, 2025\n\n\n\n\n\nNo matching items"
+>>>>>>> lindsay
   },
   {
     "objectID": "about.html",
@@ -130,7 +134,11 @@
     "href": "pages/Tennis_homepage.html",
     "title": "Team Tennis Homepage",
     "section": "",
+<<<<<<< HEAD
     "text": "Since 1963, tennis has given us legends, rivalries, and unforgettable matches. This site brings those stories to life through data—visualized in ways that highlight patterns, rivalries, and the evolution of the sport.\nAt the center of modern tennis history stand Roger Federer, Rafael Nadal, and Novak Djokovic—the Big Three. Their rivalry has defined an era, producing countless classics and pushing each player to new heights. Together, they’ve amassed dozens of Grand Slam titles, spent record-breaking weeks at World No. 1, and redefined what dominance looks like in tennis.\nAlongside them, a new generation has begun to take the stage. Caros Alcaraz and Jannik Sinner are not just rising stars—they’re the future of the sport. With data-driven insights, we’ll explore how their early careers compare to the Big Three, and what their budding rivalry might mean for tennis in the years ahead.\nOur data stretches back over six decades and includes every player since 1963—their names, heights, countries of origin, and more. By combining rich historical records with modern performance metrics, this project offers both context and clarity to tennis’s biggest debates."
+=======
+    "text": "Since 1963, tennis has given us legends, rivalries, and unforgettable matches. This site brings those stories to life through data—visualized in ways that highlight patterns, rivalries, and the evolution of the sport.\nAt the center of modern tennis history stand Roger Federer, Rafael Nadal, and Novak Djokovic—the Big Three. Their rivalry has defined an era, producing countless classics and pushing each player to new heights. Together, they’ve amassed dozens of Grand Slam titles, spent record-breaking weeks at World No. 1, and redefined what dominance looks like in tennis.\nAlongside them, a new generation has begun to take the stage. Carlos Alcaraz and Jannik Sinner are not just rising stars—they’re the future of the sport. With data-driven insights, we’ll explore how their early careers compare to the Big Three, and what their budding rivalry might mean for tennis in the years ahead.\nOur data stretches back over six decades and includes every player since 1963—their names, heights, countries of origin, and more. By combining rich historical records with modern performance metrics, this project offers both context and clarity to tennis’s biggest debates."
+>>>>>>> lindsay
   },
   {
     "objectID": "pages/Tennis_homepage.html#get-to-know-the-players",
@@ -222,5 +230,29 @@
     "title": "Page example",
     "section": "Sub-Section (Level #2)",
     "text": "Sub-Section (Level #2)\n\nOur Plot! (Level #3)\nThe plot may feel stretched. If this is the case, you will want to determine good plot-saving settings for a website.\nFor example, controlling the plot saving parameter argument of ggplot::sggsave() using units = \"px\" (pixels) and specifying the width (in pixels) and height (in pixels) may be a good approach. You can determine what pixel dimensions would be good for a webpage by doing and Internet search.\nExample:\n\nwidth    = 1600\nheight   = 1100\nunits    = \"px\"\ndpi      = 200 # or \"retina\"\n\n\n\n\n\nsome caption\n\n\n\n\nPlot with width configurations\n\n\n\na different caption\n\n\n\n\nOur Plot with width configurations and no caption"
+<<<<<<< HEAD
+=======
+  },
+  {
+    "objectID": "leisenman_hw8.html",
+    "href": "leisenman_hw8.html",
+    "title": "Lindsay Eisenman",
+    "section": "",
+    "text": "I chose to change the legends and annotations for my graph containing a trendline of the ATP singles ranking for Jannik Sinner and Carlos Alcaraz. To start, I put the legend below the graph with larger points to help the audience view it easier. For the annotations, I created a tibble with the dates and labels I wanted for each player’s grand slam win. This helped automate the labeling process, which I used geom_point and geom_text_repel for. I used the ggrepel library to ensure that the text from the label does not block any of the points."
+  },
+  {
+    "objectID": "leisenman_hw8.html#the-modified-plot",
+    "href": "leisenman_hw8.html#the-modified-plot",
+    "title": "Lindsay Eisenman",
+    "section": "",
+    "text": "I chose to change the legends and annotations for my graph containing a trendline of the ATP singles ranking for Jannik Sinner and Carlos Alcaraz. To start, I put the legend below the graph with larger points to help the audience view it easier. For the annotations, I created a tibble with the dates and labels I wanted for each player’s grand slam win. This helped automate the labeling process, which I used geom_point and geom_text_repel for. I used the ggrepel library to ensure that the text from the label does not block any of the points."
+  },
+  {
+    "objectID": "leisenman_hw8.html#code-block-for-embedding-your-png",
+    "href": "leisenman_hw8.html#code-block-for-embedding-your-png",
+    "title": "Lindsay Eisenman",
+    "section": "",
+    "text": "# plot with a caption\n\n#| fig.cap: \"Plot 1\"\n#| fig.align: \"center\" # to center plot on page if desired\n#| out.width: \"100%\"   # or some other % appropriate for you site\n\nknitr::include_graphics(here::here(\"figs\", \"new2_ranking_timeline_hw.png\"))"
+>>>>>>> lindsay
   }
 ]
