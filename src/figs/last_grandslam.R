@@ -74,7 +74,7 @@ year_last_match <- atp_singles_data %>%
   group_by(player) %>%
   slice(1) %>%
   ungroup() %>%
-  select(player, tourney_date, tourney_name) %>%
+  select(player, tourney_date, tourney_name) 
 year_last_match
 
 
