@@ -1,0 +1,15 @@
+{
+  "hash": "bc1b54b291fd4de4506cec8a11ea19e5",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Page example\"\n#page-layout: article\nformat:\n  html:\n    toc: true\n    #toc-location: left\n    toc-depth: 4          # or higher, depending on how deep your headings go\n    toc-collapse: false   # keep all expanded by default\n    number-sections: false\n    code-tools: false\n    fig-align: center\n\nexecute:\n  #enabled: false\n  freeze: auto\n---\n\n::: {.cell}\n\n```{.r .cell-code}\n# do not display the code on your website\n\n# read and clean the data\n#source( <-- data cleaning path and file name -->)\n\n# read cleaned and plot data\n#source( <-- data plotting file name -->)\n```\n:::\n\n\n\n\n# Overview (Level #1)\n\nText here ...\n\n\n## Sub-Section (Level #2)\n\n### Our Plot! (Level #3)\n\nThe plot may feel stretched. If this is the case, you will want to determine good plot-saving settings for a website. \n\nFor example, controlling the plot saving parameter argument of `ggplot::sggsave()` using `units = \"px\"` (pixels) and specifying the width (in pixels) and height (in pixels) may be a good approach. You can determine what pixel dimensions would be good for a webpage by doing and Internet search. \n\nExample:\n\n- `width    = 1600`\n- `height   = 1100`\n- `units    = \"px\"`\n- `dpi      = 200` `# or \"retina\"`\n\n\n![](../figs/cty_hwy_mpg_point.png)\n\n### Plot with `width` configurations\n\n![](../figs/cty_hwy_mpg_point.png){width=800}\n\n### Our Plot with `width` configurations\n\n![](../figs/cty_hwy_mpg_point.png){width=500}\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
