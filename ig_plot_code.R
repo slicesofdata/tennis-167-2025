@@ -3,31 +3,35 @@ library(here)
 
 data_merged <- source(here("data/processed/data_merged.R"))$value
 
+# 1. Identify straight-set matches
 data_merged_ss <- data_merged %>%
   mutate(
     straight_sets = grepl("^([6-7]-[0-5])( [6-7]-[0-5])*?$", score)
   )
 
+# 2. Winner rank group: Top 10 vs Outside Top 50 (51+)
 data_merged_ss_2 <- data_merged_ss %>%
   mutate(
     rank_group = case_when(
-      winner_rank <= 100                       ~ "Top 100",
-      winner_rank > 100 & !is.na(winner_rank)  ~ "101+",
+      winner_rank <= 10                        ~ "Top 10",
+      winner_rank > 50 & !is.na(winner_rank)   ~ "Outside Top 50",
+      TRUE                                     ~ NA_character_   # drops ranks 11–50
+    )
+  )
+
+# 3. Opponent rank group: Top 50 vs 51+
+data_merged_ss_3 <- data_merged_ss_2 %>%
+  mutate(
+    opp_rank_group = case_when(
+      loser_rank <= 50                         ~ "Opponent: Top 50",
+      loser_rank > 50 & !is.na(loser_rank)     ~ "Opponent: 51+",
       TRUE                                     ~ NA_character_
     )
   )
 
-data_merged_ss_3 <- data_merged_ss_2 %>%
-  mutate(
-    opp_rank_group = case_when(
-      loser_rank <= 100                        ~ "Opponent: Top 100",
-      loser_rank > 100 & !is.na(loser_rank)    ~ "Opponent: 101+",
-      TRUE                                     ~ NA_character_
-    )
-  )
+# 4. Compute straight-set win rates
 rates_all <- data_merged_ss_3 %>%
   filter(
-    winner_age >= 25,             # keep if you still want "older winners"
     !is.na(rank_group),
     !is.na(opp_rank_group)
   ) %>%
@@ -40,16 +44,16 @@ rates_all <- data_merged_ss_3 %>%
 
 rates_all
 
-
+# 5. Plot: same structure as before
 rank_rate_facet_plot <- rates_all %>%
   ggplot(aes(x = rank_group, y = straight_set_rate, fill = rank_group)) +
   geom_col(width = 0.6, color = "black") +
   facet_wrap(~ opp_rank_group) +
   scale_y_continuous(labels = scales::percent, limits = c(0, 1)) +
-  scale_fill_manual(values = c("Top 100" = "#1f78b4", "101+" = "#bbbbbb")) +
+  scale_fill_manual(values = c("Top 10" = "#1f78b4", "Outside Top 50" = "#bbbbbb")) +
   theme_minimal() +
   labs(
-    title = "Straight-Set Win Rates (Age ≥ 25)\nby Winner & Opponent Ranking Group",
+    title = "Straight-Set Win Rates\nTop 10 vs Outside Top 50 by Opponent Rank",
     x = "Winner Ranking Group",
     y = "Straight-Set Win Rate",
     fill = "Winner Rank"
