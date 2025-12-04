@@ -83,7 +83,7 @@ matches_per_year$player_name <- factor(
 
 numberofmatches_year <- ggplot(matches_per_year, aes(x = year, y = player_name, 
                                                      fill = player_name, alpha = matches)) +
-  geom_tile() +
+  geom_tile(color = "black", size = 0.1) +
   scale_fill_manual(values = player_colors) +  
   scale_alpha_continuous(range = c(0.1, 1), guide = FALSE) +  
   labs(title = "Singles Matches Played per Year (Heatmap)",
