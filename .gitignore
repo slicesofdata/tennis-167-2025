@@ -20,6 +20,9 @@ Rplots.pdf
 *.Rout
 *_Rout.txt
 
+.DS_Store
+.Rproj.user/
+
 # Ignore R history files
 .Rhistory
 .Rapp.history
