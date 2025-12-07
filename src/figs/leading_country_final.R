@@ -72,7 +72,7 @@ save_plot_png <- function(
 
 
 save_plot_png(plot = graph2, file_name = "leading_country.png", figs_dir = "figs")
-
+#
 
 
 
