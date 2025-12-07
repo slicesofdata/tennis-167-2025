@@ -40,7 +40,7 @@ american_win <- atp_singles_data %>%
   geom_point(size = 2) +
   # geom_smooth(se = FALSE, method = "loess", linetype = "dashed", linewidth = 0.8) +
   labs(
-    title = "American Player Win %: US Open vs Australian Open (2000–2025)",
+    title = "American Win %: US vs Australian Open",
     subtitle = "Visualizing home-court advantage over time",
     x = "Year",
     y = "Win Percentage (%)",
