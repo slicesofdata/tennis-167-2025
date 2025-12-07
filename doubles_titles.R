@@ -13,10 +13,34 @@ player_colors <- c(
   "Sinner" = "#9C27B0"     # Pink
 )
 
+save_plot_png <- function(
+    plot,
+    file_name,
+    figs_dir,
+    units = "px",
+    width = 1600,
+    height = 1100,
+    dpi = 300) {
+
+  file_path <- here::here(figs_dir, file_name)
+
+  ggsave(
+    filename = file_path,
+    plot = plot,
+    device = "png",
+    units = units,
+    width = width,
+    height = height,
+    dpi = dpi
+  )
+}
+
+
+
 
 #######################################################################################################################
 
-cleaned_doubles_data <- readRDS(file = here::here("data","processed","cleaned_doubles_data.Rds")) 
+cleaned_doubles_data <- readRDS(file = here::here("data","processed","cleaned_doubles_data.Rds"))
 head(cleaned_doubles_data)
 
 #######################################################################################################################
@@ -74,7 +98,7 @@ players_overall_titles
 
 doubles_titles_plot <- players_overall_titles %>%
   ggplot(aes(x = player, y = doubles_titles, fill = player)) +
-  geom_col() +  
+  geom_col() +
   coord_flip() +
   scale_fill_manual(values = c(
     "Roger Federer"   = "#006400",
@@ -83,7 +107,7 @@ doubles_titles_plot <- players_overall_titles %>%
     "Carlos Alcaraz"  = "#FF8C00",
     "Jannik Sinner"   = "#9C27B0"
   )) +
-  geom_text(aes(label = doubles_titles), hjust = +2.5, color = "white") + 
+  geom_text(aes(label = doubles_titles), hjust = +2.5, color = "white") +
   labs(
     title = "Number of Doubles Titles per Player", x = "", y = "") +
   theme_minimal() +
@@ -91,5 +115,9 @@ doubles_titles_plot <- players_overall_titles %>%
 doubles_titles_plot
 
 #######################################################################################################################
+
+
+save_plot_png(plot = doubles_titles_plot, file_name = "number_doubles_titles.png", figs_dir = "figs")
+
 
 

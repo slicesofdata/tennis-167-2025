@@ -16,7 +16,7 @@ player_colors <- c(
 
 #######################################################################################################################
 
-cleaned_doubles_data <- readRDS(file = here::here("data","processed","cleaned_doubles_data.Rds")) 
+cleaned_doubles_data <- readRDS(file = here::here("data","processed","cleaned_doubles_data.Rds"))
 head(cleaned_doubles_data)
 
 #######################################################################################################################
@@ -148,13 +148,13 @@ players_stacked <- players_overall %>%
 
 #######################################################################################################################
 
-doubles_plot <- 
+doubles_plot <-
   ggplot(players_stacked, aes(x = player, y = percentage, fill = result)) +
   geom_bar(aes(fill = interaction(player, result)), stat = "identity", position = "stack") +
-  coord_flip() +  
+  coord_flip() +
   scale_fill_manual(
     values = c(
-      "Roger Federer.Won"  = "#006400",   
+      "Roger Federer.Won"  = "#006400",
       "Roger Federer.Lost" = scales::alpha("#006400", 0.5),
       "Rafael Nadal.Won"   = "#D32F2F",
       "Rafael Nadal.Lost"  = scales::alpha("#D32F2F", 0.5),
@@ -172,7 +172,7 @@ doubles_plot <-
     color = "white",
     size = 3) +
   scale_y_continuous(labels = scales::percent_format(scale = 1)) +
-  labs(title = "Percentage of Doubles Matches Won and Lost", 
+  labs(title = "Percentage of Doubles Matches Won and Lost",
        x = "", y = " ", fill = " ",
        caption = "Solid colors = Wins; Faded colors = Losses") +
   theme_minimal() +
@@ -181,8 +181,37 @@ doubles_plot <-
           hjust = 0.5,      # centers the caption horizontally
           size = 10,        # adjusts font size
           face = "italic",  # optional, makes it italic
-          margin = margin(t = 10))) 
+          margin = margin(t = 10)))
 doubles_plot
 
 
 #######################################################################################################################
+
+
+
+save_plot_png <- function(
+    plot,
+    file_name,
+    figs_dir,
+    units = "px",
+    width = 1600,
+    height = 1100,
+    dpi = 300) {
+
+  file_path <- here::here(figs_dir, file_name)
+
+  ggsave(
+    filename = file_path,
+    plot = plot,
+    device = "png",
+    units = units,
+    width = width,
+    height = height,
+    dpi = dpi
+  )
+}
+
+
+save_plot_png(plot = doubles_plot, file_name = "percentage_doubles_won_lost.png", figs_dir = "figs")
+
+

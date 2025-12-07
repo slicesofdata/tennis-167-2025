@@ -25,30 +25,14 @@ project:
     navigate: true
 
 website:
-  title: "Website Title"
+  title: "Tennis "
 
   # site-url: ""
   # add optional favicon
   # favicon: "website_files/images/myfavicon.png"
 
-  # add optional page footer
-  page-footer:
-    # not necessary
-    center: |
-      [contact me](myemail@mydomain.com)
 
-    # not necessary
-    left: |
-      made with [Quarto](https://quarto.org)
 
-    # not necessary
-    right: |
-      [GitHub Repo](https://github.com/username/repositoryname)
-
-    # add optional background for footer
-    background: "black"
-  # add optional logo
-  # logo: "website_files/images/logo.png"  # path to your logo image
 
 
   # add webpage description
@@ -60,37 +44,51 @@ website:
       - text: "Tennis Homepage" # use empty string to be blank
         href: pages/Tennis_homepage.qmd
 
+
+
+      - text: "ATP Match Overview"
+        menu:
+          - text: "Major Tournaments"
+            href: major_page.qmd
+          - text: "Court Surfaces"
+            href: surface_page.qmd
+          - text: "ATP Rankings"
+            href: ranking_page_final.qmd
+          - text: "ATP Doubles"
+            href: pages/doubles.qmd
+
+      - text: "Career Performance Trends"
+        menu:
+          - text: "Performance by Age"
+            href: pages/age_performance.qmd
+          - text: "Early Career Performance"
+            href: pages/early_career.qmd
+
+      - text: "Performance by Nationality"
+        menu:
+          - text: "Country Dominance"
+            href: pages/leading_country_final.qmd
+          - text: "American Performance"
+            href: pages/american_win.qmd
+
+  #    - text: "Conditional Probabilites"
+  #      menu:
+   #       - text: "--- "
+  #          href: pages/leading_country_final.qmd
+   #       - text: "---"
+    #        href: pages/american_win.qmd
+
+
       # adding another page
       - text: "First Page Text"
         href: pages/my_first_page.qmd  # use a meaningful name
 
-      # adding a tab with dropdown menu
-      - text: "Drop Tab Text"
-        menu:
-          - text: "Text for first option"
-            href: pages/my_second_page.qmd
-          - text: "Text for second option"
-            href: pages/my_third_page.qmd
-          - text: "Exercise Test Page"
-            href: pages/team_test_page.qmd
-          - text: "Ranking Page"
-            href: pages/ranking_page.qmd
 
       # the about file
-      - text: "About Page Text"
+      - text: "Final Conclusions"
         href: about.qmd
 
-    right:
-      - about.qmd     # to have about page here instead
 
-      # not necessary
-      - icon: github
-        href: https://github.com/username   # omit for multiple users
-
-      # not necessary
-      #- text: "@myxhandle"
-      #  href: https://x.com/myxhandle
-      #  aria-label: X (formerly Twitter)
 
 format:
   html:
