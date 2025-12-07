@@ -40,11 +40,6 @@ website:
 
   navbar:
     left:
-      # the index file
-      - text: "Tennis Homepage" # use empty string to be blank
-        href: pages/Tennis_homepage.qmd
-
-
 
       - text: "ATP Match Overview"
         menu:
@@ -78,10 +73,6 @@ website:
    #       - text: "---"
     #        href: pages/american_win.qmd
 
-
-      # adding another page
-      - text: "First Page Text"
-        href: pages/my_first_page.qmd  # use a meaningful name
 
 
       # the about file

@@ -17,7 +17,6 @@ atp_singles_data <- readRDS(file = here :: here("data","processed","atp_singles.
 source(here::here("src", "figs", "american_win.R"))
 ```
 
-
 In tennis, home-court advantage refers to the competitive boost a player may experience when competing in their home country or in familiar playing conditions. This can include things like local crowds supporting their favorite players, reduced travel fatigue, and better acclimation to court speed, climate, and time zone. At major tournaments like the Grand Slams, these factors can subtly but meaningfully influence performance, helping players sustain energy through long matches, feel more confident under pressure, and even benefit from crowd-driven momentum during key points.
 
 <br>

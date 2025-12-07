@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="My thoughts about…">
 
-<title>My blog – Tennis</title>
+<title>hw06eisenmanl – Tennis </title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,8 +30,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -69,73 +66,15 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script src="https://kit.fontawesome.com/78ddb093ea.js" crossorigin="anonymous"></script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -222,112 +161,51 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">My blog</h1>
-                  <div>
-        <div class="description">
-          My thoughts about…
-        </div>
-      </div>
-                </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta column-page-left">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-cloud"><div class="category" data-category="YW5pbWFscw=="><span class="quarto-category-count category-cloud-10">animals</span></div><div class="category" data-category="ZGF0YQ=="><span class="quarto-category-count category-cloud-10">data</span></div><div class="category" data-category="ZG9ncw=="><span class="quarto-category-count category-cloud-10">dogs</span></div></div></div>
-<!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
-
-
-
-
-
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Order By</option>
-       <option value="index" data-direction="asc">Default</option>
-         <option value="listing-title" data-direction="asc">
-          Title
-        </option>
-         <option value="listing-date-sort" data-direction="asc">
-          Date - Oldest
-        </option>
-         <option value="listing-date-sort" data-direction="desc">
-          Date - Newest
-        </option>
-         <option value="listing-author" data-direction="asc">
-          Author
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
     </div>
-</div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="ZGF0YSUyQ2RvZ3MlMkNhbmltYWxz" data-listing-date-sort="1735718400000" data-listing-file-modified-sort="1756840292779" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="6">
-<div class="thumbnail">
-<p><a href="../blog/posts/firstpost.html" class="no-external"></a></p><a href="../blog/posts/firstpost.html" class="no-external">
-<p><img loading="lazy" src="../blog/posts/website_files/images/random_png.png" class="thumbnail-image"></p>
-</a><p><a href="../blog/posts/firstpost.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/firstpost.html" class="no-external">My great title</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../blog/posts/firstpost.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('ZGF0YQ=='); return false;">
-data
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('ZG9ncw=='); return false;">
-dogs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('YW5pbWFscw=='); return false;">
-animals
-</div>
-</div>
-<div class="listing-description">
-<a href="../blog/posts/firstpost.html" class="no-external">My post text goes here …</a>
-</div>
-</div>
-<div class="metadata">
-<a href="../blog/posts/firstpost.html" class="no-external">
-<div class="listing-date">
-Jan 1, 2025
-</div>
-</a>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<p>Homework #6: Lindsay Eisenman</p>
+<p><br></p>
+<p>Limitations associated with the below visualization: <br> - Only includes data from the years 2022-2025 and top 10 rankings <br> - Infrequent changes in the data result in flat sections in the graph <br> - Difficult to draw meaningful conclusions about performance from rankings <br></p>
+<p><br></p>
+<p>Here is the code created to clean the Alcaraz and Sinner data:</p>
+<p>cleaneddata_alcaraz &lt;- cleaned_rankings_data %&gt;% <br> mutate(dob = as.Date(as.character(dob), format = “%Y%m%d”)) %&gt;% <br> mutate(ranking_date = as.Date(as.character(ranking_date), format = “%Y%m%d”)) %&gt;% <br> mutate(height = as.numeric(height)) %&gt;% <br> filter(name_last == “Alcaraz”) %&gt;% <br> filter(name_first == “Carlos”) %&gt;% <br> mutate(age = as.numeric((ranking_date - dob) / 365.25)) <br> cleaneddata_alcaraz <br></p>
+<p>cleaneddata_sinner &lt;- cleaned_rankings_data %&gt;% <br> mutate(dob = as.Date(as.character(dob), format = “%Y%m%d”)) %&gt;% <br> mutate(ranking_date = as.Date(as.character(ranking_date), format = “%Y%m%d”)) %&gt;% <br> mutate(height = as.numeric(height)) %&gt;% <br> filter(name_last == “Sinner”) %&gt;% <br> filter(name_first == “Jannik”) %&gt;% <br> mutate(age = as.numeric((ranking_date - dob) / 365.25)) <br> cleaneddata_sinner <br></p>
+<p><br></p>
+<p>Here is the code to create the visualization using the aboved cleaned data:</p>
+<p>new2_ranking_timeline &lt;-<br> ggplot(mapping = aes(x = ranking_date, y = rank)) + <br> geom_line(data = cleaneddata_sinner, aes(color = “Sinner”)) + <br> geom_line(data = cleaneddata_alcaraz, aes(color = “Alcaraz”)) + <br> labs(x = “Date”, y = “Ranking (1 = Highest)”, color = “Player”, <br> title = “ATP Singles Ranking: Alcaraz vs Sinner (2022-2025)”) + <br> scale_color_manual(values = c(“Sinner” = “navy”, <br> “Alcaraz” = “orange”)) + <br> scale_x_date(limits = as.Date(c(“2022-01-01”, Sys.Date()))) + <br> scale_y_reverse(limits = c(10,1), <br> breaks = 10:1, <br> labels = scales::number_format(accuracy = 1)) + <br> annotate(“point”, x = as.Date(“2024-01-28”), y = 4, size = 1) + <br> annotate(“text”, x = as.Date(“2024-01-28”), y = 4.25, <br> label = “Australian Open”, <br> size = 3) + #this adds a point and text to show the sinner’s AO win <br> annotate(“point”, x = as.Date(“2024-09-6”), y = 1, size = 1) + <br> annotate(“text”, x = as.Date(“2024-09-6”), y = 1.25,<br> label = “US Open”, <br> size = 3) + <br> annotate(“point”, x = as.Date(“2022-09-11”), y = 1, size = 1) + <br> annotate(“text”, x = as.Date(“2022-09-11”), y = 1.25, <br> label = “US Open”, <br> size = 3) + <br> annotate(“point”, x = as.Date(“2023-09-16”), y = 2, size = 1) + <br> annotate(“text”, x = as.Date(“2023-09-16”), y = 2.25, <br> label = “Wimbledon”, <br> size = 3) + <br> annotate(“point”, x = as.Date(“2024-06-09”), y = 2, size = 1) + <br> annotate(“text”, x = as.Date(“2024-06-09”), y = 2.25, <br> label = “French Open”, <br> size = 3) + <br> annotate(“point”, x = as.Date(“2024-07-14”), y = 3, size = 1) + <br> annotate(“text”, x = as.Date(“2024-07-14”), y = 3.25, <br> label = “Wimbledon”, <br> size = 3) + <br> theme_classic() <br> new2_ranking_timeline <br></p>
+<p><br></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../src/figs/hw06_plot1.png" class="img-fluid figure-img" width="800"></p>
+<figcaption>Plot 1</figcaption>
+</figure>
 </div>
 </div>
 </div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+<p><br></p>
+<p>I used geom_line for this visualization because this is time-series data and I wanted to visualize the trendline and compare the rankings between both players.</p>
+<p><br></p>
+<p>Instead of geom_line, I could have also used geom_smooth what provides the following: <br> <br> Advantages: <br> - Automatically fits and displays a trend line that reveal patterns in the data <br> - Reduces noise by summarizing trends instead of showing every fluctuation <br> - Good for data sets covering a large time frame <br> Disadvantages: <br> - Geom_smooth can oversimplify the data and obscure actual data variability <br> - Results depend on the chosen smoothing method, which can mislead interpretation <br></p>
+<p><br></p>
+<p>Decorative elements of this visualization: <br> - Added bullet points on the trend lines to indicate grand slam wins by each player <br> - Since there were only 6 bullet points total, the graph did not become overcrowded <br> - However, if there were more grand slam wins, the graph would not be readable <br> - Another decorative element I could add would be a color gradient for the player’s age <br></p>
+<p><br></p>
+<p>This visualization relates to Wilke’s “The principle of proportional ink” which emphasizes that the amount of “ink” should be related to the values the data represents. In this case, the lines are thin and trace the ranking movement per player, which is a good use of ink. However, the bullet points labeling each grand slam both players have won is a possible violation of this principle. Any more additional bullet points may lead to an overcrowded graph.</p>
+
+
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
