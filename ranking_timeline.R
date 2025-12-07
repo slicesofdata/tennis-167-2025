@@ -98,7 +98,7 @@ big3_ranking_timeline <-
              size = 1.5, stroke = 0.4, shape = 21,
              position = position_jitter()) +
   labs(x = "Date", y = "Ranking (1 = Highest)", color = "", shape = "Grand Slam Wins",
-       title = "ATP Singles Ranking: Big 3 (2003-2025)",
+       title = "ATP Singles Ranking: Big 3",
        caption = "Grand Slam wins are marked by circles on the plot.") +
   scale_color_manual(values = c("Roger Federer" = "#006400",
                                 "Rafael Nadal" = "#D32F2F",
@@ -117,7 +117,7 @@ big3_ranking_timeline <-
 big3_ranking_timeline
 
 
-save_plot_png(plot = big3_ranking_timeline, file_name = "big3_ranking_timeline.png", figs_dir = "figs")
+save_plot_png(plot = big3_ranking_timeline, file_name = "big3_ranking_timeline_final.png", figs_dir = "figs")
 
 #maybe add a fourth line that shows the total (see domination?)
 
@@ -165,8 +165,13 @@ new2_ranking_timeline1 <-
   geom_smooth(data = cleaneddata_alcaraz, aes(color = "Carlos Alcaraz"), se = FALSE, method = "loess", linewidth = 1) +
   geom_point(data = filtered_atp_singles_new2, aes(x = tourney_date, y = winner_rank, color = winner_name),
              size = 2.5, alpha = 0.6) +
+<<<<<<< HEAD
   labs(x = "Date", y = "Ranking (1 = Highest)", color = " ",
        title = "ATP Singles Ranking: Alcaraz vs Sinner (2022-2025)",
+=======
+  labs(x = "Date", y = "Ranking (1 = Highest)", color = " ", 
+       title = "ATP Singles Ranking: Alcaraz vs Sinner",
+>>>>>>> lindsay
        caption = "Grand Slam wins are marked by circles on the plot.") +
   scale_color_manual(values = c("Jannik Sinner" = "#9C27B0",
                                 "Carlos Alcaraz" = "#FF8C00")) +
@@ -183,7 +188,7 @@ new2_ranking_timeline1 <-
   )
 new2_ranking_timeline1
 
-save_plot_png(plot = new2_ranking_timeline1, file_name = "new2_ranking_timeline1.png", figs_dir = "figs")
+save_plot_png(plot = new2_ranking_timeline1, file_name = "new2_ranking_timeline_final.png", figs_dir = "figs")
 
 
 ###this is the same graph as above, just using geom_line instead of geom_smooth

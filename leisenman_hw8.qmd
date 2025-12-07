@@ -1,0 +1,34 @@
+---
+title: "Lindsay Eisenman"
+---
+
+
+```{r}
+#| message: false
+#| warning: false
+#| include: false
+cleaned_rankings_data <- readRDS(file = here::here("data", "processed", "cleaned_rankings_data.rds"))
+atp_singles_data <- readRDS(file = here::here("data", "processed", "atp_singles.Rds"))
+
+
+source(here::here("ranking_timeline.R"))
+
+source(here::here("hw8_source_script.R"))
+
+```
+
+
+I chose to change the legends and annotations for my graph containing a trendline of the ATP singles ranking for Jannik Sinner and Carlos Alcaraz. To start, I put the legend below the graph with larger points to help the audience view it easier. For the annotations, I created a tibble with the dates and labels I wanted for each player's grand slam win. This helped automate the labeling process, which I used geom_point and geom_text_repel for. I used the ggrepel library to ensure that the text from the label does not block any of the points. 
+
+
+
+```{r}
+#| echo: false
+# plot with a caption
+
+#| fig.cap: "Plot 1"
+#| fig.align: "center" # to center plot on page if desired
+#| out.width: "100%"   # or some other % appropriate for you site
+
+knitr::include_graphics(here::here("figs", "new2_ranking_timeline_hw.png"))
+```

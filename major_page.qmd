@@ -1,0 +1,71 @@
+---
+title: "Player Performance in Major vs. Non Major Tournaments"
+editor: visual
+---
+
+<br>
+
+This page continues to focus on the Big Three (Djokovic, Federer, Nadal), and new two (Alcaraz & Sinner). The plots included here look into player performance in different tournament types.
+
+<br>
+
+Our group thought it would be interesting to look into player performance in major tournaments (US Open, French Open, Australian Open, and Wimbledon) vs. other non-major tournaments. How are titles distributed between the two categories, and how do their winning percentages compare to one another?
+
+<br>
+
+```{r}
+#| message: false
+#| warning: false
+#| include: false
+cleaned_rankings_data <- readRDS(file = here::here("data", "processed", "cleaned_rankings_data.rds"))
+atp_singles_data <- readRDS(file = here::here("data", "processed", "atp_singles.Rds"))
+```
+
+```{r}
+#| message: false
+#| warning: false
+#| include: false
+source(here::here("major.R"))
+```
+
+<br>
+
+This first visualization distinguishes matches into majors vs. non-majors, comparing winning percentage for total matches played in both categories:
+
+<br>
+
+```{r}
+#| echo: false
+#| fig.cap: " "
+#| fig.align: "center" 
+#| out.width: "800px"
+
+knitr::include_graphics(here::here("figs", "majorswinp.png"))
+```
+
+This visualization shows the difference between both categories for all five players. For all of them, the difference is extremely thin, being around a 5% increase in win percentage while playing in major tournaments. While it may be counter intuitive that these players have a higher win % in major tournaments, it likely signals that more competitive environments bring out the best from these five dominant athletes.
+
+<br>
+
+It also may be a phenomenon with the more talented players, as top ranked competitors have less of an incentive to participate in non-major tournaments being that they have already made a name for themselves. This would likely increase the amount of matches played within major tournaments, during the prime of their careers – while the non-major matches were likely played early on, when the players were still figuring out the professional game and beginning to enter their primes. It also could be a function of less major matches played - which lowers likelihood of losses, especially considering that these players likely were in their primes by the time they participated in major tournaments. It may be interesting to look into how many matches are played for both categories at each player's age, or over time for their careers; It will also be intriguing to see how these percentages stack up when it comes to the amount of tournaments won by each player.
+
+<br>
+
+The next visualization investigates the second suggestion, for the total tournaments that each player has won:
+
+<br>
+
+```{r}
+#| echo: false
+#| fig.cap: " "
+#| fig.align: "center" 
+#| out.width: "800px"
+
+knitr::include_graphics(here::here("figs", "majortitles.png"))
+```
+
+This graph exhibits the number of total singles tournaments won on the y axis, as well as on the top of each bar. This graph is more intuitive, with each player racking up many more non-major tournament wins than major tournament wins. It is very interesting to note that all players have around a 1:3 or 1:4 major:non-major ratio except Sinner.
+
+<br>
+
+Again, an important limitation of looking at total career patterns within this group of players is that the Big Three have a long and illustrious career, and a large sample size to look at, while Sinner and Alcaraz are just beginning their careers.
