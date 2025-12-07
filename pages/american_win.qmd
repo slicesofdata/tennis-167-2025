@@ -1,73 +1,38 @@
 ---
-title: "Untitled"
+title: "Home Court Advantage"
 editor: visual
 ---
 
 ```{r}
-library(ggplot2)
-library(readr)
-library(here)
-library(tidyverse)
-
-```
-
-```{r}
-
+#| message: false
+#| warning: false
+#| include: false
 atp_singles_data <- readRDS(file = here :: here("data","processed","atp_singles.Rds" ))
 ```
 
-The visualization below compares American players’ win percentages at the US Open and the Australian Open from 2000 to 2025, offering insight into potential home-court advantage over time. In the early 2000s, the US Open consistently favored American talent, with win rates hovering above 60% and peaking near 70%. However, that advantage noticeably eroded throughout the 2010s, with performance at both tournaments converging around the 40–50% mark as global competition intensified.
-
-Interestingly, the past few years show a resurgence — particularly at the Australian Open — where American win percentages have climbed sharply again. This shift may reflect the emergence of a new generation of U.S. players who can succeed on multiple surfaces, reducing the historical reliance on hard-court familiarity and New York crowd support. Together, these trends suggest that while home-court advantage remains a factor in Grand Slam performance, American competitiveness is increasingly defined by adaptability and rising young talent capable of winning anywhere in the world.
-
 ```{r}
-
-atp_singles_data %>%
-
-  mutate(
-    year = as.integer(format(as.Date(tourney_date), "%Y")),
-    tn_clean = tourney_name |>
-      str_to_lower() |>
-      str_replace_all("\\.", "") |>
-      str_squish(),
-    tourney = case_when(
-      str_detect(tn_clean, "^us\\s*open$") ~ "US Open",
-      str_detect(tn_clean, "^australian\\s*open$") ~ "Australian Open",
-      TRUE ~ NA_character_
-    ),
-    winner_ioc = toupper(winner_ioc),
-    loser_ioc  = toupper(loser_ioc)
-  ) %>%
-  # filter relevant years, tournaments, and American matches
-  filter(
-    year >= 2000, year <= 2025,
-    !is.na(tourney),
-    winner_ioc == "USA" | loser_ioc == "USA"
-  ) %>%
-  mutate(american_win = (winner_ioc == "USA")) %>%
-  group_by(tourney, year) %>%
-  summarise(
-    win_percent = 100 * mean(american_win, na.rm = TRUE),
-    .groups = "drop"
-  ) %>%
-  # line graph instead of bar chart
-  ggplot(aes(x = year, y = win_percent, color = tourney)) +
-  geom_line(linewidth = 1.2) +
-  geom_point(size = 2) +
- # geom_smooth(se = FALSE, method = "loess", linetype = "dashed", linewidth = 0.8) +
-  labs(
-    title = "American Player Win %: US Open vs Australian Open (2000–2025)",
-    subtitle = "Visualizing home-court advantage over time",
-    x = "Year",
-    y = "Win Percentage (%)",
-    color = "Tournament"
-  ) +
-  scale_y_continuous(limits = c(0, 100)) +
-  theme_minimal(base_size = 13) +
-  theme(
-    plot.title = element_text(face = "bold"),
-    axis.text.x = element_text(angle = 45, hjust = 1),
-    legend.position = "bottom"
-  )
+#| message: false
+#| warning: false
+#| include: false
+source(here::here("src", "figs", "american_win.R"))
 ```
 
+
+In tennis, home-court advantage refers to the competitive boost a player may experience when competing in their home country or in familiar playing conditions. This can include things like local crowds supporting their favorite players, reduced travel fatigue, and better acclimation to court speed, climate, and time zone. At major tournaments like the Grand Slams, these factors can subtly but meaningfully influence performance, helping players sustain energy through long matches, feel more confident under pressure, and even benefit from crowd-driven momentum during key points.
+
+<br>
+
+The visualization below compares American players’ win percentages at the US Open and the Australian Open from 2000 to 2025, offering insight into potential home-court advantage over time. In the early 2000s, the US Open consistently favored American talent, with win rates hovering above 60% and peaking near 70%. However, that advantage noticeably eroded throughout the 2010s, with performance at both tournaments converging around the 40–50% mark as global competition intensified.
+
+Interestingly, the past few years show a resurgence, particularly at the Australian Open, where American win percentages have climbed sharply again. This shift may reflect the emergence of a new generation of U.S. players who can succeed on multiple surfaces, reducing the historical reliance on hard-court familiarity and New York crowd support. Together, these trends suggest that while home-court advantage remains a factor in Grand Slam performance, American competitiveness is increasingly defined by adaptability and rising young talent capable of winning anywhere in the world.
+
+<br>
+
+```{r}
+#| echo: false
+#| fig.cap: " "
+#| fig.align: "center" 
+#| out.width: "800px"
+
+knitr::include_graphics(here::here("figs", "american_win.png"))
+```
