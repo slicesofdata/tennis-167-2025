@@ -1,13 +1,15 @@
-library(tidyverse)
 library(ggplot2)
 library(readr)
 library(here)
+library(tidyverse)
 
-atp_singles_data <- readRDS(file = here::here("data", "processed", "atp_singles.Rds"))
+
+atp_singles_data <- readRDS(file = here :: here("data","processed","atp_singles.Rds" ))
 
 
 
 american_win <- atp_singles_data %>%
+
   mutate(
     year = as.integer(format(as.Date(tourney_date), "%Y")),
     tn_clean = tourney_name |>
@@ -50,11 +52,10 @@ american_win <- atp_singles_data %>%
   theme_minimal(base_size = 13) +
   theme(
     plot.title = element_text(face = "bold"),
-    #axis.text.x = element_text(angle = 45, hjust = 1),
+    axis.text.x = element_text(angle = 45, hjust = 1),
     legend.position = "bottom"
   )
 american_win
-
 
 
 
@@ -67,7 +68,7 @@ save_plot_png <- function(
     height = 1100,
     dpi = 300) {
 
-  file_path <- here::here(figs_dir, file_name)
+  file_path <- here::here("figs", file_name)
 
   ggsave(
     filename = file_path,
@@ -81,17 +82,7 @@ save_plot_png <- function(
 }
 
 
-
 save_plot_png(plot = american_win, file_name = "american_win.png", figs_dir = "figs")
-
-
-
-
-
-
-
-
-
 
 
 
