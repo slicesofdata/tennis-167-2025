@@ -2,18 +2,14 @@ project:
   type: website
   output-dir: docs      # use docs/ for githubpages, other cases use _site/
   render:
-    # - "*.{qmd,R,py}"
+#    - "*.{qmd,R,py}"
     - "*.qmd"           # render all *.qmd files
     - "!site/this_dir/" # don't render a directory
 
     #- "!call_scripts/" # don't render a directory
   #pre-render: Rscript prerender.R #load_libraries.R
   # after rendering completes, script that removes .R files from the docs/ folder.
-<<<<<<< HEAD
   #post-render: Rscript cleanup/clean_docs_dir.R
-=======
-  # post-render: Rscript cleanup/clean_docs_dir.R
->>>>>>> lindsay
 
   #resources:
   #  - "webr-serviceworker.js"
@@ -23,93 +19,67 @@ project:
   #  - figs/    # ensures that the .R files in figs/ are rendered in a website build
 
   # settings for previewing the website
-<<<<<<< HEAD
-=======
-
->>>>>>> lindsay
   preview:
     port: 1671
     browser: true
     navigate: true
 
 website:
-  title: "Website Title"
+  title: "Tennis "
 
   # site-url: ""
   # add optional favicon
   # favicon: "website_files/images/myfavicon.png"
 
-  # add optional page footer
-  page-footer:
-    # not necessary
-    center: |
-      [contact me](myemail@mydomain.com)
 
-    # not necessary
-    left: |
-      made with [Quarto](https://quarto.org)
 
-    # not necessary
-    right: |
-      [GitHub Repo](https://github.com/username/repositoryname)
-
-    # add optional background for footer
-    background: "black"
-  # add optional logo
-  # logo: "website_files/images/logo.png"  # path to your logo image
 
 
   # add webpage description
-<<<<<<< HEAD
   description: ""
 
   navbar:
     left:
-      # the index file
-      - text: "Tennis Homepage" # use empty string to be blank
-        href: pages/Tennis_homepage.qmd
-=======
-  description: "Blah Blah Blah"
-  
-  navbar:
-    left: 
-      # the right side of nav bar
-      - href: index.qmd
-        text: "Home"
-      - about.qmd
->>>>>>> lindsay
 
-      # adding another page
-      - text: "First Page Text"
-        href: pages/my_first_page.qmd  # use a meaningful name
-
-      # adding a tab with dropdown menu
-      - text: "Drop Tab Text"
+      - text: "ATP Match Overview"
         menu:
-          - text: "Text for first option"
-            href: pages/my_second_page.qmd
-          - text: "Text for second option"
-            href: pages/my_third_page.qmd
-          - text: "Exercise Test Page"
-            href: pages/team_test_page.qmd
-          - text: "Ranking Page"
-            href: pages/ranking_page.qmd
+          - text: "Major Tournaments"
+            href: major_page.qmd
+          - text: "Court Surfaces"
+            href: surface_page.qmd
+          - text: "ATP Rankings"
+            href: ranking_page_final.qmd
+          - text: "ATP Doubles"
+            href: pages/doubles.qmd
+
+      - text: "Career Performance Trends"
+        menu:
+          - text: "Performance by Age"
+            href: pages/age_performance.qmd
+          - text: "Early Career Performance"
+            href: pages/early_career.qmd
+
+      - text: "Performance by Nationality"
+        menu:
+          - text: "Country Dominance"
+            href: pages/leading_country_final.qmd
+          - text: "American Performance"
+            href: pages/american_win.qmd
+
+  #    - text: "Conditional Probabilites"
+  #      menu:
+   #       - text: "--- "
+  #          href: pages/leading_country_final.qmd
+   #       - text: "---"
+    #        href: pages/american_win.qmd
+
+
 
       # the about file
-      - text: "About Page Text"
+      - text: "Final Conclusions"
         href: about.qmd
 
-    right:
-      - about.qmd     # to have about page here instead
 
-      # not necessary
-      - icon: github
-        href: https://github.com/username   # omit for multiple users
-
-      # not necessary
-      #- text: "@myxhandle"
-      #  href: https://x.com/myxhandle
-      #  aria-label: X (formerly Twitter)
 
 format:
   html:
@@ -127,11 +97,8 @@ format:
     #mainfont: arial #Nunito
     #fontsize: 1.1rem # 1.2rem
 
-<<<<<<< HEAD
 
 
 
 # set quarto optional editor preference: source or visual
 #editor: source
-=======
->>>>>>> lindsay
