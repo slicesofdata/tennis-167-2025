@@ -3,7 +3,6 @@ title: "Home Court Advantage"
 editor: visual
 ---
 
-
 ```{r}
 #| message: false
 #| warning: false
@@ -18,10 +17,9 @@ atp_singles_data <- readRDS(file = here :: here("data","processed","atp_singles.
 source(here::here("src", "figs", "american_win.R"))
 ```
 
-The visualization below compares American players’ win percentages at the US Open and the Australian Open from 2000 to 2025, offering insight into potential home-court advantage over time. In the early 2000s, the US Open consistently favored American talent, with win rates hovering above 60% and peaking near 70%. However, that advantage noticeably eroded throughout the 2010s, with performance at both tournaments converging around the 40–50% mark as global competition intensified.
+The visualization below compares American players’ win percentages at the US Open and the Australian Open from 2000 to 2025, offering insight into potential home-court advantage over time, and if it even exists. In the early 2000s, the Americans were playing very strongly at the US open, with win rates hovering above 60% and peaking near 70%. However, that advantage noticeably declined throughout the 2010s, with performance at both tournaments converging around the 40–50% mark as global competition intensified.
 
-Interestingly, the past few years show a resurgence — particularly at the Australian Open — where American win percentages have climbed sharply again. This shift may reflect the emergence of a new generation of U.S. players who can succeed on multiple surfaces, reducing the historical reliance on hard-court familiarity and New York crowd support. Together, these trends suggest that while home-court advantage remains a factor in Grand Slam performance, American competitiveness is increasingly defined by adaptability and rising young talent capable of winning anywhere in the world.
-
+Interestingly, the past few years show a resurgence, particularly at the Australian Open, where American win percentages have climbed sharply again. Together, these trends suggest that while home-court advantage remains a factor in Grand Slam performance, there are many other factors that can influence whether a player wins a specific match. Players, no matter the nationality, have learned to adapt to changing environments and have had success winning anywhere in the world. 
 
 ```{r}
 #| echo: false
