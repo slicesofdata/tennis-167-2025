@@ -9,7 +9,6 @@ execute:
 
 Through this process, we have analyzed many different variables including tournament titles, surface types, singles rankings, doubles success, early in career performance, country dominance, and different conditional probabilities. Our analysis has shown that Carlos Alcaraz and Jannik Sinner are on trajectories that closely mirror or even surpass the early career performances of the Big 3 (Novak Djokovic, Rafael Nadal, and Roger Federer). 
 
-<br>
 
 ```{r}
 #| echo: false
@@ -20,11 +19,9 @@ Through this process, we have analyzed many different variables including tourna
 knitr::include_graphics(here::here("images", "alcaraz.png"))
 ```
 
-<br>
 
 Both Alcaraz and Sinner have demonstrated impressive consistency and results in their early years on the ATP Tour. Their win totals in the early stages of their careers are on par with or ahead of the Big 3 at similar points in their careers, signaling that these two players are well on track to make a significant impact in the sport
 
-<br>
 
 ```{r}
 #| echo: false
@@ -35,11 +32,9 @@ Both Alcaraz and Sinner have demonstrated impressive consistency and results in 
 knitr::include_graphics(here::here("images", "djokovic_sinner.png"))
 ```
 
-<br>
 
 While sustained success over a full career is needed to establish a legacy, the early career win rates of both Alcaraz and Sinner suggest that tennis fans have much to look forward to as this new generation begins to challenge the Big 3’s long-held dominance.
 
-<br>
 
 ```{r}
 #| echo: false
@@ -50,11 +45,8 @@ While sustained success over a full career is needed to establish a legacy, the 
 knitr::include_graphics(here::here("images", "big_3.png"))
 ```
 
-<br>
 
 As the sport evolves, it’s clear that Alcaraz and Sinner have the potential to write the next great chapter in tennis history. Their early successes set the stage for a thrilling future, and we will be watching closely to see how their careers unfold. However, will another player emerge to join Alcaraz and Sinner in creating a modern "Big 3"? Only time will tell, as the next few years will be pivotal in shaping the future of men's tennis.
-
-<br>
 
 
 ```{r}
@@ -67,48 +59,5 @@ knitr::include_graphics(here::here("images", "all_5.png"))
 ```
 
 
-<br>
 
-```{r}
-#| echo: false
-#| fig.cap: " "
-#| fig.align: "center" 
-#| out.width: "800px"
-
-knitr::include_graphics(here::here("images", "alcaraz.png"))
-```
-
-<br>
-
-Both Alcaraz and Sinner have demonstrated impressive consistency and results in their early years on the ATP Tour. Their win totals in the early stages of their careers are on par with or ahead of the Big 3 at similar points in their careers, signaling that these two players are well on track to make a significant impact in the sport
-
-<br>
-
-```{r}
-#| echo: false
-#| fig.cap: " "
-#| fig.align: "center" 
-#| out.width: "800px"
-
-knitr::include_graphics(here::here("images", "djokovic_sinner.png"))
-```
-
-<br>
-
-While sustained success over a full career is needed to establish a legacy, the early career win rates of both Alcaraz and Sinner suggest that tennis fans have much to look forward to as this new generation begins to challenge the Big 3’s long-held dominance.
-
-<br>
-
-```{r}
-#| echo: false
-#| fig.cap: " "
-#| fig.align: "center" 
-#| out.width: "800px"
-
-knitr::include_graphics(here::here("images", "big_3.png"))
-```
-
-<br>
-
-As the sport evolves, it’s clear that Alcaraz and Sinner have the potential to write the next great chapter in tennis history. Their early successes set the stage for a thrilling future, and we will be watching closely to see how their careers unfold. However, will another player emerge to join Alcaraz and Sinner in creating a modern "Big 3"? Only time will tell, as the next few years will be pivotal in shaping the future of men's tennis.
 
