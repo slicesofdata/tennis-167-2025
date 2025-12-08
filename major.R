@@ -7,13 +7,13 @@ library(scales)
 
 save_plot_png <- function(
     plot,
-    file_name, 
+    file_name,
     figs_dir,
     units = "px",
     width = 1600,
     height = 1100,
     dpi = 300) {
-  
+
   file_path <- here::here(figs_dir, file_name)
   print(file_path)
   ggsave(
@@ -40,7 +40,7 @@ player_colors <- c(
 
 cleaned_rankings_data <- readRDS("data/processed/cleaned_rankings_data.rds")
 
-atp_singles_data <- readRDS("data/processed/atp_singles.Rds") 
+atp_singles_data <- readRDS("data/processed/atp_singles.Rds")
 
 #################################################################################
 
@@ -110,31 +110,31 @@ majorsviz <- ggplot(
   aes(
     x     = player_short,
     y     = win_pct,
-    fill  = player_short,   
-    alpha = tourney_type,   
-    group = tourney_type    
+    fill  = player_short,
+    alpha = tourney_type,
+    group = tourney_type
   )
 ) +
   geom_col(position = position_dodge(width = 0.75)) +
-  
+
   # player colors from your vector
   scale_fill_manual(
     values = player_colors,
     name   = "Player"
   ) +
-  
+
   # alpha levels & legend for Major vs Non-Major
   scale_alpha_manual(
     values = c("Major" = 1, "Non-Major" = 0.4)
   ) +
-  
+
   scale_y_continuous(
     limits = c(0, 1),
     breaks = seq(0, 1, by = 0.10),
     labels = scales::percent_format(accuracy = 1),
     expand = c(0, 0)
   ) +
-  
+
   labs(
     x     = NULL,
     y     = "Singles Matches Won (%)",
@@ -142,9 +142,7 @@ majorsviz <- ggplot(
     caption = "Solid colors = Majors; Faded colors = Non-Majors"
   ) +
   theme_classic() +
-  theme(
-    plot.title    = element_text(face = "bold", size = 16),
-  ) + theme(legend.position = "none") + 
+  theme(legend.position = "none") +
   theme(plot.title = element_text(hjust = 0.5)) +
   theme(plot.caption = element_text(
     hjust = 0.5,
@@ -251,27 +249,29 @@ titles_viz <- ggplot(
     color = "black",
     inherit.aes = FALSE
   ) +
-  
+
   # Player colors, no player legend
   scale_fill_manual(
     values = player_colors,
     guide  = "none"
   ) +
-  
+
   # Keep only the tourney_type legend
   scale_alpha_manual(
     values = c("Major" = 1, "Non-Major" = 0.4)
   ) +
-  
+
   labs(
     x     = NULL,
     y     = "Number of Titles Won",
-    title = "Total Singles Tournaments Won: Majors vs. Non-Majors",
+    title = "Total Singles Tournaments Won",
+    subtitle = "Majors vs. Non-Majors",
     caption = "Solid colors = Major Wins; Faded colors = Non-Major Wins"
   ) +
   theme_classic() +
   theme(
-    plot.title      = element_text(hjust = 0.5, face = "bold", size = 16),
+    plot.title = element_text(hjust = 0.5, face = "bold", size = 16),
+    plot.subtitle = element_text(hjust = 0.5, size = 14),
     legend.position = "top",
     legend.title    = element_text(face = "bold"),
     legend.key.width = unit(1.5, "cm")
@@ -282,6 +282,7 @@ titles_viz <- ggplot(
     face = "italic",
     margin = margin(t = 10)
   ))
+titles_viz
 
 save_plot_png(
   plot = titles_viz,
