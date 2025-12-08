@@ -1,8 +1,7 @@
 ---
-title: "leading_country_final"
+title: "Country Dominance"
 editor: visual
 ---
-
 
 ```{r}
 #| message: false
@@ -17,48 +16,20 @@ As we move toward the 2000s, a noticeable shift occurs in the competitive landsc
 
 This graph not only demonstrates the changing dominance in men’s tennis over time but also reflects how the rise of new generations and training infrastructures around the world continues to reshape the sport’s competitive dynamics.
 
+```{r}
+#| message: false
+#| warning: false
+#| include: false
+source(here::here("src", "figs", "leading_country_final.R"))
+```
 
 ```{r}
-library(tidyverse)
-library(ggplot2)
-library(readr)
-library(here)
+#| echo: false
+#| fig.cap: " "
+#| fig.align: "center" 
+#| out.width: "800px"
 
-
-selected_countries <- c("USA", "ESP", "FRA", "ITA", "GER")
-
-
-graph2 <- wins_selected <- atp_singles_data %>%
-  mutate(
-    year = as.integer(format(as.Date(tourney_date), "%Y")),
-    winner_ioc = toupper(str_trim(winner_ioc))
-  ) %>%
-  filter(
-    !is.na(year),
-    year >= 1968,
-    winner_ioc %in% selected_countries
-  ) %>%
-  count(year, winner_ioc, name = "wins") %>%
-  rename(country = winner_ioc)
-
-
-ggplot(wins_selected, aes(x = year, y = wins, color = country)) +
-  geom_line(linewidth = 1.1) +
-  geom_point(size = 1.8) +
-  labs(
-    title = "Match Wins by Country Over Time ",
-    subtitle = "USA, Spain, France, Italy, and Germany (1968–2025)",
-    x = "Year",
-    y = "Number of Match Wins",
-    color = "Country"
-  ) +
-  theme_minimal(base_size = 13) +
-  theme(
-    plot.title = element_text(face = "bold"),
-    axis.text.x = element_text(angle = 45, hjust = 1),
-    legend.position = "right"
-  )
-
-graph2
+knitr::include_graphics(here::here("figs", "leading_country.png"))
 ```
+
 As the era of the “Big 3” comes to a close, the rise of young stars like Carlos Alcaraz and Jannik Sinner signals a new chapter in men’s tennis. With their rapid climb to the top of the rankings and early Grand Slam success, they appear poised to reshape the competitive landscape, continuing the trend of a more globally distributed field. Instead of a single dominant nation or trio of players, the future of tennis may be defined by tighter rivalries, more frequent shifts at the top, and increased representation from emerging tennis countries. This transition suggests a sport entering a more unpredictable and thrilling era, one where the next generation has the opportunity to redefine what sustained excellence looks like on the global stage.
