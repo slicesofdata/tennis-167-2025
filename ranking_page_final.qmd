@@ -5,7 +5,7 @@ editor: visual
 
 <br>
 
-The ATP singles ranking is a point-based system that ranks men's professional tennis players based on their performance in official singles tournaments over the preceding 52 weeks. A player's best 19 tournament results determines their ranking, with points awarded based on the level of the tournament (e.g., Grand Slam, ATP Masters 1000, ATP 500, ATP 250, etc.) and how far a player advances. Points from tournaments are dropped after 52 weeks and replaced with current performances, meaning rankings can change weekly. Rankings are important for tournament eligibility and their seeding within the draw. The player with the highest number of points at the end of the year is crowned the year-end No. 1 player.
+The ATP singles ranking is a point-based system that ranks men's professional tennis players based on their performance in official singles tournaments over 52 weeks. A player's best 19 tournament results determines their ranking, with points awarded based on the level of the tournament (e.g., Grand Slam, ATP Masters 1000, ATP 500, ATP 250, etc.) and how far a player advances in the tournament. Points from tournaments are dropped after 52 weeks and replaced with current performances, meaning rankings can change weekly. Rankings are important for tournament eligibility and their seeding within the draw. The player with the highest number of points at the end of the year is crowned the year-end No.1 player.
 
 <br>
 
@@ -45,7 +45,7 @@ The "New 2"—Carlos Alcaraz and Jannik Sinner—have risen to the top of the ga
 
 <br>
 
-The visualization below shows the ATP singles ranking trajectory for Carlos Alcaraz and Jannik Sinner, with circles representing their Grand Slam wins. Alcaraz emerged as a frontrunner, rising to the top of the game slightly before Sinner, accumulating a few more Grand Slam titles during this time period. However, Sinner has recently surged ahead in the rankings, signaling the beginning of a fierce rivalry for the world No. 1 spot between these two rising stars.
+The visualization below shows the ATP singles ranking trajectory for Carlos Alcaraz and Jannik Sinner, with circles representing their Grand Slam wins. Alcaraz emerged as a front runner, rising to the top of the game slightly before Sinner, accumulating a few more Grand Slam titles during this time period. However, Sinner has recently surged ahead in the rankings, signaling the beginning of a fierce rivalry for the world No. 1 spot between these two rising stars.
 
 <br>
 
@@ -58,7 +58,7 @@ The visualization below shows the ATP singles ranking trajectory for Carlos Alca
 knitr::include_graphics(here::here("figs", "new2_ranking_timeline_final.png"))
 ```
 
-Beyond visualizing the movement of these five players' singles rankings over time, we can also examine the percentage of weeks each player has spent at the No. 1 spot throughout their career. The bar chart below highlights this data, showcasing how Djokovic has spent approximately 37.1% of his career as the world No. 1. This is evidence of his sustained dominance at the top of the game and consistency year after year, as rankings are a great data-driven measure of performance based on a player's results against a variety of different opponents.
+Beyond visualizing the movement of these five players' singles rankings over time, we can also examine the percentage of weeks each player has spent at the No. 1 spot throughout their career. The bar chart below highlights such data, showcasing how Djokovic has spent approximately 37.1% of his career as the world No. 1. This is evidence of his sustained dominance at the top of the game and consistency year after year, as rankings are a great data-driven measure of performance based on a player's results against a variety of different opponents.
 
 <br>
 
