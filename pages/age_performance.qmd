@@ -3,7 +3,6 @@ title: "Performance Over Time"
 editor: visual
 ---
 
-
 ```{r}
 #| message: false
 #| warning: false
@@ -20,15 +19,14 @@ source(here::here("src", "figs", "age_numberofmatches.R"))
 source(here::here("src", "figs", "last_grandslam.R"))
 ```
 
-
-A tennis player’s career often follows a rise-peak-decline pattern. One’s early career is generally focused on improving skills, gaining experience, and learning how to compete at the top of the game. Tournament wins are often sporadic during these years. Once players reach maturity, they often perform the best during these years accumulating the most Grand Slam wins and career highlights. Late in a player’s career, the player’s physical abilities often decline, leading to longer recovery times and increased injury risk. At this time, it is important for players to adapt their game style and focus on playing fewer events. Historically, women have peaked earlier in their careers (around ages 22–26), whereas men tend to peak later. Factors that can affect one’s performance over time include physical condition and injuries, playing style, mental toughness, and experience.
+A tennis player’s career often follows a rise-peak-decline pattern. One’s early career is generally focused on improving skills, gaining experience, and learning how to compete at the top of the game. Tournament wins are often sporadic during
+the beginning years of their career. During the early stage of players careers, they tend to perform their best and accumulate the most Grand Slam wins and career highlights. Late in a player’s career, the player’s physical abilities often decline, leading to longer recovery times and increased injury risk. At this time, it is important for players to adapt their game style and focus on playing fewer events. Historically, women have peaked earlier in their careers (around ages 22–26), whereas men tend to peak later. Factors that can affect one’s performance over time include physical condition and injuries, playing style, mental toughness, and experience.
 
 <br>
 
 The visualization below is a heatmap showing the number of singles matches each selected player has played each year. The darker tiles indicate more matches played, whereas the lighter tiles indicate less matches played that year. As shown by the Big 3, the highest match volume occurred early in their careers, roughly 5 years in. The lowest match volume appears at both the beginning and end of each player’s career. We expect to see a similar pattern for the New 2 as their careers evolve. Playing more matches can indicate a player’s growing confidence, greater success, and/or participation in a larger number of tournaments. However, this places significant mental and physical demands that often affect performance in later years.
 
 <br>
-
 
 ```{r}
 #| echo: false
@@ -41,10 +39,9 @@ knitr::include_graphics(here::here("figs", "numberofmatches_year.png"))
 
 <br>
 
-This next visualization is a facet plot highlighting each player’s performance by age. Performance is measured as the percentage of singles matches won. Both Federer and Djokovic appear to reach their peak performance—winning roughly 80% of matches—around age 25. Nadal’s peak occurs slightly earlier, around age 22, with a somewhat lower maximum win percentage. It is interesting to note how these three curves follow the same rise-peak-decline pattern that was introduced earlier. Because Sinner and Alcaraz are newer to the tour and much younger, their performance patterns are differ from the Big 3. Sinner appears to be in the “peak” stage of his career, with his winning percentage increasing every year. Alcaraz shows a slight downward slope in the current data, but is expected to continue improving, as he is still early in his career.
+This next visualization is a facet plot highlighting each player’s performance by age. Performance is measured as the percentage of singles matches won. Both Federer and Djokovic appear to reach their peak performance—winning roughly 80% of matches—around age 25. Nadal’s peak occurs slightly earlier, around age 22, with a somewhat lower maximum win percentage. It is interesting to note how these three curves follow the same rise-peak-decline pattern that was introduced earlier. Because Sinner and Alcaraz are newer to the tour and much younger, their performance patterns are different from the Big Three. Sinner appears to be in the “peak” stage of his career, with his winning percentage increasing every year. Alcaraz shows a slight downward slope in the current data, but is expected to continue improving, as he is still early in his career.
 
 <br>
-
 
 ```{r}
 #| echo: false
@@ -55,13 +52,11 @@ This next visualization is a facet plot highlighting each player’s performance
 knitr::include_graphics(here::here("figs", "age_performance.png"))
 ```
 
-
 <br>
 
 Below is a timeline showing the end-of-career milestones for the Big 3. There are three key markers: the last Grand Slam won, the last title won that was not a Grand Slam, and the last match played (retirement). Federer’s timeline shows an approximately equal spacing between these events, with about two years between each milestone. This indicates a gradual winding down, rather than a sudden drop in performance. Nadal, on the other hand, won a Grand Slam as his final tournament before retirement. This indicates how some players like to retire on a high note. Both players retired roughly three years after their last Grand Slam victory. Djokovic is the only member of the Big 3 still active on the tour, which is why he does not have a “retirement” marker. While he has not won a Grand Slam in the past few years, his presence on the tour demonstrates competitiveness at the highest level.
 
 <br>
-
 
 ```{r}
 #| echo: false
