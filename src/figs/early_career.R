@@ -29,7 +29,7 @@ save_plot_png <- function(
 }
 
 
-atp_singles_data <- readRDS(file = here :: here("Desktop","dataviz","tennis-167-2025","data","processed","atp_singles.Rds" ))
+atp_singles_data <- readRDS(file = here :: here("data","processed","atp_singles.Rds" ))
 head(atp_singles_data)
 
 
@@ -137,32 +137,59 @@ cummulative_match_wins <- ggplot(wins_cum,
   )
 cummulative_match_wins
 
-save_plot_png(plot = cummulative_match_wins, file_name = "cummulative_match_wins.png", figs_dir = "Desktop/dataviz/tennis-167-2025/figs")
+save_plot_png(plot = cummulative_match_wins, file_name = "cummulative_match_wins.png", figs_dir = "figs")
 
 
-```
 
-```{r}
-'''library(ggridges)
 
- <- ggplot(wins_age,
-       aes(x = winner_age, y = winner_name, fill = winner_name)) +
-  geom_density_ridges(alpha = 0.8) +
-  scale_fill_manual(values = player_colors_full) +
-  scale_x_continuous(
-    breaks = floor(min(wins_age$winner_age, na.rm = TRUE)):
-      ceiling(max(wins_age$winner_age, na.rm = TRUE)),
-    labels = function(x) sprintf("%d", x)  # force no decimals
+
+wins_age <- wins_raw %>%
+  filter(!is.na(winner_age)) %>%
+  select(winner_name, winner_age)
+
+
+
+wins_by_age <- wins_age %>%
+  mutate(winner_age = floor(winner_age)) %>%
+  group_by(winner_name, winner_age) %>%
+  summarise(n_wins = n(), .groups = "drop")
+
+wins_start <- ggplot(wins_by_age,
+                     aes(x = winner_age,
+                         y = n_wins,
+                         color = winner_name,
+                         group = winner_name)) +
+  geom_line(linewidth = 1.2, alpha = 0.6) +
+  geom_point(size = 2.5, alpha = 0.8) +
+  scale_color_manual(
+    values = player_colors_full,
+    breaks = c("Roger Federer",
+               "Rafael Nadal",
+               "Novak Djokovic",
+               "Carlos Alcaraz",
+               "Jannik Sinner"),
+    name = NULL
   ) +
-  labs(title = "Age Density of Early-Career Match Wins",
-       x = "Age",
-       y = NULL) +
-  theme_classic() +
-  theme(legend.position = "none",
-        plot.title = element_text(hjust = 0.5, face="bold"))
-early_career
-'''
+  scale_x_continuous(limits = c(17, 21), breaks = 17:21) +
+  labs(
+    title = "Match Wins at Each Age (Early-Career)",
+    x = "Age",
+    y = "Number of Match Wins"
+  ) +
+  theme_classic(base_size = 14) +
+  theme(
+    legend.position = "right",
+    plot.title = element_text(
+      hjust = 0.5,
+      vjust = 1.5,
+      face = "bold",
+      margin = margin(b = 10)
+    ),
+    plot.title.position = "plot"
+  )
+
+wins_start
 
 
-```
+save_plot_png(plot = wins_start, file_name = "wins_start.png", figs_dir = "figs")
 
