@@ -14,7 +14,7 @@ save_plot_png <- function(
     height = 1100,
     dpi = 300) {
 
-  file_path <- here::here(figs_dir, file_name)
+  file_path <- here::here("figs", file_name)
 
   ggsave(
     filename = file_path,
@@ -165,13 +165,10 @@ new2_ranking_timeline1 <-
   geom_smooth(data = cleaneddata_alcaraz, aes(color = "Carlos Alcaraz"), se = FALSE, method = "loess", linewidth = 1) +
   geom_point(data = filtered_atp_singles_new2, aes(x = tourney_date, y = winner_rank, color = winner_name),
              size = 2.5, alpha = 0.6) +
-<<<<<<< HEAD
+
   labs(x = "Date", y = "Ranking (1 = Highest)", color = " ",
        title = "ATP Singles Ranking: Alcaraz vs Sinner (2022-2025)",
-=======
-  labs(x = "Date", y = "Ranking (1 = Highest)", color = " ", 
-       title = "ATP Singles Ranking: Alcaraz vs Sinner",
->>>>>>> lindsay
+
        caption = "Grand Slam wins are marked by circles on the plot.") +
   scale_color_manual(values = c("Jannik Sinner" = "#9C27B0",
                                 "Carlos Alcaraz" = "#FF8C00")) +
