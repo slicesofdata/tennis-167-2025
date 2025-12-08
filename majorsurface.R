@@ -7,14 +7,14 @@ library(scales)
 
 save_plot_png <- function(
     plot,
-    file_name, 
+    file_name,
     figs_dir,
     units = "px",
     width = 1600,
     height = 1100,
     dpi = 300) {
-  
-  file_path <- here::here(figs_dir, file_name)
+
+  file_path <- here::here("figs", file_name)
   print(file_path)
   ggsave(
     filename = file_path,
@@ -40,7 +40,7 @@ player_colors <- c(
 
 cleaned_rankings_data <- readRDS("data/processed/cleaned_rankings_data.rds")
 
-atp_singles_data <- readRDS("data/processed/atp_singles.Rds") 
+atp_singles_data <- readRDS("data/processed/atp_singles.Rds")
 
 #################################################################################
 
@@ -141,16 +141,16 @@ surfaceviz <- ggplot(win_pct_by_surface,
   ) +
   theme_minimal() +
   theme(
-  
+
     plot.title = element_text(face = "bold", size = 16),
     plot.subtitle = element_text(size = 10, colour = "grey30"),
     plot.caption = element_text(size = 8, colour = "grey40"),
-    
-    
-    
+
+
+
     panel.grid.minor = element_blank(),
     panel.grid.major.x = element_blank(),
-    
+
     legend.position = "right",
     legend.title = element_text(face = "bold"),
     legend.box = "vertical"
@@ -212,14 +212,14 @@ titles_surface_share_viz <- ggplot(
   )
 ) +
   geom_col(width = 0.5, alpha = 0.65) +   # slightly transparent bars
-  
+
   geom_text(
     aes(label = titles),
     position = position_stack(vjust = 0.5),  # center of each stacked chunk
     color = "black",
     size = 3.5
   )  +   # stacked by default
-  
+
   scale_fill_manual(
     values = c(
       "Hard"  = "#0077C8",  # Australian Open blue
@@ -228,12 +228,12 @@ titles_surface_share_viz <- ggplot(
     ),
     name = "Surface"
   ) +
-  
+
   scale_y_continuous(
     labels = scales::percent_format(accuracy = 1),
     expand = expansion(mult = c(0, 0.02))
   ) +
-  
+
   labs(
     x     = NULL,
     y     = "Tournaments Won by Surface (%)",
