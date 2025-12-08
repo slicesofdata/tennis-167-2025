@@ -268,6 +268,8 @@ titles_viz <- ggplot(
     subtitle = "Majors vs. Non-Majors",
     caption = "Solid colors = Major Wins; Faded colors = Non-Major Wins"
   ) +
+  scale_y_continuous(limits = c(0, 100),
+                     breaks = seq(0, 100, by = 20)) +
   theme_classic() +
   theme(
     plot.title = element_text(hjust = 0.5, face = "bold", size = 16),
