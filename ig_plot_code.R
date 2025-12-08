@@ -1,35 +1,46 @@
 library(tidyverse)
 library(here)
 
+# -----------------------------------------
+# 1. Load data
+# -----------------------------------------
 data_merged <- source(here("data/processed/data_merged.R"))$value
 
-# 1. Identify straight-set matches
+# -----------------------------------------
+# 2. Identify straight-set matches
+# -----------------------------------------
 data_merged_ss <- data_merged %>%
   mutate(
     straight_sets = grepl("^([6-7]-[0-5])( [6-7]-[0-5])*?$", score)
   )
 
-# 2. Winner rank group: Top 10 vs Outside Top 50 (51+)
+# -----------------------------------------
+# 3. Winner rank group: Top 10 vs Outside Top 50 (51+)
+# -----------------------------------------
 data_merged_ss_2 <- data_merged_ss %>%
   mutate(
     rank_group = case_when(
-      winner_rank <= 10                        ~ "Top 10",
-      winner_rank > 50 & !is.na(winner_rank)   ~ "Outside Top 50",
-      TRUE                                     ~ NA_character_   # drops ranks 11–50
+      winner_rank <= 10                      ~ "Top 10",
+      winner_rank > 50 & !is.na(winner_rank) ~ "Outside Top 50",
+      TRUE                                   ~ NA_character_
     )
   )
 
-# 3. Opponent rank group: Top 50 vs 51+
+# -----------------------------------------
+# 4. Opponent rank group: Top 50 vs 51+
+# -----------------------------------------
 data_merged_ss_3 <- data_merged_ss_2 %>%
   mutate(
     opp_rank_group = case_when(
-      loser_rank <= 50                         ~ "Opponent: Top 50",
-      loser_rank > 50 & !is.na(loser_rank)     ~ "Opponent: 51+",
-      TRUE                                     ~ NA_character_
+      loser_rank <= 50                       ~ "Opponent: Top 50",
+      loser_rank > 50 & !is.na(loser_rank)   ~ "Opponent: 51+",
+      TRUE                                   ~ NA_character_
     )
   )
 
-# 4. Compute straight-set win rates
+# -----------------------------------------
+# 5. Compute straight-set win rates
+# -----------------------------------------
 rates_all <- data_merged_ss_3 %>%
   filter(
     !is.na(rank_group),
@@ -44,13 +55,24 @@ rates_all <- data_merged_ss_3 %>%
 
 rates_all
 
-# 5. Plot: same structure as before
+# -----------------------------------------
+# 6. Faceted bar plot with finer y-axis ticks
+# -----------------------------------------
 rank_rate_facet_plot <- rates_all %>%
   ggplot(aes(x = rank_group, y = straight_set_rate, fill = rank_group)) +
   geom_col(width = 0.6, color = "black") +
   facet_wrap(~ opp_rank_group) +
-  scale_y_continuous(labels = scales::percent, limits = c(0, 1)) +
-  scale_fill_manual(values = c("Top 10" = "#1f78b4", "Outside Top 50" = "#bbbbbb")) +
+  scale_y_continuous(
+    labels = scales::percent,
+    limits = c(0, 1),
+    breaks = seq(0, 1, by = 0.10)  # 0%, 10%, 20%, ..., 100%
+  ) +
+  scale_fill_manual(
+    values = c(
+      "Top 10"          = "#1f78b4",
+      "Outside Top 50"  = "#bbbbbb"
+    )
+  ) +
   theme_minimal() +
   labs(
     title = "Straight-Set Win Rates\nTop 10 vs Outside Top 50 by Opponent Rank",
@@ -63,3 +85,8 @@ rank_rate_facet_plot <- rates_all %>%
   )
 
 rank_rate_facet_plot
+ggsave(filename = here::here("figs", "straight_set_win_rates.png"),
+       plot = rank_rate_facet_plot,
+       width = 8,
+       height = 5,
+       dpi = 300)
