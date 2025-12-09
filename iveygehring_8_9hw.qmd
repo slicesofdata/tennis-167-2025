@@ -4,12 +4,41 @@ format: html
 editor: visual
 ---
 
-## CODE
+# Assembling your Elements 
 
-rank_rate_facet_plot \<- rates_all %\>% ggplot(aes(x = rank_group, y = straight_set_rate, fill = rank_group)) + geom_col(width = 0.6, color = "black") + facet_wrap(\~ opp_rank_group) + scale_y_continuous(labels = scales::percent, limits = c(0, 1)) + scale_fill_manual(values = c("Top 100" = "#1f78b4", "101+" = "#bbbbbb")) + theme_minimal() + labs( title = "Straight-Set Win Rates (Age ≥ 25)\nby Winner & Opponent Ranking Group", x = "Winner Ranking Group", y = "Straight-Set Win Rate", fill = "Winner Rank" ) + theme( plot.title = element_text(size = 14, face = "bold") )
+You will ensure that your data and plotting scripts needed for creating your plot are used to build the up-to-date version of the plot.
 
-## ![](straight_set_wins_plot.png)
+## Code Block for Sourcing Your Scripts
 
-Hi professor,
+```{r}
+# source data-related scripts
+library(here)
+library(tidyverse)
+source(here::here("data/processed/data_merged.R"))$value
 
-Here is my new graph above. I could not find my old code, as we talked about in class, so I redid it all.
+# source plotting script(s)
+source(here::here("ig_plot_code.R"))
+
+```
+
+## The Modified Plot
+
+I added smaller units on the y-axis so that it would be easier for a view to interpret my results. I also completely changed the essence of the graph to use double visual encoding. I thought that it would be more usefull to look at this specific relationship than the previous so it is a slight tweak from before.
+
+
+
+
+## Code Block for Embedding your PNG
+
+```{r}
+# plot with a caption
+
+#| fig.cap: "Straight-set win rates by ranking group"
+#| fig.align: "center" # to center plot on page if desired
+#| out.width: "100%"   # or some other % appropriate for you site
+
+knitr::include_graphics(here::here("figs", "straight_set_win_rates.png"))
+```
+
+
+
