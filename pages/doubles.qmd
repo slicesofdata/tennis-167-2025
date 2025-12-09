@@ -1,0 +1,83 @@
+---
+title: "ATP Doubles"
+editor: visual
+---
+
+```{r}
+#| message: false
+#| warning: false
+#| include: false
+cleaned_doubles_data <- readRDS(file = here::here("data","processed","cleaned_doubles_data.Rds"))
+```
+
+```{r}
+#| message: false
+#| warning: false
+#| include: false
+source(here::here("doubles_titles.R"))
+source(here::here("percentage_doubles_won_vs_lost.R"))
+source(here::here("src", "figs", "doubles_over_time.R"))
+source(here::here("src", "figs", "singles_vs_doubles_number.R"))
+```
+
+In tennis, doubles involves two teams of two players competing on one court. Unlike singles, where players compete alone, doubles requires teamwork, communication, and a slightly different set of skills. The court is wider in doubles, with both alleys in play, allowing for different angles and more space to attack and defend. Doubles players often have great volleys, quick reflexes, and a wider range of different shots in their repertoire. Being able to react quickly during fast exchanges is a big part of what makes doubles so exciting to watch. Playing doubles often enhances a player's net game in singles, which is why so many of the top singles players continue to compete in doubles tournaments.
+
+<br>
+
+The visualization below shows the number of doubles titles each of our featured players has won over the course of their career. In comparison to their impressive singles achievements, the number of doubles titles they've earned are minimal. Rafael Nadal has the most doubles titles to his name, with 11 over the course of his career. Roger Federer is not far behind with 8 doubles titles, and Novak Djokovic only has 1. Although both Carlos Alcaraz and Jannik Sinner are at the early stages in their career, they both have zero doubles titles. The average number of doubles titles among these five players are 4.
+
+<br>
+
+```{r}
+#| echo: false
+#| fig.cap: " "
+#| fig.align: "center" 
+#| out.width: "800px"
+
+knitr::include_graphics(here::here("figs", "number_doubles_titles.png"))
+```
+
+<br>
+
+The graph below shows that these players have not dominated the doubles tour as much as they have in the singles tour. As the caption mentions, the solid colors represent the percentage of doubles matches won, while the faded colors represent matches lost. Federer and Nadal barely have a wining record, whereas Djokovic and Sinner have a losing record. Alcaraz has not played any doubles matches at this point in his career. The ATP tour has doubles specialists—players that only focus on training and playing doubles. Our featured players focus on playing singles, which is why their winning record in doubles is not as impressive.
+
+<br>
+
+```{r}
+#| echo: false
+#| fig.cap: " "
+#| fig.align: "center" 
+#| out.width: "800px"
+
+knitr::include_graphics(here::here("figs", "percentage_doubles_won_lost.png"))
+```
+
+<br>
+
+Although these players have played a few doubles tournaments in their career, it is important to take a look at the timing of these matches. The visualization below shows the total number of doubles matches the Big 3 have played per year. Sinner and Alcaraz have not played enough doubles matches to be included in this visualization. Federer played the most out of everyone at the start of his career, with around 40 total doubles matches in the year 2000. This number just gradually decreased as his career progressed. The dotted lines represent the year each player won their first singles grand slam. It is interesting to note how the number of doubles matches they each played began to decrease after their singles career took off. The Big 3's shift away from doubles reflects a common pattern among top singles players—as their career goals become focused on overall singles dominance.
+
+<br>
+
+```{r}
+#| echo: false
+#| fig.cap: " "
+#| fig.align: "center" 
+#| out.width: "800px"
+
+knitr::include_graphics(here::here("figs", "doubles_played_per_year.png"))
+```
+
+<br>
+
+Finally, the visualization below puts into perspective the number of matches each player has played in singles (solid colors) vs doubles (faded colors). It is clear that the majority of their career has been spent playing singles tournaments. While doubles tennis has its own set of champions, the spotlight in the sport is overwhelmingly focused on the singles players, especially these five.
+
+<br>
+
+```{r}
+#| echo: false
+#| fig.cap: " "
+#| fig.align: "center" 
+#| out.width: "800px"
+
+knitr::include_graphics(here::here("figs", "singles_vs_doubles.png"))
+```

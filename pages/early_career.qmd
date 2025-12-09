@@ -1,0 +1,44 @@
+---
+title: "Early Career"
+editor: visual
+---
+
+```{r}
+#| message: false
+#| warning: false
+#| include: false
+atp_singles_data <- readRDS(file = here :: here("data","processed","atp_singles.Rds" ))
+```
+
+```{r}
+#| message: false
+#| warning: false
+#| include: false
+source(here::here("src", "figs", "early_career.R"))
+```
+
+This visualization compares how five top ATP players — Roger Federer, Rafael Nadal, Novak Djokovic, Carlos Alcaraz, and Jannik Sinner — accumulated singles match wins over the first seven seasons of their careers. By aligning each player’s debut season as “Career Year 1,” we can directly compare development across eras. Using ATP match results from 1998–2024, the cumulative totals reveal not just year-to-year success but how quickly each player established winning momentum on tour. The line chart clearly highlights differences in career trajectories: Federer’s early seasons show a more gradual rise before his dominance took shape, while Nadal and Djokovic accelerated sharply around Years 4 and 5, matching their early Grand Slam breakthroughs.
+
+What stands out most is how rapidly Alcaraz and Sinner are climbing compared to the Big 3 at the same stage. Their steep lines suggest they are matching — or even surpassing — the pace set by three of the greatest players in tennis history. Of course, there are limitations: Alcaraz and Sinner have incomplete careers ahead and fewer injury setbacks so far, and all wins are treated equally regardless of tournament level. Still, the data strongly indicates a generational shift underway. If their current trajectories continue, today’s young stars may well be on track to define the next era of men’s tennis.
+
+```{r}
+#| echo: false
+#| fig.cap: " "
+#| fig.align: "center" 
+#| out.width: "800px"
+
+knitr::include_graphics(here::here("figs", "cummulative_match_wins.png"))
+```
+
+This visualization compares early-career performance by age — specifically match wins from ages 17 to 21 — for five top ATP players: Federer, Nadal, Djokovic, Alcaraz, and Sinner. Unlike the previous graph that aligned careers by season, this approach focuses purely on age to highlight who broke through earliest. Nadal stands out immediately with exceptional teenage success, leading the group at ages 17 and 18 — a reflection of his precocious dominance on clay and quick rise to the top of the sport. Federer’s development is much slower in comparison, but by age 21 his match-win count surges past everyone else, showing how his ascent came slightly later yet still reached a remarkable peak. Djokovic follows a steadier trajectory, climbing consistently from 18 to 19 and maintaining solid success each year without the dramatic early highs of Nadal.
+
+Alcaraz and Sinner, representing the new generation, display rapid progression that places them on a historically impressive pace. Alcaraz’s jump at age 18 and Sinner’s strong rise through age 20 show they are already competing at elite levels comparable to the Big 3 at similar ages. While each player’s curve follows a different path — early dominance (Nadal), late explosion (Federer), steady rise (Djokovic), and fast-tracked success (Alcaraz and Sinner) — the takeaway is that greatness develops in multiple forms. Even with limitations such as differing match opportunities and rounded ages, the strong upward trends for Alcaraz and Sinner suggest that they may be poised to define the next era of men’s tennis.
+
+```{r}
+#| echo: false
+#| fig.cap: " "
+#| fig.align: "center" 
+#| out.width: "800px"
+
+knitr::include_graphics(here::here("figs", "wins_start.png"))
+```
