@@ -1,0 +1,15 @@
+{
+  "hash": "900684e1d4dbd1cba8c710f1f9e6c572",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Final Conclusions\"\nformat: html\n\nexecute:\n  #enabled: false\n  freeze: auto\n---\n\n\nThrough this process, we have analyzed many different variables including tournament titles, surface types, singles rankings, doubles success, early in career performance, country dominance, and different conditional probabilities. Our analysis has shown that Carlos Alcaraz and Jannik Sinner are on trajectories that closely mirror or even surpass the early career performances of the Big 3 (Novak Djokovic, Rafael Nadal, and Roger Federer). \n\n<br>\n\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![ ](images/alcaraz.png){fig-align='center' width=800px}\n:::\n:::\n\n\n<br>\n\nBoth Alcaraz and Sinner have demonstrated impressive consistency and results in their early years on the ATP Tour. Their win totals in the early stages of their careers are on par with or ahead of the Big 3 at similar points in their careers, signaling that these two players are well on track to make a significant impact in the sport\n\n<br>\n\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![ ](images/djokovic_sinner.png){fig-align='center' width=800px}\n:::\n:::\n\n\n<br>\n\nWhile sustained success over a full career is needed to establish a legacy, the early career win rates of both Alcaraz and Sinner suggest that tennis fans have much to look forward to as this new generation begins to challenge the Big 3’s long-held dominance.\n\n<br>\n\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![ ](images/big_3.png){fig-align='center' width=800px}\n:::\n:::\n\n\n<br>\n\nAs the sport evolves, it’s clear that Alcaraz and Sinner have the potential to write the next great chapter in tennis history. Their early successes set the stage for a thrilling future, and we will be watching closely to see how their careers unfold. However, will another player emerge to join Alcaraz and Sinner in creating a modern \"Big 3\"? Only time will tell, as the next few years will be pivotal in shaping the future of men's tennis.\n\n<br>\n\n\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![ ](images/all_5.png){fig-align='center' width=800px}\n:::\n:::\n\n\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

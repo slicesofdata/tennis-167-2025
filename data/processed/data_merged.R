@@ -2,9 +2,15 @@ library(tidyverse)
 library(here)
 
 # --- load objects ---
+<<<<<<< HEAD
 futures_matches   <- readRDS(here("data/processed/Joined_Futures.rds"))
 joined_qual_chall <- source(here("data/processed/qual_chall_matches.R"))$value
 joined_futures     <- readRDS(here("data/processed/Joined_Futures.rds"))
+=======
+futures_matches   <- source(here("data/processed/futures_matches.R"))$value
+joined_qual_chall <- source(here("data/processed/qual_chall_matches.R"))$value
+joinedfutures     <- source(here("data/processed/joinedfutures.R"))$value
+>>>>>>> d81c63c7e6feb420093afa9d924ef56943030e8f
 atp_singles       <- readRDS(here("data/processed/atp_singles.Rds"))
 joined_rankings   <- readRDS(here("data/processed/joined_rankings_data.Rds"))
 
@@ -14,6 +20,7 @@ fix_types <- function(df) {
   df %>% mutate(tourney_level = as.character(tourney_level))
 }
 
+<<<<<<< HEAD
 glimpse(futures_matches)
 glimpse(joined_qual_chall)
 glimpse(joined_futures)
@@ -65,3 +72,17 @@ matches <- bind_rows(
 )
 
 matches
+=======
+dfs <- list(
+  futures_matches   = futures_matches   %>% fix_types(),
+  joined_qual_chall = joined_qual_chall %>% fix_types(),
+  joinedfutures     = joinedfutures     %>% fix_types(),
+  atp_singles       = atp_singles       %>% fix_types()
+)
+
+# --- now it will bind cleanly ---
+all_matches <- bind_rows(dfs, .id = "source")
+
+# (optional) join rankings if needed (adjust keys as appropriate)
+# all_matches <- left_join(all_matches, joined_rankings, by = "player_id")
+>>>>>>> d81c63c7e6feb420093afa9d924ef56943030e8f

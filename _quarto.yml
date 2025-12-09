@@ -1,19 +1,37 @@
 project:
   type: website
-  output-dir: docs
+  output-dir: docs      # use docs/ for githubpages, other cases use _site/
   render:
     - "*.qmd"           # render all *.qmd files
     - "!site/this_dir/" # don't render a directory
+<<<<<<< HEAD
   post-render: Rscript cleanup/clean_docs_dir.R
 
+=======
+
+    #- "!call_scripts/" # don't render a directory
+  #pre-render: Rscript prerender.R #load_libraries.R
+  # after rendering completes, script that removes .R files from the docs/ folder.
+  #post-render: Rscript cleanup/clean_docs_dir.R
+
+  #resources:
+  #  - "webr-serviceworker.js"
+  #  - "webr-worker.js"
+
+  #resources:
+  #  - figs/    # ensures that the .R files in figs/ are rendered in a website build
+
+  # settings for previewing the website
+>>>>>>> d81c63c7e6feb420093afa9d924ef56943030e8f
   preview:
-    port: 1111
+    port: 1671
     browser: true
     navigate: true
 
 website:
-  title: "Website Title"
+  title: "Tennis "
 
+<<<<<<< HEAD
   page-footer:
     center: |
       [contact me](myemail@mydomain.com)
@@ -22,11 +40,20 @@ website:
     right: |
       [GitHub Repo](https://github.com/username/repositoryname)
     background: "black"
+=======
+  # site-url: ""
+  # add optional favicon
+  # favicon: "website_files/images/myfavicon.png"
+
+
+
+>>>>>>> d81c63c7e6feb420093afa9d924ef56943030e8f
 
   description: ""
 
   navbar:
     left:
+<<<<<<< HEAD
       - href: index.qmd
         text: Home
 
@@ -34,14 +61,44 @@ website:
         href: pages/my_first_page.qmd
 
       - text: "Drop Tab Text"
-        menu:
-          - text: "Text for first option"
-            href: pages/my_second_page.qmd
-          - text: "Text for second option"
-            href: pages/my_third_page.qmd
-          - text: "Exercise Test Page"
-            href: pages/team_test_page.qmd
+=======
 
+      - text: "ATP Match Overview"
+>>>>>>> d81c63c7e6feb420093afa9d924ef56943030e8f
+        menu:
+          - text: "Major Tournaments"
+            href: major_page.qmd
+          - text: "Court Surfaces"
+            href: surface_page.qmd
+          - text: "ATP Rankings"
+            href: ranking_page_final.qmd
+          - text: "ATP Doubles"
+            href: pages/doubles.qmd
+
+      - text: "Career Performance Trends"
+        menu:
+          - text: "Performance by Age"
+            href: pages/age_performance.qmd
+          - text: "Early Career Performance"
+            href: pages/early_career.qmd
+
+      - text: "Performance by Nationality"
+        menu:
+          - text: "Country Dominance"
+            href: pages/leading_country_final.qmd
+          - text: "American Performance"
+            href: pages/american_win.qmd
+
+  #    - text: "Conditional Probabilites"
+  #      menu:
+   #       - text: "--- "
+  #          href: pages/leading_country_final.qmd
+   #       - text: "---"
+    #        href: pages/american_win.qmd
+
+
+
+<<<<<<< HEAD
       - text: "About Page Text"
         href: about.qmd
 
@@ -66,3 +123,32 @@ format:
     theme: cosmo
     toc: true
     include-in-header: "fonts/fontawesome.html"
+=======
+      # the about file
+      - text: "Final Conclusions"
+        href: about.qmd
+
+
+
+format:
+  html:
+    # base case approach
+    theme: cosmo   # cosmo is the default, alternatively call the .scss file, [styles/custom.scss]
+    #theme: darkly  # or if you have .scss, call it [cosmo, styles/custom.scss]
+    #code-link: true
+    #code-fold: true
+    #code-tools: true
+
+    toc: true
+    #page-layout: full
+    # add option for other fonts
+    include-in-header: "fonts/fontawesome.html"
+    #mainfont: arial #Nunito
+    #fontsize: 1.1rem # 1.2rem
+
+
+
+
+# set quarto optional editor preference: source or visual
+#editor: source
+>>>>>>> d81c63c7e6feb420093afa9d924ef56943030e8f
