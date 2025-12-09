@@ -39,8 +39,8 @@ FuturesFiles
 
 ################################################################################
 # Create Data Table; Files would not join at first, as some columns disagreed.
-All_Futures <- FuturesFiles %>% 
-  map_dfr(~ read_csv(.x, 
+All_Futures <- FuturesFiles %>%
+  map_dfr(~ read_csv(.x,
                      col_types = cols(
                        .default = col_guess(),
                        tourney_level = col_character()
@@ -50,5 +50,5 @@ All_Futures
 
 ################################################################################
 # End of script, Saving RDS to data processed folder
-saveRDS(All_Futures, file = here::here("data", "processed", "Joined_Futures.rds"))
+saveRDS(All_Futures, file = here::here("data", "processed", "joined_futures.rds"))
 
