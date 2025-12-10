@@ -40,10 +40,6 @@ website:
 
   navbar:
     left:
-      # the index file
-      - text: "Tennis Homepage" # use empty string to be blank
-        href: pages/Tennis_homepage.qmd
-
 
 
       - text: "ATP Match Overview"
@@ -71,12 +67,12 @@ website:
           - text: "American Performance"
             href: pages/american_win.qmd
 
-  #    - text: "Conditional Probabilites"
-  #      menu:
-   #       - text: "--- "
-  #          href: pages/leading_country_final.qmd
-   #       - text: "---"
-    #        href: pages/american_win.qmd
+      - text: "Conditional Probabilites"
+        menu:
+          - text: "Straight Set Win Rates"
+            href: pages/straight_set_win_rates.qmd
+          - text: "Upset Magnitude Analysis"
+            href: pages/upset_magnitude.qmd
 
 
       # adding another page
