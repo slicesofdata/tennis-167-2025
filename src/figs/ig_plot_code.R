@@ -4,7 +4,7 @@ library(here)
 # -----------------------------------------
 # 1. Load data
 # -----------------------------------------
-data_merged <- source(here("data/processed/data_merged.R"))$value
+data_merged <- source(here::here("data/processed/data_merged.R"))$value
 
 # -----------------------------------------
 # 2. Identify straight-set matches
