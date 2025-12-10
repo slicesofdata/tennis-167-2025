@@ -11,6 +11,8 @@ There are four major tournaments (Grand Slams) every calendar year, including th
 #| message: false
 #| warning: false
 #| include: false
+library(here)
+library(tidyverse)
 cleaned_rankings_data <- readRDS(file = here::here("data", "processed", "cleaned_rankings_data.rds"))
 atp_singles_data <- readRDS(file = here::here("data", "processed", "atp_singles.Rds"))
 ```
@@ -19,6 +21,8 @@ atp_singles_data <- readRDS(file = here::here("data", "processed", "atp_singles.
 #| message: false
 #| warning: false
 #| include: false
+library(here)
+library(tidyverse)
 source(here::here("src/figs/major.R"))
 ```
 
