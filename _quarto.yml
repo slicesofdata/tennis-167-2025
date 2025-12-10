@@ -2,12 +2,9 @@ project:
   type: website
   output-dir: docs      # use docs/ for githubpages, other cases use _site/
   render:
+#    - "*.{qmd,R,py}"
     - "*.qmd"           # render all *.qmd files
     - "!site/this_dir/" # don't render a directory
-<<<<<<< HEAD
-  post-render: Rscript cleanup/clean_docs_dir.R
-
-=======
 
     #- "!call_scripts/" # don't render a directory
   #pre-render: Rscript prerender.R #load_libraries.R
@@ -22,7 +19,6 @@ project:
   #  - figs/    # ensures that the .R files in figs/ are rendered in a website build
 
   # settings for previewing the website
->>>>>>> d81c63c7e6feb420093afa9d924ef56943030e8f
   preview:
     port: 1671
     browser: true
@@ -31,40 +27,26 @@ project:
 website:
   title: "Tennis "
 
-<<<<<<< HEAD
-  page-footer:
-    center: |
-      [contact me](myemail@mydomain.com)
-    left: |
-      made with [Quarto](https://quarto.org)
-    right: |
-      [GitHub Repo](https://github.com/username/repositoryname)
-    background: "black"
-=======
   # site-url: ""
   # add optional favicon
   # favicon: "website_files/images/myfavicon.png"
 
 
 
->>>>>>> d81c63c7e6feb420093afa9d924ef56943030e8f
 
+
+  # add webpage description
   description: ""
 
   navbar:
     left:
-<<<<<<< HEAD
-      - href: index.qmd
-        text: Home
+      # the index file
+      - text: "Tennis Homepage" # use empty string to be blank
+        href: pages/Tennis_homepage.qmd
 
-      - text: "First Page Text"
-        href: pages/my_first_page.qmd
 
-      - text: "Drop Tab Text"
-=======
 
       - text: "ATP Match Overview"
->>>>>>> d81c63c7e6feb420093afa9d924ef56943030e8f
         menu:
           - text: "Major Tournaments"
             href: major_page.qmd
@@ -97,33 +79,11 @@ website:
     #        href: pages/american_win.qmd
 
 
+      # adding another page
+ #     - text: "First Page Text"
+  #      href: pages/my_first_page.qmd  # use a meaningful name
 
-<<<<<<< HEAD
-      - text: "About Page Text"
-        href: about.qmd
 
-      - text: "The Big 3"
-        menu:
-          - text: "ATP Singles Ranking"
-            href: pages/page1.qmd
-          - text: "Major vs Non-major Wins"
-            href: pages/page2.qmd
-          - text: "Limitations of Visualization"
-            href: pages/hw06eisenmanl.qmd
-          - text: "More Visualizations"
-            href: pages/hw05eisenmanl_final.qmd
-
-    right:
-      - about.qmd
-      - icon: github
-        href: https://github.com/username
-
-format:
-  html:
-    theme: cosmo
-    toc: true
-    include-in-header: "fonts/fontawesome.html"
-=======
       # the about file
       - text: "Final Conclusions"
         href: about.qmd
@@ -151,4 +111,4 @@ format:
 
 # set quarto optional editor preference: source or visual
 #editor: source
->>>>>>> d81c63c7e6feb420093afa9d924ef56943030e8f
+
