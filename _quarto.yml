@@ -45,11 +45,11 @@ website:
       - text: "ATP Match Overview"
         menu:
           - text: "Major Tournaments"
-            href: major_page.qmd
+            href: pages/major_page.qmd
           - text: "Court Surfaces"
-            href: surface_page.qmd
+            href: pages/surface_page.qmd
           - text: "ATP Rankings"
-            href: ranking_page_final.qmd
+            href: pages/ranking_page_final.qmd
           - text: "ATP Doubles"
             href: pages/doubles.qmd
 
@@ -82,7 +82,7 @@ website:
 
       # the about file
       - text: "Final Conclusions"
-        href: about.qmd
+        href: pages/about.qmd
 
 
 
