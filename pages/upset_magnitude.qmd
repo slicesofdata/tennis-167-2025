@@ -1,5 +1,5 @@
 ---
-title: "upset_magnitude"
+title: "Upset Magnitude Analysis"
 format: html
 editor: visual
 ---
