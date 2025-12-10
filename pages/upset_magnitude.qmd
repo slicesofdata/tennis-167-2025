@@ -4,8 +4,6 @@ format: html
 editor: visual
 ---
 
-## Upset Magnitude Analysis
-
 ```{r}
 #| label: fig-upset_magnitude
 #| echo: false
