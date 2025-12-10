@@ -7,7 +7,6 @@ ATP tournaments are played on three main different surfaces: hard court, clay (g
 
 We are familiar with certain player narratives, such as Nadal dominating on the clay and Federer being the king of grass, and we wanted to see if the data confirmed this.
 
-
 ```{r}
 #| message: false
 #| warning: false
@@ -20,11 +19,10 @@ atp_singles_data <- readRDS(file = here::here("data", "processed", "atp_singles.
 #| message: false
 #| warning: false
 #| include: false
-source(here::here("majorsurface.R"))
+source(here::here("src/figs/majorsurface.R"))
 ```
 
 This first visualization shows the number of titles each player has won on each surface. In comparison to the other players, it is clear that Nadal has won the majority of clay court tournaments. Being from Spain, Nadal has grown up on this surface and has developed a game style that maximizes its advantages. He thrives on long rallies, a high bouncing topsin forehand, and superior movement. His nickname, the "King of Clay," is strongly supported by the data. Additionally, it is shown that Federer has won the most grass court tournaments out of everyone. Federer has traditionally been a serve-and-volleyer, coming to the net and finishing points quickly. This, along with his deadly slice backhand, has made him especially effective on this surface.
-
 
 ```{r}
 #| echo: false
@@ -45,5 +43,3 @@ The next visualization investigates the percentage of singles matches won on eac
 
 knitr::include_graphics(here::here("figs", "surfacewinp.png"))
 ```
-
-
