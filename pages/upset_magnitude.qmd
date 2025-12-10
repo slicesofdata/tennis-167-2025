@@ -1,0 +1,28 @@
+---
+title: "upset_magnitude"
+format: html
+editor: visual
+---
+
+## Upset Magnitude Analysis
+
+```{r}
+#| label: fig-upset_magnitude
+#| echo: false
+#| message: false
+#| warning: false
+
+library(here)
+library(tidyverse)
+
+source(here::here("ig_plot2_code.R"))
+
+# This line actually draws the plot in the HTML
+upset_sina_plot
+```
+
+This visualization examines the magnitude of true upsets in ATP matches, defined as the rank gap between the winner and loser (winner rank – loser rank), segmented by the winner’s ranking cohort: Top 50, Ranks 51–100, and 101+. The distribution shows how “big” upsets tend to be depending on who is pulling them off. The width of each violin reflects how varied the upset sizes are, while the embedded line and dot represent the median and interquartile range.
+
+A clear pattern emerges: Top 50 winners tend to produce the smallest upset magnitudes, both in median size and overall spread. This indicates that when elite players secure upsets over higher-ranked opponents, they are usually not overcoming massive ranking deficits—these upsets tend to be modest and tightly clustered. In contrast, players ranked 51–100 and 101+ generate upsets with much larger gaps and more variability, suggesting that when lower-ranked players win, they are more likely to defeat opponents significantly above them in the rankings.
+
+Taken together, the results suggest that upsets are not created equal: elite players rarely generate dramatic upsets because their ranking already reflects consistent performance, while lower-ranked players account for a broader and more dramatic range of ranking reversals. This aligns with the intuitive view that ATP competition is top-heavy—players outside the Top 100 occasionally create striking results, whereas Top 50 athletes tend to compete within a more predictable performance band when upsetting someone above them.
