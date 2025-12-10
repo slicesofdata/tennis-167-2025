@@ -1,10 +1,8 @@
 ---
-title: "straight_set_win_rates"
+title: "Straight Set Win Rates"
 format: html
 editor: visual
 ---
-
-## Straight-Set Win Rate Analysis
 
 ```{r}
 #| label: fig-straight-set-win-rates
