@@ -1,0 +1,29 @@
+---
+title: "straight_set_win_rates"
+format: html
+editor: visual
+---
+
+## Straight-Set Win Rate Analysis
+
+```{r}
+#| label: fig-straight-set-win-rates
+#| echo: false
+#| message: false
+#| warning: false
+
+library(here)
+library(tidyverse)
+
+source(here::here("ig_plot_code.R"))
+
+# This line actually draws the plot in the HTML
+rank_rate_facet_plot
+```
+
+
+This bar chart compares the likelihood of winning in straight sets based on the winner’s ranking cohort: Top 10 players versus players ranked outside the Top 50, with performance split by the opponent’s ranking group (Top 50 versus 51+). The results show that both ranking groups perform similarly against players ranked outside the Top 50, with straight-set win rates hovering in the mid-50% range. This suggests that players of all rankings tend to dominate lower-ranked opponents at roughly comparable levels, regardless of whether they are elite or simply above average.
+
+However, a notable divergence appears when the opponent is ranked inside the Top 50. In these more competitive matchups, Top 10 players exhibit a significantly higher straight-set win rate, outperforming their outside-Top-50 counterparts by roughly 15 percentage points. This illustrates a structural separation between skill tiers: elite players not only win more often overall, but when they do win, they do so more decisively — even against high-level competition.
+
+Overall, this analysis reinforces the competitive hierarchy within professional tennis. When facing weaker opponents, decisive victories are common across the board; however, against stronger opponents, elite players display far more consistency and match control, while lower-ranked players are more likely to require long, multi-set battles or lose outright. This distinction highlights how straight-set dominance is a meaningful indicator of both skill level and match pressure management.
