@@ -1,13 +1,12 @@
 ---
-title: "Winning Percentages on Different Surfaces and  Website Page"
+title: "Court Surfaces"
 editor: visual
 ---
 
-This page continues to focus on the Big Three (Djokovic, Federer, Nadal), and new two (Alcaraz & Sinner). The plots included here look into different winning percentages in different tournament types, and played on different surfaces.
+ATP tournaments are played on three main different surfaces: hard court, clay (green and red), and grass. Specific players often perform better on certain surfaces, because of their game style, the way they grew up, and the types of conditions that they are accustomed to. Most players grow up playing on hard courts, as these are the most plentiful around the world. Certain countries, like Spain, train their players on red clay from the start, which is a surface in which the ball bounces higher and rewards topspin. Finally, grass courts are the rarest surface, yet they carry a rich tradition and tournaments on this surface are considered extremely prestigious. This surface rewards an aggressive playing style, with slices, dropshots, and netplay often utilized.
 
-Our group thought it would be interesting to look into player performance in major tournaments (US Open, French Open, Australian Open, and Wimbledon) vs. other non-major tournaments.
+We are familiar with certain player narratives, such as Nadal dominating on the clay and Federer being the king of grass, and we wanted to see if the data confirmed this.
 
-We also believed that it would be intriguing to look at performance on different surfaces. We knew of certain player narratives, such as Nadal playing better on clay surfaces - and wanted to see if the data would confirm these to be true.
 
 ```{r}
 #| message: false
@@ -24,9 +23,8 @@ atp_singles_data <- readRDS(file = here::here("data", "processed", "atp_singles.
 source(here::here("majorsurface.R"))
 ```
 
-This first visualization distinguishes matches into major vs. non-major categories, comparing player performance in both categories:
+This first visualization shows the number of titles each player has won on each surface. In comparison to the other players, it is clear that Nadal has won the majority of clay court tournaments. Being from Spain, Nadal has grown up on this surface and has developed a game style that maximizes its advantages. He thrives on long rallies, a high bouncing topsin forehand, and superior movement. His nickname, the "King of Clay," is strongly supported by the data. Additionally, it is shown that Federer has won the most grass court tournaments out of everyone. Federer has traditionally been a serve-and-volleyer, coming to the net and finishing points quickly. This, along with his deadly slice backhand, has made him especially effective on this surface.
 
-<br>
 
 ```{r}
 #| echo: false
@@ -37,9 +35,7 @@ This first visualization distinguishes matches into major vs. non-major categori
 knitr::include_graphics(here::here("figs", "surfacetitles.png"))
 ```
 
-The next visualization investigates differences between player performance when playing on different surfaces:
-
-<br>
+The next visualization investigates the percentage of singles matches won on each surface. It is interesting to note that the data confirms aforementioned narratives such as the notion that Nadal plays much better on clay. Nadal and Sinner have clear surfaces they win more on. It is also interesting to note that some players perform relatively poorly on specific surfaces compared to others, with some examples being Alcaraz clearly performing worse on hard surfaces and Federer playing worse on clay. This visualization effectively shows each player's objectively best and worst, as well as likely their favorite and least favorite, surfaces to play on.
 
 ```{r}
 #| echo: false
@@ -50,4 +46,4 @@ The next visualization investigates differences between player performance when 
 knitr::include_graphics(here::here("figs", "surfacewinp.png"))
 ```
 
-Because the five players we chose to focus on are so dominant, there is not much variance in their winning percentages - with most players' percentages hovering around \~75-80%. It is interesting however, that the data confirms aforementioned narratives such as the notion that Nadal plays much better on clay. Nadal and Sinner have clear surfaces they win more on; It is also interesting to note that some players perform relatively poorly on specific surfaces compared to others - examples being Carlos Alcaraz clearly performing worse on hard surfaces, and Federer playing worse on clay. This visualization effectively shows each player's objectively best and worst, as well as likely their favorite and least favorite, surfaces to play on.
+
