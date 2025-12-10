@@ -13,7 +13,7 @@ editor: visual
 library(here)
 library(tidyverse)
 
-source(here::here("ig_plot2_code.R"))
+source(here::here("src/figs/ig_plot2_code.R"))
 
 # This line actually draws the plot in the HTML
 upset_sina_plot
