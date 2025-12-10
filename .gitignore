@@ -19,7 +19,9 @@
 Rplots.pdf
 *.Rout
 *_Rout.txt
-
+Straight Set Wins.pdf
+Surface Distribution For Young Winners.pdf
+futures_matches_1.R
 # Ignore R history files
 .Rhistory
 .Rapp.history
@@ -52,7 +54,7 @@ _ignore_this_dir/*
 #src/*
 
 # but keep the directory itself with an empty .gitkeep or .gitignore
-#!api/.gitkeep 
+#!api/.gitkeep
 !data/.gitkeep
 !figs/.gitkeep
 !src/.gitkeep
@@ -61,7 +63,7 @@ _ignore_this_dir/*
 
 ## image/pdf files ##
 #*.pdf
-#*.png 
+#*.png
 *.tiff
 #*.jpg
 #*.jpeg
