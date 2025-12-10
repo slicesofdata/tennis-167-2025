@@ -19,7 +19,7 @@ atp_singles_data <- readRDS(file = here::here("data", "processed", "atp_singles.
 #| message: false
 #| warning: false
 #| include: false
-source(here::here("major.R"))
+source(here::here("src/figs/major.R"))
 ```
 
 <br>
@@ -35,7 +35,7 @@ knitr::include_graphics(here::here("figs", "majorswinp.png"))
 
 For all five players, the difference between their major and non-major winning percentage is pretty thin. There is around a 5% increase in win percentage while playing in major tournaments. While it may be counter intuitive that these players have a higher win percentage in major tournaments, it likely signals that more competitive environments bring out the best from these five dominant athletes.
 
-It also may be a phenomenon with the more talented players, as top ranked competitors have less of an incentive to participate in non-major tournaments. They often do not need to rack up ranking points to get into Grand Slams, and use that time to prioritize training, recovery, and rest. This would likely increase the amount of matches played within major tournaments especially during the prime of their careers. 
+It also may be a phenomenon with the more talented players, as top ranked competitors have less of an incentive to participate in non-major tournaments. They often do not need to rack up ranking points to get into Grand Slams, and use that time to prioritize training, recovery, and rest. This would likely increase the amount of matches played within major tournaments especially during the prime of their careers.
 
 The next visualization investigates the total number of tournaments that each player has won, split between major and non-majors.
 
