@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="My thoughts about…">
 
-<title>My blog – Tennis</title>
+<title>Early Career – Tennis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,8 +30,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -69,73 +66,15 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script src="https://kit.fontawesome.com/78ddb093ea.js" crossorigin="anonymous"></script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -229,112 +168,60 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">My blog</h1>
-                  <div>
-        <div class="description">
-          My thoughts about…
-        </div>
-      </div>
-                </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta column-page-left">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-cloud"><div class="category" data-category="YW5pbWFscw=="><span class="quarto-category-count category-cloud-10">animals</span></div><div class="category" data-category="ZGF0YQ=="><span class="quarto-category-count category-cloud-10">data</span></div><div class="category" data-category="ZG9ncw=="><span class="quarto-category-count category-cloud-10">dogs</span></div></div></div>
-<!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
-
-
-
-
-
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Order By</option>
-       <option value="index" data-direction="asc">Default</option>
-         <option value="listing-title" data-direction="asc">
-          Title
-        </option>
-         <option value="listing-date-sort" data-direction="asc">
-          Date - Oldest
-        </option>
-         <option value="listing-date-sort" data-direction="desc">
-          Date - Newest
-        </option>
-         <option value="listing-author" data-direction="asc">
-          Author
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
     </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Early Career</h1>
 </div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="ZGF0YSUyQ2RvZ3MlMkNhbmltYWxz" data-listing-date-sort="1735718400000" data-listing-file-modified-sort="1757012296201" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="6">
-<div class="thumbnail">
-<p><a href="../blog/posts/firstpost.html" class="no-external"></a></p><a href="../blog/posts/firstpost.html" class="no-external">
-<p><img loading="lazy" src="../blog/posts/website_files/images/random_png.png" class="thumbnail-image"></p>
-</a><p><a href="../blog/posts/firstpost.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/firstpost.html" class="no-external">My great title</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../blog/posts/firstpost.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('ZGF0YQ=='); return false;">
-data
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('ZG9ncw=='); return false;">
-dogs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('YW5pbWFscw=='); return false;">
-animals
-</div>
-</div>
-<div class="listing-description">
-<a href="../blog/posts/firstpost.html" class="no-external">My post text goes here …</a>
-</div>
-</div>
-<div class="metadata">
-<a href="../blog/posts/firstpost.html" class="no-external">
-<div class="listing-date">
-Jan 1, 2025
-</div>
-</a>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>This visualization compares how five top ATP players — Roger Federer, Rafael Nadal, Novak Djokovic, Carlos Alcaraz, and Jannik Sinner — accumulated singles match wins over the first seven seasons of their careers. By aligning each player’s debut season as “Career Year 1,” we can directly compare development across eras. Using ATP match results from 1998–2024, the cumulative totals reveal not just year-to-year success but how quickly each player established winning momentum on tour. The line chart clearly highlights differences in career trajectories: Federer’s early seasons show a more gradual rise before his dominance took shape, while Nadal and Djokovic accelerated sharply around Years 4 and 5, matching their early Grand Slam breakthroughs.</p>
+<p>What stands out most is how rapidly Alcaraz and Sinner are climbing compared to the Big 3 at the same stage. Their steep lines suggest they are matching — or even surpassing — the pace set by three of the greatest players in tennis history. Of course, there are limitations: Alcaraz and Sinner have incomplete careers ahead and fewer injury setbacks so far, and all wins are treated equally regardless of tournament level. Still, the data strongly indicates a generational shift underway. If their current trajectories continue, today’s young stars may well be on track to define the next era of men’s tennis.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../figs/cummulative_match_wins.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="800"></p>
+</figure>
 </div>
 </div>
 </div>
-<div class="listing-no-matching d-none">
-No matching items
+<p>This visualization compares early-career performance by age — specifically match wins from ages 17 to 21 — for five top ATP players: Federer, Nadal, Djokovic, Alcaraz, and Sinner. Unlike the previous graph that aligned careers by season, this approach focuses purely on age to highlight who broke through earliest. Nadal stands out immediately with exceptional teenage success, leading the group at ages 17 and 18 — a reflection of his precocious dominance on clay and quick rise to the top of the sport. Federer’s development is much slower in comparison, but by age 21 his match-win count surges past everyone else, showing how his ascent came slightly later yet still reached a remarkable peak. Djokovic follows a steadier trajectory, climbing consistently from 18 to 19 and maintaining solid success each year without the dramatic early highs of Nadal.</p>
+<p>Alcaraz and Sinner, representing the new generation, display rapid progression that places them on a historically impressive pace. Alcaraz’s jump at age 18 and Sinner’s strong rise through age 20 show they are already competing at elite levels comparable to the Big 3 at similar ages. While each player’s curve follows a different path — early dominance (Nadal), late explosion (Federer), steady rise (Djokovic), and fast-tracked success (Alcaraz and Sinner) — the takeaway is that greatness develops in multiple forms. Even with limitations such as differing match opportunities and rounded ages, the strong upward trends for Alcaraz and Sinner suggest that they may be poised to define the next era of men’s tennis.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../figs/wins_start.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="800"></p>
+</figure>
 </div>
-</div></main> <!-- /main -->
+</div>
+</div>
+
+
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="My thoughts about…">
 
-<title>My blog – Tennis</title>
+<title>Performance Over Time – Tennis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,8 +30,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -69,73 +66,15 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script src="https://kit.fontawesome.com/78ddb093ea.js" crossorigin="anonymous"></script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -229,112 +168,69 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">My blog</h1>
-                  <div>
-        <div class="description">
-          My thoughts about…
-        </div>
-      </div>
-                </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta column-page-left">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-cloud"><div class="category" data-category="YW5pbWFscw=="><span class="quarto-category-count category-cloud-10">animals</span></div><div class="category" data-category="ZGF0YQ=="><span class="quarto-category-count category-cloud-10">data</span></div><div class="category" data-category="ZG9ncw=="><span class="quarto-category-count category-cloud-10">dogs</span></div></div></div>
-<!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
-
-
-
-
-
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Order By</option>
-       <option value="index" data-direction="asc">Default</option>
-         <option value="listing-title" data-direction="asc">
-          Title
-        </option>
-         <option value="listing-date-sort" data-direction="asc">
-          Date - Oldest
-        </option>
-         <option value="listing-date-sort" data-direction="desc">
-          Date - Newest
-        </option>
-         <option value="listing-author" data-direction="asc">
-          Author
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
     </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Performance Over Time</h1>
 </div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="ZGF0YSUyQ2RvZ3MlMkNhbmltYWxz" data-listing-date-sort="1735718400000" data-listing-file-modified-sort="1757012296201" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="6">
-<div class="thumbnail">
-<p><a href="../blog/posts/firstpost.html" class="no-external"></a></p><a href="../blog/posts/firstpost.html" class="no-external">
-<p><img loading="lazy" src="../blog/posts/website_files/images/random_png.png" class="thumbnail-image"></p>
-</a><p><a href="../blog/posts/firstpost.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/firstpost.html" class="no-external">My great title</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../blog/posts/firstpost.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('ZGF0YQ=='); return false;">
-data
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('ZG9ncw=='); return false;">
-dogs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('YW5pbWFscw=='); return false;">
-animals
-</div>
-</div>
-<div class="listing-description">
-<a href="../blog/posts/firstpost.html" class="no-external">My post text goes here …</a>
-</div>
-</div>
-<div class="metadata">
-<a href="../blog/posts/firstpost.html" class="no-external">
-<div class="listing-date">
-Jan 1, 2025
-</div>
-</a>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>A tennis player’s career often follows a rise-peak-decline pattern. One’s early career is generally focused on improving skills, gaining experience, and learning how to compete at the top of the game. Tournament wins are often sporadic during the beginning years of their career. During the middle stage of players careers, they tend to perform their best and accumulate the most Grand Slam wins and career highlights. Late in a career, the player’s physical abilities often decline, leading to longer recovery times and increased injury risk. At this point in time, it is important for players to adapt their game style and focus on playing fewer events. Historically, women have peaked earlier in their careers (around ages 22–26), whereas men tend to peak later. Factors that can affect one’s performance over time include physical condition and injuries, playing style, mental toughness, and experience.</p>
+<p>The visualization below is a heatmap showing the number of singles matches each selected player has played each year. The darker tiles indicate more matches played, whereas the lighter tiles indicate less matches played that year. As shown by the Big 3, the highest match volume occurred early in their careers, roughly 5 years in. The lowest match volume appears at both the beginning and end of each player’s career, which makes sense. We expect to see a similar pattern for the New 2 as their careers evolve. Playing more matches can indicate a player’s growing confidence, greater success, and/or participation in a larger number of tournaments. However, this places significant mental and physical demands that often affect performance in later years.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../figs/numberofmatches_year.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="800"></p>
+</figure>
 </div>
 </div>
 </div>
-<div class="listing-no-matching d-none">
-No matching items
+<p>This next visualization is a facet plot highlighting each player’s performance by age. Performance is measured as the percentage of singles matches won. Both Federer and Djokovic appear to reach their peak performance — winning roughly 80% of matches — around the age of 25. Nadal’s peak occurs slightly earlier, around age 22, with a somewhat lower maximum win percentage. It is interesting to note how these three curves follow the same rise-peak-decline pattern that was introduced earlier. Because Sinner and Alcaraz are newer to the tour and much younger, their performance patterns are different from the Big 3. Sinner appears to currently be in the “peak” stage of his career, with his winning percentage increasing every year. Alcaraz shows a slight downward slope in the current data, but is expected to continue improving, as he is still early in his career.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../figs/age_performance.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="800"></p>
+</figure>
 </div>
-</div></main> <!-- /main -->
+</div>
+</div>
+<p>Below is a timeline showing the end-of-career milestones for the Big 3. There are three key markers: the last Grand Slam won, the last title won that was not a Grand Slam, and the last match played (retirement). Federer’s timeline shows an approximately equal spacing between these events, with about two years between each milestone. This indicates a gradual winding down, rather than a sudden drop in performance. Nadal, on the other hand, won a Grand Slam as his final tournament before retirement. This indicates how some players like to retire on a high note. Both players retired roughly three years after their last Grand Slam victory. Djokovic is the only member of the Big 3 still active on the tour, which is why he does not have a “retirement” marker. While he has not won a Grand Slam since the US Open in 2023, his continued presence on the tour demonstrates competitiveness at the highest level. However, will he follow the same pattern of retiring approximately three years after the last Grand Slam title? Or will he be able to break the trend and continue to sustain elite performance? Only time will tell.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../figs/career_timeline_plot1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="800"></p>
+</figure>
+</div>
+</div>
+</div>
+
+
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="My thoughts about…">
+<meta name="author" content="">
 
-<title>My blog – Tennis</title>
+<title>Key Directories – Tennis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,8 +31,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -69,73 +67,15 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script src="https://kit.fontawesome.com/78ddb093ea.js" crossorigin="anonymous"></script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -229,112 +169,180 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">My blog</h1>
-                  <div>
-        <div class="description">
-          My thoughts about…
-        </div>
-      </div>
-                </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta column-page-left">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-cloud"><div class="category" data-category="YW5pbWFscw=="><span class="quarto-category-count category-cloud-10">animals</span></div><div class="category" data-category="ZGF0YQ=="><span class="quarto-category-count category-cloud-10">data</span></div><div class="category" data-category="ZG9ncw=="><span class="quarto-category-count category-cloud-10">dogs</span></div></div></div>
-<!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
-
-
-
-
-
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Order By</option>
-       <option value="index" data-direction="asc">Default</option>
-         <option value="listing-title" data-direction="asc">
-          Title
-        </option>
-         <option value="listing-date-sort" data-direction="asc">
-          Date - Oldest
-        </option>
-         <option value="listing-date-sort" data-direction="desc">
-          Date - Newest
-        </option>
-         <option value="listing-author" data-direction="asc">
-          Author
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#website-overview" id="toc-website-overview" class="nav-link active" data-scroll-target="#website-overview">Website Overview</a></li>
+  <li><a href="#r-studio-project-files" id="toc-r-studio-project-files" class="nav-link" data-scroll-target="#r-studio-project-files">R Studio Project Files</a>
+  <ul>
+  <li><a href="#project-directory-structure" id="toc-project-directory-structure" class="nav-link" data-scroll-target="#project-directory-structure">Project Directory Structure</a></li>
+  <li><a href="#configuration-files" id="toc-configuration-files" class="nav-link" data-scroll-target="#configuration-files">Configuration Files</a></li>
+  <li><a href="#website-files-and-directories" id="toc-website-files-and-directories" class="nav-link" data-scroll-target="#website-files-and-directories">Website Files and Directories</a></li>
+  <li><a href="#source-code" id="toc-source-code" class="nav-link" data-scroll-target="#source-code">Source Code</a></li>
+  <li><a href="#figures-and-images" id="toc-figures-and-images" class="nav-link" data-scroll-target="#figures-and-images">Figures and Images</a></li>
+  <li><a href="#brand-directory" id="toc-brand-directory" class="nav-link" data-scroll-target="#brand-directory">Brand Directory</a></li>
+  <li><a href="#blog-directory" id="toc-blog-directory" class="nav-link" data-scroll-target="#blog-directory">Blog Directory</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Key Directories</h1>
 </div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="ZGF0YSUyQ2RvZ3MlMkNhbmltYWxz" data-listing-date-sort="1735718400000" data-listing-file-modified-sort="1757012296201" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="6">
-<div class="thumbnail">
-<p><a href="../blog/posts/firstpost.html" class="no-external"></a></p><a href="../blog/posts/firstpost.html" class="no-external">
-<p><img loading="lazy" src="../blog/posts/website_files/images/random_png.png" class="thumbnail-image"></p>
-</a><p><a href="../blog/posts/firstpost.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/firstpost.html" class="no-external">My great title</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../blog/posts/firstpost.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('ZGF0YQ=='); return false;">
-data
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('ZG9ncw=='); return false;">
-dogs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('YW5pbWFscw=='); return false;">
-animals
-</div>
-</div>
-<div class="listing-description">
-<a href="../blog/posts/firstpost.html" class="no-external">My post text goes here …</a>
-</div>
-</div>
-<div class="metadata">
-<a href="../blog/posts/firstpost.html" class="no-external">
-<div class="listing-date">
-Jan 1, 2025
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<!--
+::: callout-important
+This page is under construction to reflect website project. Will be updated.
+:::
+-->
+<section id="website-overview" class="level1">
+<h1>Website Overview</h1>
+<p>Building a website requires management of relevatn files, which you must keep our files organized and easily accessible. A well-structured directory helps us to collaborate efficiently, reduce errors, and facilitate project maintenance. Let’s explore the purpose of each file or directory.</p>
+</section>
+<section id="r-studio-project-files" class="level1">
+<h1>R Studio Project Files</h1>
+<ul>
+<li><code>&lt;projectname&gt;.Rproj</code> (should match your R Studio Directory and your GitHub Repository Name)</li>
+</ul>
+<section id="project-directory-structure" class="level2">
+<h2 class="anchored" data-anchor-id="project-directory-structure">Project Directory Structure</h2>
+<pre><code>.
+├── .git
+├── .gitignore
+├── .nojekyll
+├── .quarto
+├── about.qmd
+├── blog/
+│   ├── _metadata.yml
+│   ├── index.qmd
+│   └── posts/
+├── figs/
+├── fonts/
+│   └── fontawesome.html
+├── images/
+│   ├── icons/
+│   ├── random_png.png
+│   └── profile.jpg
+├── index.qmd
+├── pages/
+│   ├── my_first_page.qmd
+│   └── my_second_page.qmd
+├── prerender.R  &lt;-------------------------------------------------
+├── &lt;projectname&gt;.Rproj
+├── robots.txt
+└── src/
+    ├── data/
+    ├── figs/
+    ├── functions/
+    │   ├── fig_saving.R
+    │   ├── fig_theme.R
+    │   ├── load_libraries.R
+    │   └── view_html.R
+    ├── starter_script_file.R
+    └── utils/
+        └── made-of-code.tmTheme
+└── styles/</code></pre>
+</section>
+<section id="configuration-files" class="level2">
+<h2 class="anchored" data-anchor-id="configuration-files">Configuration Files</h2>
+<p>These configuration files are stored in the project root (<code>.</code>) directory:</p>
+<ul>
+<li><code>.git</code>: contains Git version control system files (<strong>do not delete</strong>)</li>
+<li><code>.gitignore</code>: specifies files and directories that Git should ignore (e.g, your <code>.Renviron</code>, <code>.Rprofile</code>, and other sensitive details) (<strong>do not delete</strong>)</li>
+<li><code>.nojekyll</code>: tells GitHub Pages not to use Jekyll to build the site</li>
+<li><code>.quarto</code>: for Quarto-specific configuration files.</li>
+</ul>
+</section>
+<section id="website-files-and-directories" class="level2">
+<h2 class="anchored" data-anchor-id="website-files-and-directories">Website Files and Directories</h2>
+<ul>
+<li><code>about.qmd</code>: a website about page (<strong>do not delete</strong>)</li>
+<li><code>docs/</code>: for all rendered website files</li>
+<li><code>index.qmd</code>: a website start page (<strong>do not delete</strong>)</li>
+<li><code>pages/</code>: for individual web pages <!--
+- `prerender.R`: This file contains code for prerendering our project.
+--></li>
+<li><code>robots.txt</code>: This file specifies how search engines should crawl our site.</li>
+<li><code>styles/</code>: for website theme related files</li>
+</ul>
+</section>
+<section id="source-code" class="level2">
+<h2 class="anchored" data-anchor-id="source-code">Source Code</h2>
+<p>The <code>src/</code> directory contains our project source code:</p>
+<pre><code>src/
+  data/
+  figs/
+  functions/
+    fig_saving.R
+    fig_theme.R
+    load_libraries.R
+    view_html.R
+  starter_script_file.R
+  utils/
+    made-of-code.tmTheme</code></pre>
+<ul>
+<li><code>data/</code>: for data, <code>raw/</code> and <code>processed/</code></li>
+<li><code>figs/</code>: for <code>.png</code> figures created with {ggplot2} code</li>
+<li><code>functions/</code>: reusable functions needed for the project</li>
+<li><code>utils/</code>: for project utility files</li>
+</ul>
+</section>
+<section id="figures-and-images" class="level2">
+<h2 class="anchored" data-anchor-id="figures-and-images">Figures and Images</h2>
+<p>The following directories contain figures and image files:</p>
+<pre><code>figs/
+images/
+  icons/</code></pre>
+<ul>
+<li><code>figs/</code>: for figures generated by code</li>
+<li><code>images/</code>: for image files</li>
+<li><code>icons/</code>: for icon files</li>
+<li><code>random_png.png</code> and <code>profile.jpg</code>: example files</li>
+</ul>
+</section>
+<section id="brand-directory" class="level2">
+<h2 class="anchored" data-anchor-id="brand-directory">Brand Directory</h2>
+<pre><code>brand/</code></pre>
+<ul>
+<li><code>brand/</code>: for <code>_brand.yml</code> and related files</li>
+</ul>
+</section>
+<section id="blog-directory" class="level2">
+<h2 class="anchored" data-anchor-id="blog-directory">Blog Directory</h2>
+<p>The blog directory contains files related to our project blog:</p>
+<pre><code>blog/
+  _metadata.yml
+  index.qmd
+  posts/</code></pre>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

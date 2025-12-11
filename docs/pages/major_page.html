@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="My thoughts about…">
 
-<title>My blog – Tennis</title>
+<title>Player Performance in Major vs.&nbsp;Non Major Tournaments – Tennis </title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,8 +30,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -69,73 +66,15 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script src="https://kit.fontawesome.com/78ddb093ea.js" crossorigin="anonymous"></script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -229,112 +168,65 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">My blog</h1>
-                  <div>
-        <div class="description">
-          My thoughts about…
-        </div>
-      </div>
-                </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta column-page-left">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-cloud"><div class="category" data-category="YW5pbWFscw=="><span class="quarto-category-count category-cloud-10">animals</span></div><div class="category" data-category="ZGF0YQ=="><span class="quarto-category-count category-cloud-10">data</span></div><div class="category" data-category="ZG9ncw=="><span class="quarto-category-count category-cloud-10">dogs</span></div></div></div>
-<!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
-
-
-
-
-
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Order By</option>
-       <option value="index" data-direction="asc">Default</option>
-         <option value="listing-title" data-direction="asc">
-          Title
-        </option>
-         <option value="listing-date-sort" data-direction="asc">
-          Date - Oldest
-        </option>
-         <option value="listing-date-sort" data-direction="desc">
-          Date - Newest
-        </option>
-         <option value="listing-author" data-direction="asc">
-          Author
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
     </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Player Performance in Major vs.&nbsp;Non Major Tournaments</h1>
 </div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="ZGF0YSUyQ2RvZ3MlMkNhbmltYWxz" data-listing-date-sort="1735718400000" data-listing-file-modified-sort="1757012296201" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="6">
-<div class="thumbnail">
-<p><a href="../blog/posts/firstpost.html" class="no-external"></a></p><a href="../blog/posts/firstpost.html" class="no-external">
-<p><img loading="lazy" src="../blog/posts/website_files/images/random_png.png" class="thumbnail-image"></p>
-</a><p><a href="../blog/posts/firstpost.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/firstpost.html" class="no-external">My great title</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../blog/posts/firstpost.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('ZGF0YQ=='); return false;">
-data
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('ZG9ncw=='); return false;">
-dogs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('YW5pbWFscw=='); return false;">
-animals
-</div>
-</div>
-<div class="listing-description">
-<a href="../blog/posts/firstpost.html" class="no-external">My post text goes here …</a>
-</div>
-</div>
-<div class="metadata">
-<a href="../blog/posts/firstpost.html" class="no-external">
-<div class="listing-date">
-Jan 1, 2025
-</div>
-</a>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>This page continues to focus on the Big 3 (Djokovic, Federer, Nadal) and the New 2 (Alcaraz &amp; Sinner). The plots included here look at each player’s performance at different types of tournaments.</p>
+<p>There are four major tournaments (Grand Slams) every calendar year, including the US Open, French Open, Australian Open, and Wimbledon. These are the most coveted and prestigious titles, due to a large pot of prize money, the most ranking points, and the global recognition that comes along with winning them. Besides the Grand Slams, there are non-major tournaments that occur almost every weekend. These include a variety of different leveled tournaments, including Master’s 1000s, 500s, 250s, etc. In the visualization below, we look at how these five players’ winning percentages are distributed between the two categories (major vs.&nbsp;non-major).</p>
+<p><br></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../figs/majorswinp.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="800"></p>
+</figure>
 </div>
 </div>
 </div>
-<div class="listing-no-matching d-none">
-No matching items
+<p>For all five players, the difference between their major and non-major winning percentage is pretty thin. There is around a 5% increase in win percentage while playing in major tournaments. While it may be counter intuitive that these players have a higher win percentage in major tournaments, it likely signals that more competitive environments bring out the best from these five dominant athletes.</p>
+<p>It also may be a phenomenon with the more talented players, as top ranked competitors have less of an incentive to participate in non-major tournaments. They often do not need to rack up ranking points to get into Grand Slams, and use that time to prioritize training, recovery, and rest. This would likely increase the amount of matches played within major tournaments especially during the prime of their careers.</p>
+<p>The next visualization investigates the total number of tournaments that each player has won, split between major and non-majors.</p>
+<p><br></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../figs/majortitles.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="800"></p>
+</figure>
 </div>
-</div></main> <!-- /main -->
+</div>
+</div>
+<p>This graph exhibits the number of total singles tournaments won on the y axis, as well as with an annotation on the top of each bar. This graph is more intuitive, with each player racking up more non-major tournament wins than major tournament wins. It is very interesting to note that all players have around a 1:3 or 1:4 major to non-major ratio, except for Jannik Sinner. Djokovic has positioned himself as the player with the most Grand Slam titles, and is the only member of the Big 3 that has yet to retire. This suggests he may continue to win more tournaments if the New 2 do not stand in his way.</p>
+<p>Again, an important limitation of looking at total career patterns within this group of players is that the Big 3 have had a long and successful career, while Sinner and Alcaraz are just at the beginning of their careers. However, we can see from these visualizations that the New 2 are already making significant strides at the beginning stages of their careers.</p>
+
+
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
