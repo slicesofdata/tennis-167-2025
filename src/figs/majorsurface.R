@@ -38,9 +38,9 @@ player_colors <- c(
 
 ################################################################################
 
-cleaned_rankings_data <- readRDS("data/processed/cleaned_rankings_data.rds")
+cleaned_rankings_data <- readRDS(here::here("data/processed/cleaned_rankings_data.rds"))
 
-atp_singles_data <- readRDS("data/processed/atp_singles.Rds")
+atp_singles_data <- readRDS(here::here("data/processed/atp_singles.Rds"))
 
 #################################################################################
 
